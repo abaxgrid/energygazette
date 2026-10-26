@@ -1,0 +1,7 @@
+{"name":"Venezuela","focus":"VEN","bbox":[-74.2,0.4,-58.8,13.0],"pad":1.5,"tol":0.012,"tol_far":0.06,
+ "river_rank":8,"place_rank":7,"road_types":["Major Highway"],
+ "river_include":[{"name":"Cojedes","rank":9,"rename":"Apure","why":"Natural Earth names the lower Apure (San Fernando to the Orinoco confluence) 'Cojedes'"}],
+ "state_names":{"Vargas state":"La Guaira","Guárico State":"Guárico","Tachira":"Táchira","Merida":"Mérida","Capital":"Capital District","Federal Dependencies":""},
+ "marine":[{"name":"Caribbean Sea","lon":-67.2,"lat":12.35,"rank":0},{"name":"Atlantic Ocean","lon":-59.6,"lat":9.9,"rank":0},
+           {"name":"Gulf of Venezuela","lon":-71.15,"lat":11.55,"rank":2},{"name":"G. of Paria","lon":-62.2,"lat":10.42,"rank":3},
+           {"name":"Lake Maracaibo","lon":-71.6,"lat":9.75,"rank":2}]}

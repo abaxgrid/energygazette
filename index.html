@@ -1,0 +1,1654 @@
+<meta charset="utf-8">
+<title>The Energy Gazette: Venezuela Edition</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="The Energy Gazette: Venezuela Edition — Latin America energy intelligence. Every issue, special edition and reference tool, founded and edited by Danny Peña.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+<style>
+/* Layout: the printed issue, translated to the web — navy cover band, paper interior with 1.6pt masthead rule,
+   archive as the house data grid, navy back-page bio, red only as bar / rule / ribbon. */
+:root{
+  --navy:#0F2A43; --teal:#2E6E8E; --red:#C8102E;
+  --paper:#FFFFFF; --light:#F5F6F8; --cell:#EAEEF2; --rule:#DADADA;
+  --ink:#1A1A1A; --grey:#4A4A4A; --link:#2E6E8E;
+  --on-navy:#FFFFFF; --pale:#C8D3DE; --sub:#9AA5B1; --mist:#DCE6EE; --navy-rule:#2D445A; --ring:#5B7186;
+  --head:var(--navy);
+  --sans:"Arimo","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --wrap:1120px;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --paper:#0B1622; --light:#122334; --cell:#16293C; --rule:#24384C;
+  --ink:#E6ECF2; --grey:#A9B6C3; --link:#7FB6D3; --head:#E6ECF2; --navy:#0F2A43; color-scheme:dark } }
+:root[data-theme="dark"]{
+  --paper:#0B1622; --light:#122334; --cell:#16293C; --rule:#24384C;
+  --ink:#E6ECF2; --grey:#A9B6C3; --link:#7FB6D3; --head:#E6ECF2; --navy:#0F2A43; color-scheme:dark }
+
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--link)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+h1,h2,h3{text-wrap:balance;margin:0}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.caps{text-transform:uppercase;letter-spacing:.06em;font-weight:700}
+.num{font-variant-numeric:tabular-nums}
+
+/* ---------- cover band */
+.cover{background:var(--navy);color:var(--on-navy)}
+.cover .wrap{padding-block:28px 0}
+.mast{display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px}
+.mast .bar{width:120px;height:5px;background:var(--red)}
+.mast .name{font-size:clamp(20px,3vw,26px);font-weight:700;letter-spacing:.04em;margin-top:10px}
+.mast .ed{font-size:12.5px;color:var(--sub);letter-spacing:.08em;font-weight:700}
+nav.top{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 22px;margin-top:20px;padding-block:12px;border-top:1px solid var(--navy-rule);border-bottom:1px solid var(--navy-rule)}
+nav.top a{color:var(--pale);text-decoration:none;font-size:13px;letter-spacing:.07em;font-weight:700;text-transform:uppercase}
+nav.top a:hover{color:#fff}
+
+.lead{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:44px;padding-block:48px 44px;align-items:center}
+.lead .kick{color:var(--pale);font-size:13px}
+.lead h1{font-size:clamp(34px,5.4vw,60px);line-height:1.04;margin-top:12px;letter-spacing:-.01em}
+.lead .deck{color:var(--pale);font-size:19px;margin-top:16px;max-width:40ch}
+.lead .by{color:var(--sub);font-size:14px;margin-top:18px}
+.lead .acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.btn{display:inline-block;font:700 14px/1 var(--sans);letter-spacing:.05em;text-transform:uppercase;text-decoration:none;padding:13px 18px;border:1px solid transparent;cursor:pointer}
+.btn.solid{background:var(--teal);color:#fff}
+.btn.solid:hover{background:#357d9f}
+.btn.ghost{border-color:var(--ring);color:#fff;background:transparent}
+.btn.ghost:hover{border-color:var(--pale)}
+.inside{border-left:1px solid var(--navy-rule);padding-left:26px}
+.inside h2{font-size:13px;color:var(--sub);letter-spacing:.08em}
+.inside ol{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:12px}
+.inside li{font-size:17px;display:grid;grid-template-columns:22px 1fr}
+.inside li::before{content:"→";color:var(--pale)}
+.chips{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.chip{padding:20px 10px 18px;text-align:center}
+.chip:nth-child(odd){background:#132f4a}
+.chip:nth-child(even){background:var(--teal)}
+.chip b{display:block;font-size:clamp(26px,3.6vw,36px);line-height:1.1}
+.chip span{display:block;color:var(--mist);font-size:13px;margin-top:4px}
+.ribbon{background:var(--red);color:#fff;text-align:center;font-weight:700;font-size:13px;letter-spacing:.08em;padding-block:12px}
+
+/* ---------- interior sections */
+main section{padding-block:56px 8px}
+.sec-head{display:grid;gap:4px;border-bottom:1px solid var(--rule);padding-bottom:12px;margin-bottom:26px}
+.sec-head .k{font-size:13px;color:var(--head)}
+.sec-head h2{font-size:clamp(24px,3vw,30px);color:var(--head);line-height:1.15}
+.sec-head p{color:var(--grey);margin:6px 0 0;max-width:68ch}
+
+/* sequence */
+.seq{background:var(--navy);color:#fff;padding:22px 22px 24px}
+.seq .k{color:var(--pale);font-size:12.5px;text-align:center}
+.seq ol{list-style:none;margin:16px 0 0;padding:0;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:0}
+.seq li{padding:0 12px;border-left:1px solid var(--navy-rule)}
+.seq li:first-child{border-left:0}
+.seq time{display:block;font-weight:700;font-size:15px;letter-spacing:.03em}
+.seq span{display:block;color:var(--pale);font-size:14px;line-height:1.4;margin-top:4px}
+.seq .src{color:var(--sub);font-size:12.5px;text-align:center;margin-top:16px}
+
+/* archive */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.filters button{font:700 13px/1 var(--sans);letter-spacing:.05em;text-transform:uppercase;padding:10px 14px;border:1px solid var(--rule);background:var(--paper);color:var(--grey);cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
+.grid-wrap{overflow-x:auto;border:1px solid var(--rule)}
+table.arch{border-collapse:collapse;width:100%;min-width:760px}
+.arch th{background:var(--navy);color:#fff;text-align:left;font-size:13px;letter-spacing:.06em;text-transform:uppercase;padding:11px 14px}
+.arch td{border-top:1px solid var(--rule);padding:16px 14px;vertical-align:top}
+.arch td.no{background:var(--cell);color:var(--link);font-weight:700;width:132px;font-size:15px}
+.arch td.no small{display:block;color:var(--grey);font-weight:400;font-size:13px;margin-top:3px}
+.arch h3{font-size:19px;color:var(--head);line-height:1.25}
+.arch p{margin:6px 0 0;color:var(--grey);font-size:15.5px;max-width:66ch}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.tag{font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:4px 8px;background:var(--light);color:var(--grey)}
+.fmts{white-space:nowrap;width:190px}
+.fmts a{display:block;font-size:14.5px;font-weight:700;text-decoration:none;padding:3px 0}
+.fmts a:hover{text-decoration:underline}
+.arch tr[hidden]{display:none}
+
+/* reference desk */
+.desk{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule)}
+.tool{background:var(--paper);padding:22px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.tool .k{font-size:12px;color:var(--link)}
+.tool h3{font-size:19px;color:var(--head);line-height:1.25}
+.tool p{margin:0;color:var(--grey);font-size:15.5px}
+.tool .go{margin-top:auto;padding-top:8px;font-weight:700;font-size:14.5px;text-decoration:none}
+
+/* in production */
+.prod{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);background:var(--light)}
+.prod > div{padding:24px 26px;min-width:0}
+.prod > div + div{border-left:1px solid var(--rule)}
+.prod h3{font-size:24px;color:var(--head);line-height:1.2;margin-top:6px}
+.prod .k{font-size:12.5px;color:var(--head)}
+.prod .k.r{color:var(--red)}
+.prod ul{margin:10px 0 0;padding-left:18px;color:var(--ink);font-size:15.5px;display:grid;gap:6px}
+.prod p{color:var(--grey);margin:8px 0 0;font-size:15.5px}
+
+/* standards (So what) */
+.std{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 36px}
+.std li{display:grid;grid-template-columns:30px 1fr;gap:12px}
+.std .n{width:30px;height:30px;background:var(--navy);color:#fff;font-weight:700;display:grid;place-items:center;font-size:14px}
+.std b{display:block;color:var(--head);font-size:17px}
+.std span{color:var(--grey);font-size:15.5px}
+
+/* back page */
+.back{background:var(--navy);color:#fff;margin-top:64px}
+.back .wrap{padding-block:44px 28px}
+.back .mh{font-weight:700;font-size:15px;letter-spacing:.04em;padding-bottom:10px;border-bottom:2.5px solid var(--red)}
+.who{display:grid;grid-template-columns:120px minmax(0,1fr);gap:26px;align-items:center;margin-top:28px}
+.mono{width:120px;height:120px;border-radius:50%;border:1px solid var(--ring);background:#183852;display:grid;place-items:center;font-weight:700;font-size:38px;color:var(--pale);letter-spacing:.02em}
+.who h2{font-size:clamp(26px,3.4vw,34px)}
+.who .r{font-weight:700;font-size:16px;margin-top:4px}
+.who .l{color:var(--pale);font-size:15px;margin-top:2px}
+.bio{color:var(--pale);margin-top:22px;max-width:78ch;text-align:justify;hyphens:auto}
+.cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:26px}
+.cols div{padding:0 22px;border-left:1px solid var(--navy-rule);min-width:0}
+.cols div:first-child{padding-left:0;border-left:0}
+.cols h3{font-size:13px;letter-spacing:.07em}
+.cols p{color:var(--pale);font-size:14.5px;margin:8px 0 0}
+.sub{background:var(--teal);margin-top:34px;padding:26px 24px;text-align:center}
+.sub h2{font-size:clamp(20px,2.6vw,26px)}
+.sub p{color:var(--mist);margin:8px auto 0;max-width:62ch}
+.sub .acts{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:16px}
+.sub .btn.solid{background:var(--navy)}
+.mail{display:inline-flex;align-items:center;gap:8px;color:#fff;font-weight:700;font-size:15px;border:1px solid rgba(255,255,255,.45);padding:9px 12px;background:transparent;cursor:pointer;font-family:var(--sans)}
+.family{display:flex;flex-wrap:wrap;gap:6px 22px;justify-content:center;margin-top:30px;font-size:13.5px}
+.family a{color:var(--pale);text-decoration:none}
+.family a:hover{color:#fff}
+.legal{color:var(--sub);font-size:12.5px;text-align:center;margin-top:14px}
+
+/* ---------- living timeline */
+.tl{--law:#2E6E8E;--say:#9AA5B1;--deal:#C8102E;--list:#DCE6EE}
+.rail-wrap{background:var(--navy);overflow-x:auto;-webkit-overflow-scrolling:touch}
+.rail{position:relative;display:grid;grid-template-columns:repeat(6,minmax(118px,1fr));min-width:720px;padding:26px 14px 22px}
+.rail::before{content:"";position:absolute;left:40px;right:40px;top:37px;height:2px;background:var(--navy-rule)}
+.rail::after{content:"";position:absolute;left:40px;top:37px;height:2px;background:var(--red);width:var(--prog,0%);transition:width .35s ease}
+.stop{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:6px;background:none;border:0;color:var(--pale);cursor:pointer;font-family:var(--sans);padding:0 4px}
+.stop .dot{width:14px;height:14px;border-radius:50%;background:var(--navy);border:2px solid var(--sub);transition:transform .2s,background .2s,border-color .2s}
+.stop[data-k="law"] .dot{border-color:var(--law)} .stop[data-k="say"] .dot{border-color:var(--say)} .stop[data-k="deal"] .dot{border-color:var(--deal)} .stop[data-k="list"] .dot{border-color:var(--list)}
+.stop time{font-weight:700;font-size:15px;letter-spacing:.04em;color:#fff;margin-top:4px}
+.stop .lbl{font-size:13px;line-height:1.3;text-align:center}
+.stop:hover .lbl{color:#fff}
+.stop[aria-selected="true"] .dot{transform:scale(1.35);background:#fff}
+.stop[aria-selected="true"] .lbl{color:#fff;font-weight:700}
+.legend{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:12.5px;color:var(--grey);padding:10px 0 0}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend span::before{content:"";width:10px;height:10px;border-radius:50%;border:2px solid}
+.legend [data-k="law"]::before{border-color:var(--law)} .legend [data-k="say"]::before{border-color:var(--say)} .legend [data-k="deal"]::before{border-color:var(--deal)} .legend [data-k="list"]::before{border-color:#7FA3BF}
+.panel{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);background:var(--light);margin-top:14px}
+.panel > div,.panel > aside{padding:24px 26px;min-width:0}
+.panel > aside{border-left:1px solid var(--rule);display:flex;flex-direction:column;gap:18px}
+.panel .when{font-size:12.5px;color:var(--link)}
+.panel h3{font-size:clamp(22px,2.8vw,28px);color:var(--head);line-height:1.15;margin-top:6px}
+.panel p{margin:10px 0 0;max-width:62ch}
+.open{display:grid;gap:4px;margin-top:16px;padding:12px 14px;background:var(--paper);border-left:3px solid var(--red)}
+.open b{font-size:12px;color:var(--red)}
+.open span{color:var(--grey);font-size:15px}
+.src,.read{display:flex;flex-direction:column;gap:6px;font-size:15px;color:var(--ink)}
+.src .caps,.read .caps{font-size:12px;color:var(--grey)}
+.read a{font-weight:700;text-decoration:none;padding:6px 0;border-bottom:1px solid var(--rule)}
+.read a:hover{text-decoration:underline}
+.steps{display:flex;justify-content:space-between;align-items:center;margin-top:12px;font-size:14px;color:var(--grey)}
+.steps button{font:700 13px/1 var(--sans);letter-spacing:.05em;text-transform:uppercase;padding:10px 14px;border:1px solid var(--rule);background:var(--paper);color:var(--head);cursor:pointer}
+.steps button:hover{border-color:var(--grey)}
+.arch tr.flash td{background:var(--mist)}
+.arch tr.flash td.no{background:var(--mist)}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .arch tr.flash td{background:#1E3A55} }
+:root[data-theme="dark"] .arch tr.flash td{background:#1E3A55}
+@media (max-width:760px){ .panel{grid-template-columns:1fr} .panel > aside{border-left:0;border-top:1px solid var(--rule)} }
+@media (prefers-reduced-motion:reduce){ .rail::after,.stop .dot{transition:none} }
+
+/* ---------- map front */
+.mapfront{--up:#4FA3C7;--ex:#C8102E;--po:#DCE6EE;padding-block:34px 36px}
+.mf-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:14px 28px}
+.mf-head .kick{color:var(--pale);font-size:13px}
+.mf-head h1{font-size:clamp(30px,4.6vw,50px);line-height:1.05;margin-top:8px}
+.latest{color:#fff;text-decoration:none;font-weight:700;font-size:16px;border-bottom:2px solid var(--red);padding-bottom:4px}
+.latest .caps{color:var(--sub);font-size:12px;margin-right:6px}
+.latest:hover{color:var(--mist)}
+.layers{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.layers button,.picker button{font:700 12.5px/1 var(--sans);letter-spacing:.05em;text-transform:uppercase;padding:9px 12px;border:1px solid var(--navy-rule);background:transparent;color:var(--pale);cursor:pointer;display:inline-flex;align-items:center;gap:7px}
+.layers button[aria-pressed="true"],.picker button[aria-current="true"]{background:#fff;color:#0F2A43;border-color:#fff}
+.sw{width:10px;height:10px;border-radius:50%;display:inline-block}
+.sw.up{background:var(--up)} .sw.ex{background:var(--ex)} .sw.po{background:var(--po)} .sw.pl{border:2px solid #fff}
+.mf-grid{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:18px;margin-top:16px;align-items:start}
+.map-wrap{min-width:0}
+.map{display:block;width:100%;height:auto;border:1px solid var(--navy-rule)}
+.map .sea{fill:#0B2236}
+.map .land{fill:#143552;stroke:#2D445A;stroke-width:1}
+.map .ven{fill:#1E4A70;stroke:#7F9BB3;stroke-width:1.4}
+.map .pan{fill:#1E4A70;stroke:#C8D3DE;stroke-width:1.4;stroke-dasharray:4 3}
+.map .belt{fill:rgba(79,163,199,.2);stroke:#4FA3C7;stroke-width:1.5;stroke-dasharray:6 4}
+.geo-lbl text{fill:#5B7186;font:700 15px var(--sans);letter-spacing:.18em}
+.pin{cursor:pointer;outline:none}
+.pin .halo{fill:transparent;stroke:transparent;stroke-width:2}
+.pin .mk{stroke:#0B2236;stroke-width:2.5;transition:r .15s}
+.pin[data-layer="up"] .mk{fill:var(--up)} .pin[data-layer="ex"] .mk{fill:var(--ex)} .pin[data-layer="po"] .mk{fill:var(--po)}
+.pin[data-layer="pl"] .mk{fill:#0B2236;stroke:#fff;stroke-width:3}
+.pin:hover .mk,.pin:focus-visible .mk{stroke:#fff}
+.pin:focus-visible .halo{stroke:var(--red)}
+.pin.on .halo{stroke:#fff;fill:rgba(255,255,255,.08)}
+.pin.on text{fill:#fff}
+.pin.dim{opacity:.22}
+.map-note{color:var(--sub);font-size:12px;margin:6px 0 0}
+.site{background:var(--paper);color:var(--ink);padding:22px 22px 18px;min-width:0;border-top:4px solid var(--teal)}
+.site[data-layer="ex"]{border-top-color:var(--red)} .site[data-layer="po"]{border-top-color:#9AA5B1} .site[data-layer="pl"]{border-top-color:var(--navy)}
+.site .when{font-size:12px;color:var(--link)}
+.site h2{font-size:clamp(22px,2.6vw,27px);color:var(--head);line-height:1.15;margin-top:6px}
+.site p{margin:10px 0 0;font-size:15.5px}
+.site .who2{margin-top:12px;font-size:14.5px;color:var(--grey)}
+.site .who2 b{color:var(--ink)}
+.site .open{margin-top:14px}
+.site .read{margin-top:16px}
+.site .nav2{display:flex;justify-content:space-between;margin-top:14px;padding-top:12px;border-top:1px solid var(--rule)}
+.site .nav2 button{font:700 12.5px/1 var(--sans);letter-spacing:.05em;text-transform:uppercase;border:0;background:none;color:var(--link);cursor:pointer;padding:6px 0}
+.picker{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.picker button{font-size:12px;padding:8px 10px}
+.picker button.dim{opacity:.35}
+@media (max-width:900px){ .mf-grid{grid-template-columns:1fr} }
+@media (max-width:640px){ .layers button{padding:8px 10px;font-size:11.5px} }
+.site .open{background:var(--light)}
+
+/* ---------- calculator */
+.calc{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);border:1px solid var(--rule)}
+.cin{padding:22px;display:grid;gap:16px;background:var(--light);min-width:0}
+.cout{padding:22px;display:flex;flex-direction:column;gap:18px;min-width:0}
+.presets{display:flex;flex-wrap:wrap;gap:6px}
+.presets button{font:700 12.5px/1 var(--sans);letter-spacing:.05em;text-transform:uppercase;padding:9px 11px;border:1px solid var(--rule);background:var(--paper);color:var(--grey);cursor:pointer}
+.presets button[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
+.fld{display:grid;grid-template-columns:1fr auto;gap:4px 12px;align-items:baseline}
+.fld label{font-weight:700;font-size:15px;color:var(--head)}
+.fld small,.tog small{display:block;font-weight:400;font-size:13px;color:var(--grey)}
+.fld output{font-weight:700;font-size:16px;font-variant-numeric:tabular-nums;color:var(--link)}
+.fld input{grid-column:1/-1;width:100%;accent-color:var(--teal);margin:4px 0 0}
+.tog{display:flex;gap:10px;align-items:flex-start;font-weight:700;font-size:15px;color:var(--head);cursor:pointer}
+.tog input{accent-color:var(--teal);width:18px;height:18px;margin-top:2px;flex:none}
+.big{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule)}
+.big > div{background:var(--navy);color:#fff;padding:16px 16px 14px;display:flex;flex-direction:column;gap:2px}
+.big > div + div{background:var(--teal)}
+.big .caps{font-size:12px;color:var(--pale)}
+.big b{font-size:clamp(30px,4vw,40px);line-height:1.1}
+.big small{color:var(--mist);font-size:13px}
+.bar{display:flex;height:22px;background:var(--light)}
+.bar span{display:block;height:100%;transition:width .25s ease}
+.s-cost{background:#9AA5B1} .s-agg{background:#0F2A43} .s-tax{background:#3D6584} .s-pdv{background:#8FB3CC} .s-inv{background:#2E6E8E}
+:root[data-theme="dark"] .s-agg{background:#C8D3DE}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .s-agg{background:#C8D3DE} }
+.split{width:100%;border-collapse:collapse;font-size:15px}
+.split caption{text-align:left;font-size:12.5px;color:var(--grey);padding-bottom:6px}
+.split th{text-align:left;font-weight:400;padding:7px 0;border-top:1px solid var(--rule);display:flex;align-items:center;gap:8px}
+.split th i{width:12px;height:12px;display:inline-block;flex:none}
+.split td{text-align:right;font-weight:700;border-top:1px solid var(--rule);padding:7px 0;color:var(--head)}
+.kpi{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:0}
+.kpi div{border-top:2px solid var(--navy);padding-top:8px}
+:root[data-theme="dark"] .kpi div{border-top-color:var(--pale)}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .kpi div{border-top-color:var(--pale)} }
+.kpi dt{font-size:12.5px;color:var(--grey);text-transform:uppercase;letter-spacing:.05em;font-weight:700}
+.kpi dd{margin:4px 0 0;font-size:21px;font-weight:700;color:var(--head)}
+.warn{margin:0;padding:10px 12px;border-left:3px solid var(--red);background:var(--light);font-size:14.5px}
+.calc-note{color:var(--grey);font-size:13.5px;margin:12px 0 0;max-width:90ch}
+@media (max-width:860px){ .calc{grid-template-columns:1fr} }
+@media (max-width:480px){ .kpi{grid-template-columns:1fr 1fr} .big b{font-size:28px} }
+
+
+/* map layers (Natural Earth) */
+.map .m-sea{fill:#0A2033}
+.map .m-land{fill:#163450}
+.map .m-focus{fill:#1F4B71}
+.map .m-lake{fill:#0A2033}
+.map .m-road path{fill:none;stroke:#6F8BA5;stroke-width:.7;stroke-opacity:.55}
+.map .m-river path{fill:none;stroke:#4C93C0;stroke-width:.9;stroke-linejoin:round}
+.map .m-river path.major{stroke-width:1.8}
+.map .m-a1 path{fill:none;stroke:#7F9BB3;stroke-width:.7;stroke-dasharray:3 3;stroke-opacity:.7}
+.map .m-coast path{fill:none;stroke:#7F9BB3;stroke-width:.8}
+.map .m-a0 path{fill:none;stroke:#DCE6EE;stroke-width:1.3}
+.map .belt{fill:rgba(79,163,199,.22);stroke:#7FC0E0;stroke-width:1.2;stroke-dasharray:5 4}
+.map text{font-family:var(--sans);paint-order:stroke;stroke-linejoin:round}
+.map .l-sea{fill:#5F7D98;font-style:italic;letter-spacing:.2em;stroke:#0A2033;stroke-width:3px}
+.map .l-state{fill:#7C98B2;font-weight:700;letter-spacing:.12em;stroke:#1F4B71;stroke-width:3px;opacity:.8}
+.map .l-city{fill:#DCE6EE;stroke:#163450;stroke-width:3px}
+.map .l-city.cap{font-weight:700;fill:#fff}
+.map .c-dot{fill:#DCE6EE;stroke:#0A2033;stroke-width:1}
+.map .c-dot.cap{fill:#fff}
+.map .l-river{fill:#8EC3E3;font-style:italic;stroke:#1F4B71;stroke-width:3px}
+.map .l-water{fill:#8EC3E3;font-style:italic;stroke:#0A2033;stroke-width:3px}
+.map .l-pin,.map .pin text{fill:#fff;font-weight:700;stroke:#0A2033;stroke-width:4px}
+.map .off{fill:#0F2A43;stroke:#C8D3DE;stroke-width:1}
+.map .l-off{fill:#fff;font-weight:700;stroke:none}
+.pin .halo{fill:transparent;stroke:transparent;stroke-width:2;vector-effect:non-scaling-stroke}
+.pin.on .off{stroke:#fff;stroke-width:2}
+
+
+/* zoom */
+.map-stage{position:relative}
+.map{touch-action:pan-y;cursor:default;user-select:none;-webkit-user-select:none}
+.map.zoomed{touch-action:none;cursor:grab}
+.map.zoomed:active{cursor:grabbing}
+.map:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+.zoomctl{position:absolute;top:10px;right:10px;width:46px;display:flex;flex-direction:column;align-items:stretch;gap:1px;background:#2D445A;border:1px solid #2D445A}
+.zoomctl button{font:700 18px/1 var(--sans);width:100%;height:40px;border:0;background:#0F2A43;color:#fff;cursor:pointer}
+.zoomctl button:hover{background:#163a5b}
+.zoomctl #z-reset{font-size:10px;letter-spacing:.03em;text-transform:uppercase;height:30px;padding:0}
+.zoomctl #z-level{font:700 11px/1 var(--sans);color:#C8D3DE;background:#0F2A43;text-align:center;padding:5px 0}
+.zhint{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);background:rgba(15,42,67,.94);color:#fff;font-size:13px;font-weight:700;padding:8px 12px;border:1px solid #5B7186;pointer-events:none;white-space:nowrap}
+
+
+/* news ticker */
+.ticker{display:flex;align-items:stretch;margin-top:16px;border:1px solid var(--navy-rule);background:#0B2236;min-width:0}
+.tk-label{background:var(--red);color:#fff;font-size:12px;padding:0 12px;display:flex;align-items:center;white-space:nowrap;flex:none}
+.tk-view{overflow:hidden;flex:1;min-width:0;position:relative}
+.tk-track{list-style:none;margin:0;padding:0;display:flex;width:max-content;animation:tk var(--tk-dur,60s) linear infinite}
+.ticker:hover .tk-track,.ticker:focus-within .tk-track,.ticker.paused .tk-track{animation-play-state:paused}
+.tk-track li{display:flex;align-items:center;gap:10px;padding:10px 26px 10px 18px;border-right:1px solid var(--navy-rule);white-space:nowrap;font-size:14.5px}
+.tk-track time{font-weight:700;color:var(--sub);font-size:12.5px;letter-spacing:.05em}
+.tk-track a{color:#fff;text-decoration:none;font-weight:700}
+.tk-track a:hover{text-decoration:underline}
+.tk-src{color:var(--pale);font-size:12.5px}
+.tk-map{font:700 11px/1 var(--sans);letter-spacing:.05em;text-transform:uppercase;border:1px solid var(--ring);background:transparent;color:var(--mist);padding:5px 7px;cursor:pointer}
+.tk-map:hover{border-color:#fff;color:#fff}
+.tk-pause{flex:none;font:700 12px/1 var(--sans);letter-spacing:.05em;text-transform:uppercase;border:0;border-left:1px solid var(--navy-rule);background:transparent;color:var(--pale);padding:0 14px;cursor:pointer}
+.tk-pause:hover{color:#fff}
+.tk-note{color:var(--sub);font-size:12px;margin:6px 0 0}
+@keyframes tk{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){ .tk-track{animation:none} .tk-view{overflow-x:auto} .tk-pause{display:none} }
+@media (max-width:640px){ .tk-label{padding:0 8px;font-size:10.5px} .tk-label .tk-long{display:none} .tk-pause{padding:0 10px;font-size:11px} .tk-track li{font-size:13.5px;padding:9px 18px 9px 12px} }
+
+
+/* sticky top bar: brand left, tabs right */
+html{scroll-padding-top:72px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:31;background:#0F2A43}
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:#0F2A43;border-bottom:1px solid var(--navy-rule)}
+.tb-in{display:flex;align-items:center;gap:20px;min-height:58px}
+.brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;flex:none}
+.tb-bar{width:5px;height:24px;background:var(--red)}
+.bn{font-weight:700;letter-spacing:.05em;font-size:16px;white-space:nowrap}
+.bt{display:flex;flex-direction:column;gap:3px}
+.be{font-size:10px;color:var(--sub);letter-spacing:.12em;text-transform:uppercase;font-weight:700;white-space:nowrap}
+.tb-bar{height:30px}
+.tabs{margin-left:auto;display:flex;align-items:center;overflow-x:auto;scrollbar-width:none;min-width:0}
+.tabs::-webkit-scrollbar{display:none}
+.tabs a{display:flex;align-items:center;align-self:stretch;padding:0 7px;color:#C8D3DE;font:700 12px/1 var(--sans);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;white-space:nowrap;border-bottom:3px solid transparent;border-top:3px solid transparent}
+.tabs a:hover{color:#fff}
+.tabs a[aria-current="true"]{color:#fff;border-bottom-color:var(--red)}
+.tabs a.sub-tab{color:#fff;background:var(--teal);align-self:center;padding:9px 10px;margin-left:8px;border:0}
+.tabs a.play{color:#fff;background:var(--red);align-self:center;padding:9px 10px;margin-left:6px;border:0}
+.mast2{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:baseline;padding-top:18px}
+.mast2 .ed{font-size:12.5px;color:var(--sub);letter-spacing:.08em;font-weight:700;text-transform:uppercase}
+.mast2 .pub{color:var(--pale);font-size:12.5px;text-decoration:none}
+.mast2 .pub:hover{color:#fff}
+.mast2 + .ticker{margin-top:12px}
+@media (max-width:1290px){
+  html{scroll-padding-top:110px}
+  .tb-in{flex-wrap:wrap;gap:0}
+  .brand{min-height:48px}
+  .tabs{margin-left:0;width:100%;border-top:1px solid var(--navy-rule);min-height:46px}
+  .tabs a{padding:0 12px 0 0;margin-right:6px}
+  .tabs a.sub-tab,.tabs a.play{padding:8px 10px}
+}
+@media (max-width:1290px){ .bt{flex-direction:row;align-items:baseline;gap:10px} .tb-bar{height:22px} }
+@media (max-width:420px){ .be{display:none} }
+
+.portrait{display:block;width:120px;height:120px;border-radius:50%;object-fit:cover}
+@media (max-width:640px){ .portrait{width:84px;height:84px} }
+
+
+/* sticky ticker inside the top bar */
+.tb-tick{padding-bottom:8px}
+.tb-tick .ticker{margin-top:0}
+html{scroll-padding-top:160px}
+/* latest issues */
+.icards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.icard{display:flex;flex-direction:column;border:1px solid var(--rule);min-width:0}
+.icov{background:#0F2A43;color:#fff;padding:18px 20px 16px;display:flex;flex-direction:column;gap:8px;min-height:170px;position:relative}
+.icard:nth-child(1) .icov{border-bottom:5px solid var(--red)}
+.icard:nth-child(2) .icov{background:#2E6E8E}
+.ibar{width:44px;height:4px;background:var(--red)}
+.icard:nth-child(2) .ibar{background:#fff}
+.imeta{font-size:11.5px;color:#C8D3DE;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.icard:nth-child(2) .imeta,.icard:nth-child(2) .idate{color:#DCE6EE}
+.imeta .new{background:var(--red);color:#fff;font-size:10.5px;padding:3px 6px}
+.icov h3{font-size:clamp(22px,2.4vw,27px);line-height:1.12}
+.idate{font-size:11.5px;color:#9AA5B1;margin-top:auto}
+.ibody{padding:18px 20px 20px;display:flex;flex-direction:column;gap:10px;flex:1;background:var(--paper)}
+.ibody p{margin:0;font-size:15.5px;color:var(--grey)}
+.iin{font-size:11.5px;color:var(--head)}
+.ibody ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.ibody li{font-size:15px;display:grid;grid-template-columns:18px 1fr}
+.ibody li::before{content:"\2192";color:var(--link)}
+.ilinks{margin-top:auto;padding-top:10px;border-top:1px solid var(--rule);display:flex;flex-wrap:wrap;gap:6px 16px}
+.ilinks a{font-weight:700;font-size:14.5px;text-decoration:none}
+.ilinks a:hover{text-decoration:underline}
+.ilinks a:not(.pri){color:var(--grey);font-weight:400}
+@media (max-width:1180px){ html{scroll-padding-top:160px} }
+@media (max-width:900px){ .icards{grid-template-columns:1fr} .icov{min-height:0} }
+
+
+/* facts ticker */
+.ticker.facts{margin-top:6px;background:#0F2A43}
+.ticker.facts .tk-label{background:#2E6E8E}
+.tb-tick .tk-label{min-width:118px;justify-content:center}
+@media (max-width:640px){ .tb-tick .tk-label{min-width:56px} }
+.ticker.facts .tk-track li{padding:7px 26px 7px 18px}
+.fk{display:inline-flex;align-items:baseline;gap:9px;text-decoration:none;color:#DCE6EE}
+.fk b{font-size:17px;color:#fff;font-variant-numeric:tabular-nums}
+.fk span{font-size:13.5px;font-weight:400}
+.fk:hover span{text-decoration:underline}
+@media (max-width:1180px){ html{scroll-padding-top:196px} }
+
+
+/* map drawer from the right + edge tab */
+.edge-tab{position:fixed;right:env(safe-area-inset-right,0px);top:50%;transform:translateY(-50%);z-index:40;display:flex;flex-direction:column;align-items:stretch;width:84px;padding:0;border:1px solid #5B7186;border-right:0;background:#0F2A43;color:#fff;cursor:pointer;box-shadow:-6px 6px 20px rgba(0,0,0,.3)}
+.edge-tab .map.mini{display:block;width:100%;height:auto;border:0;background:#0A2033}
+.edge-tab .et-l{font:700 12px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;padding:9px 0;border-top:3px solid var(--red);text-align:center}
+.edge-tab .et-l::after{content:" \2190"}
+.edge-tab:hover{background:#163a5b}
+.edge-tab:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+.map.mini .m-labels,.map.mini .m-road,.map.mini .m-a1{display:none}
+.mm-dot{stroke:#0A2033;stroke-width:2}
+.mm-dot.on{stroke:#fff;stroke-width:3}
+.dlg-backdrop{position:fixed;inset:0;z-index:55;background:rgba(5,15,25,.55);opacity:0;transition:opacity .3s}
+.dlg-backdrop.open{opacity:1}
+.mapdlg{--up:#4FA3C7;--ex:#C8102E;--po:#DCE6EE;position:fixed;top:0;right:0;bottom:0;width:min(1240px,96vw);z-index:60;background:#0F2A43;color:#fff;display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);transform:translateX(100%);transition:transform .32s cubic-bezier(.2,.7,.2,1);box-shadow:-12px 0 40px rgba(0,0,0,.4)}
+.mapdlg.open{transform:none}
+.dlg-bar{display:flex;align-items:center;gap:10px;min-height:56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));border-bottom:1px solid #2D445A;flex:none}
+.dlg-bar h2{font-size:18px;flex:1;margin:0;display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px}
+.dlg-sub{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#9AA5B1}
+#dlg-close{font:700 12.5px/1 var(--sans);letter-spacing:.06em;text-transform:uppercase;padding:10px 14px;background:#fff;color:#0F2A43;border:0;cursor:pointer}
+.dlg-body{flex:1;overflow:auto;padding-block:14px 20px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.dlg-body .layers{margin-top:0}
+.tabs .map-tab{align-self:center;margin-left:8px;font:700 12px/1 var(--sans);letter-spacing:.06em;text-transform:uppercase;padding:8px 10px;background:transparent;color:#fff;border:1px solid #5B7186;cursor:pointer;white-space:nowrap}
+.tabs .map-tab:hover{border-color:#fff}
+.cover .wrap{padding-block:4px 18px}
+@media (max-width:640px){ .edge-tab{width:64px} .edge-tab .et-l{font-size:10.5px} .mapdlg{width:100vw} }
+@media (prefers-reduced-motion:reduce){ .mapdlg,.dlg-backdrop{transition:none} }
+
+
+/* ---------- fixed bottom bar with tickers; sections fit between bars */
+:root{--top-h:58px;--bot-h:96px}
+html{scroll-padding-top:calc(var(--top-h) + 8px)!important;scroll-padding-bottom:calc(var(--bot-h) + 8px)}
+body{padding-bottom:var(--bot-h)}
+.botbar{position:fixed;left:0;right:0;bottom:0;z-index:30;background:#0F2A43;border-top:1px solid #2D445A;padding-bottom:env(safe-area-inset-bottom,0px);box-shadow:0 -8px 24px rgba(0,0,0,.18)}
+.bb-in{display:grid;gap:6px;padding-block:8px}
+.botbar .ticker{margin:0}
+.botbar .tk-label{min-width:118px;justify-content:center}
+.tk-upd span{color:#9AA5B1;font-size:12.5px;font-style:italic}
+.pubk{color:inherit;text-decoration:none;font-weight:700}
+.pubk:hover{text-decoration:underline}
+.back{margin-top:24px}
+@media (max-width:640px){ .botbar .tk-label{min-width:56px} .bb-in{gap:4px;padding-block:6px} }
+@media (min-width:900px) and (min-height:560px){
+  html{scroll-snap-type:y proximity}
+  main section{padding-block:22px 6px}
+  main section.fit,.back{scroll-snap-align:start}
+  .fit{max-height:calc(100dvh - var(--top-h) - var(--bot-h) - 16px);display:flex;flex-direction:column}
+  .fit .sec-head{margin-bottom:14px;padding-bottom:8px;flex:none}
+  .fit .sec-head h2{font-size:clamp(22px,2.2vw,26px)}
+  .fit .sec-head p{margin-top:2px;font-size:15px}
+  .fit-body{flex:1 1 auto;min-height:0;overflow:auto;overscroll-behavior:contain}
+  .fit > *:not(.sec-head):not(.fit-body){flex:none}
+  /* latest */
+  .icov{min-height:0;padding:14px 18px 12px;gap:6px}
+  .icov h3{font-size:clamp(19px,1.8vw,23px)}
+  .ibody{padding:12px 18px 14px;gap:8px}
+  .ibody p{font-size:14.5px}
+  .ibody li{font-size:14px}
+  /* timeline */
+  .rail{padding:18px 14px 14px}
+  .rail::before,.rail::after{top:29px}
+  .panel{margin-top:8px}
+  .panel > div,.panel > aside{padding:16px 20px}
+  .panel p{font-size:15.5px}
+  .open{margin-top:10px;padding:8px 12px}
+  .steps{margin-top:8px}
+  .legend{padding-top:6px}
+  /* calculator */
+  .cin{padding:16px 18px;gap:10px}
+  .cout{padding:16px 18px;gap:12px}
+  .big b{font-size:30px}
+  .big > div{padding:12px 14px 10px}
+  .split{font-size:14px} .split th,.split td{padding:5px 0}
+  .kpi dd{font-size:18px}
+  .calc-note{margin-top:6px;font-size:12.5px}
+  /* archive */
+  .arch th{position:sticky;top:0;z-index:1}
+  .arch td{padding:10px 12px}
+  .arch p{font-size:14.5px}
+  .tags{margin-top:6px}
+  /* desk */
+  .tool{padding:16px 18px;gap:6px}
+  .tool p{font-size:14.5px}
+  /* editor (back page) */
+  .back .wrap{padding-block:22px 14px}
+  .who{margin-top:14px}
+  .bio{margin-top:12px;font-size:15px}
+  .cols{margin-top:14px} .cols p{font-size:13.5px}
+  .sub{margin-top:16px;padding:16px 20px}
+  .family{margin-top:14px}
+  .back{min-height:calc(100dvh - var(--top-h) - var(--bot-h))}
+  .cin{grid-template-columns:1fr 1fr;column-gap:18px;align-content:start}
+  .cin .presets,.cin .tog{grid-column:1/-1}
+  .fld label{font-size:14px} .fld small{font-size:12px}
+  .back .wrap{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);column-gap:36px;align-items:start}
+  .back .mh,.back .family,.back .legal{grid-column:1/-1}
+  .back .who{grid-column:1;grid-row:2}
+  .back .bio{grid-column:1;grid-row:3;max-width:none}
+  .back .cols{grid-column:2;grid-row:2 / span 2;grid-template-columns:1fr;margin-top:14px;gap:10px}
+  .back .cols div{padding:0 0 10px;border-left:0;border-bottom:1px solid var(--navy-rule)}
+  .back .cols div:first-child{padding-left:0}
+  .back .sub{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:6px 20px;text-align:left;padding:14px 20px}
+  .back .sub h2{font-size:20px} .back .sub p{margin:0;font-size:14px;max-width:none}
+  .back .sub .acts{grid-column:2;grid-row:1 / span 2;margin:0;justify-content:flex-end}
+  .portrait{width:96px;height:96px} .who{grid-template-columns:96px minmax(0,1fr)}
+  .back .wrap{padding-block:16px 8px} .back .family{margin-top:10px} .back .legal{margin-top:6px}
+  .cin{gap:8px}
+}
+
+
+[hidden]{display:none!important}
+/* directional section arrival */
+@media (prefers-reduced-motion:no-preference){
+  .arrive-down{animation:egDown .6s cubic-bezier(.2,.7,.2,1)}
+  .arrive-up{animation:egUp .6s cubic-bezier(.2,.7,.2,1)}
+  @keyframes egDown{from{transform:translateY(36px);opacity:.25}to{transform:none;opacity:1}}
+  @keyframes egUp{from{transform:translateY(-36px);opacity:.25}to{transform:none;opacity:1}}
+}
+.scroll-dir{position:fixed;right:calc(16px + env(safe-area-inset-right,0px));top:calc(50% - 22px);z-index:35;width:44px;height:44px;display:grid;place-items:center;background:#C8102E;color:#fff;font:700 20px/1 var(--sans);pointer-events:none;opacity:0;transition:opacity .25s}
+.scroll-dir.show{opacity:.92}
+@media (prefers-reduced-motion:reduce){ .scroll-dir{display:none} }
+
+
+/* language selector */
+.lang{display:flex;flex:none;border:1px solid #5B7186;margin-left:10px}
+.lang button{font:700 11.5px/1 var(--sans);letter-spacing:.06em;padding:8px 8px;background:transparent;color:#C8D3DE;border:0;cursor:pointer}
+.lang button + button{border-left:1px solid #5B7186}
+.lang button[aria-pressed="true"]{background:#fff;color:#0F2A43}
+.lang button:hover{color:#fff}
+.lang button[aria-pressed="true"]:hover{color:#0F2A43}
+.topbar > .tb-in{max-width:1340px}
+@media (max-width:1290px){ .lang{position:absolute;right:max(16px,env(safe-area-inset-right,0px));top:11px} .tb-in{position:relative} }
+
+
+/* markets in the facts ticker */
+.ticker.facts li.sec{border-left:2px solid #C8102E;padding-left:14px}
+.tk-sec{font-size:11.5px;color:#fff;letter-spacing:.1em}
+.ticker .px{color:#fff;font-weight:700;font-size:14px;font-variant-numeric:tabular-nums}
+.ticker .chg{font-weight:700;font-size:13px;font-variant-numeric:tabular-nums}
+.ticker .chg.up{color:#6FD39C}
+.ticker .chg.dn{color:#FF8A8A}
+.ticker .cal{font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 6px;border:1px solid #5B7186;color:#C8D3DE}
+.ticker .cal.confirmed{border-color:#6FD39C;color:#6FD39C}
+
+/* ---------- AbaxGrid links */
+.mast .pub{color:var(--pale);font-size:12.5px;text-decoration:none;margin-top:4px}
+.mast .pub:hover{color:#fff}
+nav.top a.play{color:#fff;background:var(--red);padding:3px 8px}
+.also{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr);gap:16px}
+.also a{display:flex;flex-direction:column;gap:8px;padding:24px;text-decoration:none;min-width:0}
+.also strong{font-size:26px;line-height:1.1}
+.also .k{font-size:12px}
+.also .d{font-size:15.5px}
+.also .go{margin-top:auto;padding-top:8px;font-weight:700;font-size:14.5px}
+.play-card{background:var(--navy);color:#fff;border-bottom:5px solid var(--red)}
+.play-card strong{font-size:40px;letter-spacing:.06em}
+.play-card .k,.play-card .d{color:var(--pale)}
+.play-card:hover{background:#163a5b}
+.side-card{background:var(--light);color:var(--ink)}
+.side-card strong{color:var(--head)}
+.side-card .k{color:var(--link)}
+.side-card .d{color:var(--grey)}
+.side-card .go{color:var(--link)}
+.side-card:hover{background:var(--cell)}
+@media (max-width:900px){ .also{grid-template-columns:1fr} }
+
+/* ---------- responsive */
+@media (max-width:900px){
+  .lead{grid-template-columns:1fr;gap:28px}
+  .inside{border-left:0;border-top:1px solid var(--navy-rule);padding:22px 0 0}
+  .seq ol{grid-template-columns:repeat(3,minmax(0,1fr));row-gap:18px}
+  .seq li:nth-child(4){border-left:0}
+  .desk{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .chips{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .chip:nth-child(2),.chip:nth-child(3){background:var(--teal)} .chip:nth-child(4){background:#132f4a}
+  .seq ol{grid-template-columns:1fr}
+  .seq li{border-left:0;border-top:1px solid var(--navy-rule);padding:12px 0 0}
+  .seq li:first-child{border-top:0;padding-top:0}
+  .desk,.prod,.std,.cols{grid-template-columns:1fr}
+  .prod > div + div{border-left:0;border-top:1px solid var(--rule)}
+  .cols div{padding:16px 0 0;border-left:0;border-top:1px solid var(--navy-rule);margin-top:14px}
+  .cols div:first-child{border-top:0;margin-top:0;padding-top:0}
+  .who{grid-template-columns:84px minmax(0,1fr);gap:16px}
+  .mono{width:84px;height:84px;font-size:28px}
+}
+@media (prefers-reduced-motion:no-preference){ .btn,.filters button{transition:background .15s,border-color .15s,color .15s} }
+</style>
+
+<div class="topbar" id="top">
+  <div class="wrap tb-in">
+    <a class="brand" href="#latest" aria-label="The Energy Gazette, back to the latest issues"><span class="tb-bar" aria-hidden="true"></span><span class="bt"><span class="bn">THE ENERGY GAZETTE</span><span class="be">Venezuela Edition</span></span></a>
+    <nav class="tabs" aria-label="Sections">
+      <a href="#latest" data-sec="latest" data-also="archive">Issues</a><a href="#year" data-sec="year">Timeline</a><a href="#calc" data-sec="calc">Calculator</a><a href="#desk" data-sec="desk">Reference desk</a><a href="#production" data-sec="production">Next issue</a><a href="#editor" data-sec="editor">Editor</a><button type="button" class="map-tab" id="tab-map" aria-controls="mapdlg" aria-expanded="false">Map →</button><a href="#subscribe" class="sub-tab">Subscribe</a><a href="https://abaxgrid.com/playcrudo/" class="play">Play CRUDO ↗</a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language"><button type="button" id="lang-en" data-lang="en" lang="en" aria-label="English" aria-pressed="true">EN</button><button type="button" id="lang-pt" data-lang="pt" lang="pt-BR" aria-label="Português" aria-pressed="false">PT</button></div>
+  </div>
+</div>
+
+<main>
+  <section id="latest" class="wrap fit">
+    <div class="sec-head">
+      <div class="k caps">Latest issues · Latin America energy intelligence · <a class="pubk" href="https://abaxgrid.com/">An AbaxGrid publication ↗</a></div>
+      <h2>The Three Most Recent Issues</h2>
+      <p>A new issue every other week, special editions as events warrant, sources cited throughout. Older issues are in the <a href="#archive">full archive</a>.</p>
+    </div>
+    <div class="fit-body icards">
+      <article class="icard">
+        <div class="icov">
+          <span class="ibar" aria-hidden="true"></span>
+          <div class="imeta caps">Issue No. 4 · Executive brief<span class="new caps">Latest</span></div>
+          <h3>The Procurement Signal</h3>
+          <div class="idate caps">October 2026</div>
+        </div>
+        <div class="ibody">
+          <p>A supplier-qualification call in Venezuela, read the way a CFO would: FX and working capital, IVA and withholding, sanctions and licensing.</p>
+          <div class="iin caps">Inside</div>
+          <ul><li>Six supplier categories, scored for risk</li><li>Finance, tax and legal, one lens each</li><li>What a qualified supplier has to prove</li></ul>
+          <div class="ilinks"><a href="issues/issue-04-procurement-signal.pdf" class="pri">Read the brief (PDF) →</a><a href="#subscribe">Request the full edition</a></div>
+        </div>
+      </article>
+      <article class="icard">
+        <div class="icov">
+          <span class="ibar" aria-hidden="true"></span>
+          <div class="imeta caps">Issue No. 3 · Special reflection</div>
+          <h3>A Gold Rush, Read Twice</h3>
+          <div class="idate caps">October 2026</div>
+        </div>
+        <div class="ibody">
+          <p>Venezuela's 2026 reopening set against California in 1849, checked against the reformed law and the July regulation.</p>
+          <div class="iin caps">Inside</div>
+          <ul><li>California 1849 and Venezuela 2026, side by side</li><li>A three-country timeline, 1848–1858</li><li>Panama as the corridor, then and now</li></ul>
+          <div class="ilinks"><a href="issues/issue-03-gold-rush.pdf" class="pri">Read the magazine sample (PDF) →</a></div>
+        </div>
+      </article>
+      <article class="icard">
+        <div class="icov">
+          <span class="ibar" aria-hidden="true"></span>
+          <div class="imeta caps">Issue No. 2 · Full edition</div>
+          <h3>The Rate Arrived on 7 July</h3>
+          <div class="idate caps">September 2026</div>
+        </div>
+        <div class="ibody">
+          <p>Decree 5.381 turned statutory ceilings into an assessable fiscal framework: the hinge between Chevron's May complaint and its September signature.</p>
+          <div class="iin caps">Inside</div>
+          <ul><li>Four acts, January to September</li><li>Anatomy of the fiscal architecture</li><li>The equilibrium clause as a repair mechanism</li></ul>
+          <div class="ilinks"><a href="issues/issue-02-full.pdf" class="pri">Read the full edition (PDF) →</a><a href="issues/issue-02-brief.pdf">Executive brief</a></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="year" class="wrap fit">
+    <div class="sec-head">
+      <div class="k caps">The living timeline</div>
+      <h2>From Statute to Signature, 2026</h2>
+      <p>Every edition so far hangs off these dates. Tap one to see the instrument, what it changed, what is still open, and where the Gazette covered it.</p>
+    </div>
+
+    <div class="fit-body tl">
+      <div class="rail-wrap">
+        <div class="rail" role="tablist" aria-label="2026 timeline">
+          <button type="button" role="tab" class="stop" id="tab-jan29" aria-controls="p-jan29" aria-selected="true" data-k="law"><span class="dot"></span><time datetime="2026-01-29">29 JAN</time><span class="lbl">Law reformed</span></button>
+          <button type="button" role="tab" class="stop" id="tab-apr3" aria-controls="p-apr3" aria-selected="false" tabindex="-1" data-k="law"><span class="dot"></span><time datetime="2026-04-03">3 APR</time><span class="lbl">Fiscal terms live</span></button>
+          <button type="button" role="tab" class="stop" id="tab-may29" aria-controls="p-may29" aria-selected="false" tabindex="-1" data-k="say"><span class="dot"></span><time datetime="2026-05-29">29 MAY</time><span class="lbl">The complaint</span></button>
+          <button type="button" role="tab" class="stop" id="tab-jul7" aria-controls="p-jul7" aria-selected="false" tabindex="-1" data-k="law"><span class="dot"></span><time datetime="2026-07-07">7 JUL</time><span class="lbl">The rate arrives</span></button>
+          <button type="button" role="tab" class="stop" id="tab-sep" aria-controls="p-sep" aria-selected="false" tabindex="-1" data-k="deal"><span class="dot"></span><time datetime="2026-09">SEP</time><span class="lbl">Signatures</span></button>
+          <button type="button" role="tab" class="stop" id="tab-oct9" aria-controls="p-oct9" aria-selected="false" tabindex="-1" data-k="list"><span class="dot"></span><time datetime="2026-10-09">9 OCT</time><span class="lbl">Panama delisted</span></button>
+        </div>
+      </div>
+      <div class="legend" aria-hidden="true"><span data-k="law">Instrument</span><span data-k="say">On-record statement</span><span data-k="deal">Signing</span><span data-k="list">Listing decision</span></div>
+
+      <article class="panel" role="tabpanel" id="p-jan29" aria-labelledby="tab-jan29">
+        <div class="pm">
+          <div class="when caps">29 January 2026 · Instrument</div>
+          <h3>The Hydrocarbons Law Is Reformed</h3>
+          <p>The National Assembly amends the Organic Hydrocarbons Law. Royalties can reach 30%, a new Integrated Hydrocarbons Tax of up to 15% on gross revenue is set project by project, operatorship can be delegated to minority partners, and an economic-financial equilibrium guarantee is written in.</p>
+          <div class="open"><b class="caps">Still open</b><span>Whether the Integrated Hydrocarbons Tax is deductible for income-tax purposes.</span></div>
+        </div>
+        <aside class="pa">
+          <div class="src"><span class="caps">Source</span>Gaceta Oficial N° 6.978 Extraordinario · LOH Arts. 26, 36, 51, 55–57</div>
+          <div class="read"><span class="caps">Read it in</span>
+            <a href="#archive" data-ed="The Rate Arrived on 7 July">Issue No. 2 · The Rate Arrived on 7 July</a>
+            <a href="#archive" data-ed="Anatomy of an Oil MoU">Special · Anatomy of an Oil MoU</a>
+          </div>
+        </aside>
+      </article>
+
+      <article class="panel" role="tabpanel" id="p-apr3" aria-labelledby="tab-apr3" hidden>
+        <div class="pm">
+          <div class="when caps">3 April 2026 · Instrument</div>
+          <h3>The Fiscal Provisions Take Effect</h3>
+          <p>The reform's fiscal chapter comes into force. The statute now holds ceilings, not rates: royalty and the integrated tax are capped, but the figure for any given project is left to executive discretion.</p>
+          <div class="open"><b class="caps">Still open</b><span>No assessable rate for any project yet. Investors can model the ceiling, not the number.</span></div>
+        </div>
+        <aside class="pa">
+          <div class="src"><span class="caps">Source</span>Gaceta Oficial N° 6.978 Extraordinario · transitional provisions</div>
+          <div class="read"><span class="caps">Read it in</span>
+            <a href="#archive" data-ed="The Rate Arrived on 7 July">Issue No. 2 · The Rate Arrived on 7 July</a>
+          </div>
+        </aside>
+      </article>
+
+      <article class="panel" role="tabpanel" id="p-may29" aria-labelledby="tab-may29" hidden>
+        <div class="pm">
+          <div class="when caps">29 May 2026 · On-record statement</div>
+          <h3>Chevron Says the Numbers Are Missing</h3>
+          <p>On Bloomberg TV, Chevron's chief executive says the reform points in the right direction but the fiscal values that decide project economics have not been specified. It is the clearest public statement of what investors were waiting for.</p>
+          <div class="open"><b class="caps">Still open</b><span>Which instrument would fill the gap, and when.</span></div>
+        </div>
+        <aside class="pa">
+          <div class="src"><span class="caps">Source</span>Bloomberg Television interview, 29 May 2026</div>
+          <div class="read"><span class="caps">Read it in</span>
+            <a href="#archive" data-ed="The Rate Arrived on 7 July">Issue No. 2 · The Rate Arrived on 7 July</a>
+          </div>
+        </aside>
+      </article>
+
+      <article class="panel" role="tabpanel" id="p-jul7" aria-labelledby="tab-jul7" hidden>
+        <div class="pm">
+          <div class="when caps">7 July 2026 · Instrument</div>
+          <h3>The Rate Arrives</h3>
+          <p>The implementing regulation turns ceilings into an assessable framework: an aggregate-rate schedule (Art. 43), and a 34% income-tax rate with seven-year accelerated depreciation for greenfield projects (Art. 45). Tax resolutions follow in G.O. N° 43.410. Largely unreported at the time, this is the hinge between May's complaint and September's signatures.</p>
+          <div class="open"><b class="caps">Still open</b><span>No project-specific rate determination had been published in the Gaceta as of Issue No. 2.</span></div>
+        </div>
+        <aside class="pa">
+          <div class="src"><span class="caps">Source</span>Decreto N° 5.381, Gaceta Oficial N° 7.052 Extraordinario · G.O. N° 43.410</div>
+          <div class="read"><span class="caps">Read it in</span>
+            <a href="#archive" data-ed="The Rate Arrived on 7 July">Issue No. 2 · The Rate Arrived on 7 July</a>
+            <a href="#archive" data-ed="A Gold Rush, Read Twice: California 1849, Venezuela 2026">Issue No. 3 · A Gold Rush, Read Twice</a>
+            <a href="#calc">Run the numbers · Fiscal take calculator</a>
+          </div>
+        </aside>
+      </article>
+
+      <article class="panel" role="tabpanel" id="p-sep" aria-labelledby="tab-sep" hidden>
+        <div class="pm">
+          <div class="when caps">September 2026 · Signings</div>
+          <h3>The Signatures Follow</h3>
+          <p>Chevron sets out a $7 billion, five-year plan across its joint ventures, a scaling-up rather than a return. Continental Resources signs an MoU with PDVSA for the Ayacucho 2 block on 16 September, and TotalEnergies signs one on 19 September.</p>
+          <div class="open"><b class="caps">Still open</b><span>The signed MoU texts are not public. Every clause that matters still depends on an OFAC licence.</span></div>
+        </div>
+        <aside class="pa">
+          <div class="src"><span class="caps">Source</span>Company announcements · CNBC interview, Caracas, 2 September 2026</div>
+          <div class="read"><span class="caps">Read it in</span>
+            <a href="#archive" data-ed="Chevron Bets Bigger">Issue No. 1 · Chevron Bets Bigger</a>
+            <a href="#archive" data-ed="Anatomy of an Oil MoU">Special · Anatomy of an Oil MoU</a>
+            <a href="#archive" data-ed="Who's Operating in Venezuela">Briefing · Who's Operating in Venezuela</a>
+          </div>
+        </aside>
+      </article>
+
+      <article class="panel" role="tabpanel" id="p-oct9" aria-labelledby="tab-oct9" hidden>
+        <div class="pm">
+          <div class="when caps">9 October 2026 · Listing decision</div>
+          <h3>Panama Comes Off the EU List</h3>
+          <p>The EU removes Panama from its list of non-cooperative tax jurisdictions, tied to the new economic-substance law and its implementing decree. Panama becomes a defensible platform for Venezuela-facing work, but only for structures with real substance.</p>
+          <div class="open"><b class="caps">Still open</b><span>Venezuela's own EU and FATF standing, being verified for the next brief.</span></div>
+        </div>
+        <aside class="pa">
+          <div class="src"><span class="caps">Source</span>Council of the EU, list of non-cooperative jurisdictions · Panama Law 526</div>
+          <div class="read"><span class="caps">Read it in</span>
+            <a href="#production">In production · Panama, Cleared. Now Prove It.</a>
+          </div>
+        </aside>
+      </article>
+
+      <div class="steps">
+        <button type="button" id="tl-prev" aria-label="Previous date">← Earlier</button>
+        <span id="tl-count" class="num" aria-live="polite">1 of 6</span>
+        <button type="button" id="tl-next" aria-label="Next date">Later →</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="calc" class="wrap fit">
+    <div class="sec-head">
+      <div class="k caps">Run the numbers</div>
+      <h2>Fiscal Take per Barrel</h2>
+      <p>Move the levers to see how one barrel splits between costs, the state and the private partner under the 2026 framework. Start from a preset, then make it your own.</p>
+    </div>
+    <div class="fit-body calc">
+      <div class="cin">
+        <div class="presets" role="group" aria-label="Presets">
+          <button type="button" id="pr-jv" data-agg="35" data-tax="50" aria-pressed="false">Existing joint venture</button>
+          <button type="button" id="pr-green" data-agg="20" data-tax="34" aria-pressed="true">Greenfield</button>
+          <button type="button" id="pr-cap" data-agg="45" data-tax="50" aria-pressed="false">Statutory ceilings</button>
+        </div>
+        <div class="fld"><label for="c-price">Realized price</label><output id="o-price" for="c-price">$60/bbl</output><input type="range" id="c-price" min="20" max="120" step="1" value="60"></div>
+        <div class="fld"><label for="c-agg">Aggregate rate <small>royalty + integrated tax, % of gross</small></label><output id="o-agg" for="c-agg">20%</output><input type="range" id="c-agg" min="0" max="45" step="1" value="20"></div>
+        <div class="fld"><label for="c-tax">Income tax (ISLR)</label><output id="o-tax" for="c-tax">34%</output><input type="range" id="c-tax" min="0" max="50" step="1" value="34"></div>
+        <div class="fld"><label for="c-opex">Operating cost</label><output id="o-opex" for="c-opex">$15/bbl</output><input type="range" id="c-opex" min="2" max="40" step="1" value="15"></div>
+        <div class="fld"><label for="c-capex">Capital recovery <small>capex per barrel produced</small></label><output id="o-capex" for="c-capex">$10/bbl</output><input type="range" id="c-capex" min="0" max="30" step="1" value="10"></div>
+        <div class="fld"><label for="c-stake">Private partner's stake <small>PDVSA holds the rest, at least 50.1%</small></label><output id="o-stake" for="c-stake">40%</output><input type="range" id="c-stake" min="0" max="49.9" step="0.1" value="40"></div>
+        <label class="tog" for="c-ded"><input type="checkbox" id="c-ded" checked> <span>Aggregate rate deductible for income tax <small>Open question for the integrated-tax portion</small></span></label>
+      </div>
+      <div class="cout">
+        <div class="big">
+          <div><span class="caps">State take</span><b id="r-state" class="num">0%</b><small>Taxes plus PDVSA's equity share, of pre-tax profit</small></div>
+          <div><span class="caps">Partner keeps</span><b id="r-inv" class="num">$0</b><small>per barrel, after tax</small></div>
+        </div>
+        <div class="bar" aria-hidden="true">
+          <span id="b-cost" class="s-cost"></span><span id="b-agg" class="s-agg"></span><span id="b-tax" class="s-tax"></span><span id="b-pdv" class="s-pdv"></span><span id="b-inv" class="s-inv"></span>
+        </div>
+        <table class="split num">
+          <caption class="caps">One barrel at <span id="t-price">$60</span></caption>
+          <tbody>
+            <tr><th scope="row"><i class="s-cost"></i>Operating and capital cost</th><td id="t-cost"></td></tr>
+            <tr><th scope="row"><i class="s-agg"></i>Royalty and integrated tax</th><td id="t-agg"></td></tr>
+            <tr><th scope="row"><i class="s-tax"></i>Income tax</th><td id="t-tax"></td></tr>
+            <tr><th scope="row"><i class="s-pdv"></i>PDVSA's equity share</th><td id="t-pdv"></td></tr>
+            <tr><th scope="row"><i class="s-inv"></i>Private partner's share</th><td id="t-inv"></td></tr>
+          </tbody>
+        </table>
+        <dl class="kpi num">
+          <div><dt>Fiscal take</dt><dd id="r-fiscal"></dd></div>
+          <div><dt>Breakeven price</dt><dd id="r-be"></dd></div>
+          <div><dt>Pre-tax profit</dt><dd id="r-pre"></dd></div>
+        </dl>
+        <p class="warn" id="r-warn" hidden>At these settings the project loses money on every barrel.</p>
+      </div>
+    </div>
+    <p class="calc-note">Illustrative. The aggregate rate and income tax follow the Hydrocarbons Law reform (G.O. N° 6.978 Ext.) and Decree 5.381 (G.O. N° 7.052 Ext., Arts. 43 and 45); preset rates are this desk's modelling assumptions, not published project terms. Capital recovery is treated as deductible. Analysis, not tax or investment advice.</p>
+  </section>
+
+  <section id="archive" class="wrap fit">
+    <div class="sec-head">
+      <div class="k caps">The archive</div>
+      <h2>Every Edition</h2>
+      <p>Numbered issues every other week, special editions when events warrant. Full editions and executive briefs are landscape PDFs; carousels are the LinkedIn page images.</p>
+    </div>
+    <div class="filters" role="group" aria-label="Filter editions">
+      <button type="button" id="f-all" data-f="all" aria-pressed="true">All</button>
+      <button type="button" id="f-issue" data-f="issue" aria-pressed="false">Issues</button>
+      <button type="button" id="f-special" data-f="special" aria-pressed="false">Special editions</button>
+      <button type="button" id="f-brief" data-f="brief" aria-pressed="false">Briefings</button>
+    </div>
+    <div class="fit-body grid-wrap">
+      <table class="arch">
+        <thead><tr><th scope="col">Edition</th><th scope="col">Headline</th><th scope="col">Formats</th></tr></thead>
+        <tbody>
+          <tr data-kind="issue">
+            <td class="no">Issue No. 4<small>October 2026</small></td>
+            <td><h3>The Procurement Signal</h3>
+              <p>Halliburton Venezuela's supplier-qualification call across six categories, analysed for FX and working capital, IVA and withholding, transfer pricing, and OFAC licensing.</p>
+              <div class="tags"><span class="tag">Oilfield services</span><span class="tag">Supply chain</span><span class="tag">Tax</span></div></td>
+            <td class="fmts"><a href="issues/issue-04-procurement-signal.pdf">Executive brief →</a><a href="#subscribe">Request full edition →</a></td>
+          </tr>
+          <tr data-kind="special">
+            <td class="no">Special<small>October 2026</small></td>
+            <td><h3>National Added Value for Venezuela's Energy Sector</h3>
+              <p>Five questions foreign investors ask about valor agregado nacional, based on the article by Gustavo León Villalba, legal counsel to the Venezuelan Petroleum Chamber, Carabobo Chapter.</p>
+              <div class="tags"><span class="tag">FAQ</span><span class="tag">Local content</span><span class="tag">Expert view</span></div></td>
+            <td class="fmts"><a href="issues/special-national-added-value.pdf">FAQ (PDF) →</a></td>
+          </tr>
+          <tr data-kind="issue">
+            <td class="no">Issue No. 3<small>October 2026</small></td>
+            <td><h3>A Gold Rush, Read Twice: California 1849, Venezuela 2026</h3>
+              <p>The reopening set against the 1849 rush, with a three-country timeline (United States, Panama, Venezuela, 1848–1858) and Panama's role as the transit corridor, then and now.</p>
+              <div class="tags"><span class="tag">History</span><span class="tag">Panama</span><span class="tag">Magazine sample</span></div></td>
+            <td class="fmts"><a href="issues/issue-03-gold-rush.pdf">Magazine sample →</a></td>
+          </tr>
+          <tr data-kind="special">
+            <td class="no">Special<small>September 2026</small></td>
+            <td><h3>Anatomy of an Oil MoU</h3>
+              <p>The document behind every signing ceremony. An illustrative 14-clause bilingual model drafted from the legal framework, with the five clauses that carry the risk and what binds and what does not.</p>
+              <div class="tags"><span class="tag">Contracts</span><span class="tag">Bilingual</span><span class="tag">OFAC</span></div></td>
+            <td class="fmts"><a href="issues/special-anatomy-oil-mou-brief.pdf">Executive brief →</a><a href="#subscribe">Request full edition →</a></td>
+          </tr>
+          <tr data-kind="issue">
+            <td class="no">Issue No. 2<small>September 2026</small></td>
+            <td><h3>The Rate Arrived on 7 July</h3>
+              <p>Decree 5.381 turned statutory ceilings into an assessable fiscal framework. The largely unreported hinge between Chevron's May complaint and its September signature.</p>
+              <div class="tags"><span class="tag">Fiscal regime</span><span class="tag">Decree 5.381</span><span class="tag">Chevron</span></div></td>
+            <td class="fmts"><a href="issues/issue-02-full.pdf">Full edition →</a><a href="issues/issue-02-brief.pdf">Executive brief →</a></td>
+          </tr>
+          <tr data-kind="issue">
+            <td class="no">Issue No. 1<small>September 2026</small></td>
+            <td><h3>Chevron Bets Bigger</h3>
+              <p>Five factual developments, led by the $7 billion scaling-up of Chevron's joint ventures. Four Orinoco Belt blocks hold about 91% of the reserves of Venezuela's seven largest fields.</p>
+              <div class="tags"><span class="tag">Chevron</span><span class="tag">Orinoco Belt</span><span class="tag">Reserves</span></div></td>
+            <td class="fmts"><a href="issues/issue-01-full.pdf">Full edition →</a><a href="issues/issue-01-carousel.pdf">Carousel →</a></td>
+          </tr>
+          <tr data-kind="brief">
+            <td class="no">Briefing<small>October 2026</small></td>
+            <td><h3>Who's Operating in Venezuela</h3>
+              <p>The majors, independents, traders and refiners mapped by segment and by status: active, licence sought, exited or legacy, state operator.</p>
+              <div class="tags"><span class="tag">Tracker</span><span class="tag">GL 49 · 50A · 50B</span></div></td>
+            <td class="fmts"><a href="issues/briefing-operators-tracker.pdf">Briefing (PDF) →</a><a href="#desk">Live tracker →</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="desk" class="wrap fit">
+    <div class="sec-head">
+      <div class="k caps">Reference desk</div>
+      <h2>Tools the Editions Are Built On</h2>
+      <p>Working references kept current between issues. Some are open; the deeper models are shared on request.</p>
+    </div>
+    <div class="fit-body desk">
+      <article class="tool"><div class="k caps">Interactive tracker</div><h3>Oil Companies in Venezuela</h3>
+        <p>Upstream, midstream and downstream players, filterable by segment and licence status.</p>
+        <a class="go" href="tools/operators-tracker.html">Open tracker →</a></article>
+      <article class="tool"><div class="k caps">Cheat sheet</div><h3>OFAC Licensing, 2015–2026</h3>
+        <p>Executive orders, statutes and the general licences in force, in five phases, linked to primary sources.</p>
+        <a class="go" href="tools/ofac-licensing.html">Open cheat sheet →</a></article>
+      <article class="tool"><div class="k caps">Diagram</div><h3>The Supply Chain in Four Eras</h3>
+        <p>1970, 1990, 2010 and a 2030 outlook side by side. Who owns, who operates, who collects.</p>
+        <a class="go" href="tools/supply-chain-eras.html">Open diagram →</a></article>
+      <article class="tool"><div class="k caps">Map</div><h3>Sector Relationship Matrix</h3>
+        <p>State layer, international operators, trading counterparties, advisers and the Citgo litigation, post-January 2026.</p>
+        <a class="go" href="tools/relationship-matrix.pdf">Open matrix (PDF) →</a></article>
+      <article class="tool"><div class="k caps">Model · on request</div><h3>LOH 2026 P&amp;L at 600 kb/d</h3>
+        <p>Base and greenfield streams under the 2026 fiscal terms, with government take, netback and breakeven KPIs and peer benchmarks.</p>
+        <a class="go" href="#subscribe">Request the model →</a></article>
+      <article class="tool"><div class="k caps">Primary sources</div><h3>The Legal Library</h3>
+        <p>Hydrocarbons Law reform (G.O. 6.978 Ext.), Decree 5.381 (G.O. 7.052 Ext.) and G.O. 43.410, as cited across the editions.</p>
+        <a class="go" href="#archive">See the editions →</a></article>
+    </div>
+  </section>
+
+  <section id="production" class="wrap">
+    <div class="sec-head">
+      <div class="k caps">In production</div>
+      <h2>Next on the Desk</h2>
+    </div>
+    <div class="prod">
+      <div>
+        <div class="k caps">Executive brief · compliance first</div>
+        <h3>Panama, Cleared. Now Prove It.</h3>
+        <p>Structuring a Venezuela energy platform in Panama after the EU delisting, under the new economic-substance law.</p>
+        <ul>
+          <li>What OFAC still restricts for non-U.S. persons dealing with PDVSA</li>
+          <li>Holding, services hub, trading and procurement structures, compared</li>
+          <li>A list scorecard: Panama and Venezuela on FATF, EU and OFAC lists</li>
+        </ul>
+      </div>
+      <div>
+        <div class="k caps r">Being verified before release</div>
+        <ul>
+          <li>Venezuela's current status on the EU tax list</li>
+          <li>Venezuela's FATF status after the October 2026 plenary</li>
+        </ul>
+        <p>Editions go out only once every figure on the page has a source.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="standards" class="wrap">
+    <div class="sec-head">
+      <div class="k caps">So what</div>
+      <h2>Editorial Standards</h2>
+    </div>
+    <ol class="std">
+      <li><span class="n">1</span><div><b>Primary sources first.</b><span>Gaceta Oficial texts, SEC filings and on-record statements, linked on the page.</span></div></li>
+      <li><span class="n">2</span><div><b>Inference is labelled.</b><span>Illustrative models and this desk's reasoning are marked as such, never passed off as fact.</span></div></li>
+      <li><span class="n">3</span><div><b>Findings, not teasers.</b><span>Headlines state what happened. The analysis says why it matters to a CFO.</span></div></li>
+      <li><span class="n">4</span><div><b>Analysis, not advice.</b><span>Nothing here is legal, tax or investment advice. Sanctions material is descriptive.</span></div></li>
+    </ol>
+  </section>
+
+  <section id="abaxgrid" class="wrap">
+    <div class="sec-head">
+      <div class="k caps">Also from AbaxGrid</div>
+      <h2>Beyond the Gazette</h2>
+    </div>
+    <div class="also">
+      <a class="play-card" href="https://abaxgrid.com/playcrudo/">
+        <span class="k caps">Strategy game · play in the browser</span>
+        <strong>CRUDO</strong>
+        <span class="d">Run Venezuela's oil and gas chain end to end, from the wellhead to the export terminal.</span>
+        <span class="go caps">Play CRUDO →</span>
+      </a>
+      <a class="side-card" href="https://abaxgrid.com/gazettepro/">
+        <span class="k caps">Research tool</span>
+        <strong>GazettePro</strong>
+        <span class="d">Venezuelan tax-law research corpus.</span>
+        <span class="go">Visit GazettePro →</span>
+      </a>
+      <a class="side-card" href="https://abaxgrid.com/">
+        <span class="k caps">The studio</span>
+        <strong>AbaxGrid</strong>
+        <span class="d">Products, plus solutions designed to measure for companies.</span>
+        <span class="go">Visit abaxgrid.com →</span>
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer class="back" id="editor">
+  <div class="wrap">
+    <div class="mh">THE ENERGY GAZETTE: VENEZUELA EDITION</div>
+    <div class="who">
+      <img class="portrait" src="assets/portrait.png" width="120" height="120" alt="Danny Peña">
+      <div>
+        <h2>Danny Peña</h2>
+        <div class="r">Founder &amp; Editor · The Energy Gazette: Venezuela Edition</div>
+        <div class="l">CFO · Tax Newsroom Editor, Latin America</div>
+      </div>
+    </div>
+    <p class="bio">Danilo (Danny) Peña Segovia is a CFO with more than sixteen years leading finance, statutory reporting and tax for multinationals, including 3M, Halliburton, Syngenta and Daimler, across fifteen-plus jurisdictions in Latin America, the United States and Canada, and regional teams of over thirty professionals. His background also spans advisory consulting with Baker Tilly and BDO. A registered CPA and a lawyer licensed to practice in Venezuela, he writes on Latin American tax developments for IBFD in Amsterdam.</p>
+    <div class="cols">
+      <div><h3 class="caps">Practice</h3><p>CFO · Registered CPA and lawyer licensed in Venezuela · Former regional tax leadership at 3M, Halliburton, Syngenta and Daimler · 16+ years across 15+ jurisdictions</p></div>
+      <div><h3 class="caps">Academic</h3><p>LL.M. in Taxation of Cross-Border Investment, University of Miami · MBA in Tax Management · Law and Public Accounting, Universidad de Carabobo</p></div>
+      <div><h3 class="caps">Editorial</h3><p>Tax Newsroom Editor for Latin America, IBFD (Amsterdam) · Founder and Editor, The Energy Gazette: Venezuela Edition</p></div>
+    </div>
+
+    <div class="sub" id="subscribe">
+      <h2>Subscribe to The Energy Gazette: Venezuela Edition</h2>
+      <p>A new issue every other week, with special editions as events warrant. Subscribe on LinkedIn, or write to request a full edition or a model.</p>
+      <div class="acts">
+        <a class="btn solid" href="https://www.linkedin.com/in/dannypenasegovia" target="_blank" rel="noopener">Follow on LinkedIn</a>
+        <button type="button" class="mail" id="copy-mail" aria-label="Copy email address">danny@abaxgrid.com <span id="copy-state">· Copy</span></button>
+      </div>
+    </div>
+
+    <div class="family" aria-label="More from AbaxGrid">
+      <a href="https://abaxgrid.com/">AbaxGrid</a><a href="https://abaxgrid.com/gazettepro/">GazettePro</a><a href="https://abaxgrid.com/playcrudo/">Play CRUDO</a><a href="https://abaxgrid.com/taxableapp/">Taxable</a>
+    </div>
+    <p class="legal">© 2026 The Energy Gazette: Venezuela Edition · Analysis, not legal, tax or investment advice</p>
+  </div>
+</footer>
+
+
+<div class="scroll-dir" id="scroll-dir" aria-hidden="true">↓</div>
+<div class="botbar" id="botbar" role="region" aria-label="News and key facts">
+  <div class="wrap bb-in">
+    <div class="ticker" role="region" aria-label="Latest news" data-name="news ticker" data-speed="60">
+      <span class="tk-label caps"><span class="tk-long">Latest&nbsp;</span>news</span>
+      <div class="tk-view"><ul class="tk-track" id="tk-track"><li class="tk-upd"><span>Updated 25 Oct 2026 · summaries by the Gazette desk, links to the original reports</span></li><li><time datetime="2026-10-23">23 OCT</time><a href="https://www.riotimesonline.com/venezuela-oil-field-115000-barrels-us-deal-october-2026/" target="_blank" rel="noopener">NABEP reports 115,000 b/d at its Zulia operations, with 120,000 targeted by December; no independent figure yet</a><span class="tk-src">The Rio Times</span><button type="button" class="tk-map" data-site="maracaibo">On the map</button></li><li><time datetime="2026-10-21">21 OCT</time><a href="https://www.businesstoday.in/india/story/can-reliance-help-bring-venezuelan-oil-back-to-market-rubio-says-talks-scheduled-for-wednesday-562635-2026-10-20" target="_blank" rel="noopener">Rubio meets Reliance at Jamnagar on refining more Venezuelan heavy crude; sanctions still to be worked through</a><span class="tk-src">Business Today</span></li><li><time datetime="2026-10-18">18 OCT</time><a href="https://www.worldoil.com/news/2026/10/18/venezuela-expects-76-billion-in-oil-and-gas-investment-over-five-years" target="_blank" rel="noopener">Caracas projects about $76 billion of oil and gas investment over five years: 61 agreements signed, 44 in negotiation</a><span class="tk-src">World Oil / Bloomberg</span></li><li><time datetime="2026-10-09">9 OCT</time><a href="https://www.marketscreener.com/news/venezuela-looking-to-sign-105-oil-contracts-by-end-of-year-head-of-pdvsa-ce785ddcd88ff02d" target="_blank" rel="noopener">PDVSA aims to sign 105 oil contracts by year-end, about 70% of them new</a><span class="tk-src">Reuters via MarketScreener</span></li><li><time datetime="2026-10-07">7 OCT</time><a href="https://www.aljazeera.com/video/newsfeed/2026/10/7/explosion-shutters-venezuelas-second-largest-oil-refinery" target="_blank" rel="noopener">Explosion halts the Cardón refinery at Punto Fijo, 300,000 b/d of capacity</a><span class="tk-src">Al Jazeera</span><button type="button" class="tk-map" data-site="paraguana">On the map</button></li><li><time datetime="2026-10-01">1 OCT</time><a href="https://gbm.com/media/noticia/noticia-en-vivo-exportaciones-petroleras-de-venezuela-cayeron-a-108-millones-de-barriles-diarios-en-septiembre-datos-2/" target="_blank" rel="noopener">September exports fall about 9% to 1.08 million b/d as traders press for freight discounts</a><span class="tk-src">Reuters via GBM</span></li></ul></div>
+      <button type="button" class="tk-pause" aria-pressed="false" aria-label="Pause news ticker">Pause</button>
+    </div>
+<script type="application/json" id="eg-markets">{"asOf": "23 Oct 2026", "groups": [{"label": "Majors", "stocks": [["XOM", "ExxonMobil", 183.21, 2.79], ["CVX", "Chevron", 233.21, 2.88], ["SHEL", "Shell", 108.18, 2.25], ["BP", "BP", 51.32, 2.54], ["TTE", "TotalEnergies", 92.78, 2.0], ["COP", "ConocoPhillips", 150.8, 3.55]]}, {"label": "Oilfield services", "stocks": [["SLB", "SLB", 52.39, -1.26], ["HAL", "Halliburton", 34.92, 5.21], ["BKR", "Baker Hughes", 55.6, -0.47]]}], "calendar": [["2026-10-27", "Baker Hughes", "Q3 results", "confirmed"], ["2026-10-29", "Shell", "Q3 results", "confirmed"], ["2026-10-29", "TotalEnergies", "Q3 results", "expected"], ["2026-10-30", "ExxonMobil", "Q3 results", "confirmed"], ["2026-10-30", "Chevron", "Q3 results", "confirmed"], ["2026-10-30", "BP", "Q3 results", "expected"], ["2026-11-05", "ConocoPhillips", "Q3 results", "expected"]]}</script>
+    <div class="ticker facts" role="region" aria-label="Key facts" data-name="facts ticker" data-speed="52">
+      <span class="tk-label caps"><span class="tk-long">Key&nbsp;</span>facts</span>
+      <div class="tk-view"><ul class="tk-track"><li><a href="#calc" class="fk"><b>50.1%</b><span>PDVSA minimum stake in mixed companies</span></a><span class="tk-src">Hydrocarbons Law</span></li><li><a href="#calc" class="fk"><b>30%</b><span>Maximum royalty</span></a><span class="tk-src">Hydrocarbons Law, 2026 reform</span></li><li><a href="#calc" class="fk"><b>15%</b><span>Maximum integrated hydrocarbons tax</span></a><span class="tk-src">Hydrocarbons Law, 2026 reform</span></li><li><a href="#calc" class="fk"><b>34%</b><span>Greenfield income tax rate</span></a><span class="tk-src">Reglamento, Art. 45</span></li></ul></div>
+      <button type="button" class="tk-pause" aria-pressed="false" aria-label="Pause facts ticker">Pause</button>
+    </div>
+  </div>
+</div>
+<button type="button" class="edge-tab" id="edge-tab" aria-label="Open the map" aria-controls="mapdlg" aria-expanded="false">
+  <svg id="mm-svg" class="map mini" viewBox="0 0 978.9 806.4" aria-hidden="true"></svg>
+  <span class="et-l">Map</span>
+</button>
+<div class="dlg-backdrop" id="dlg-backdrop" hidden></div>
+<div class="mapdlg" id="mapdlg" role="dialog" aria-modal="true" aria-labelledby="dlg-title" hidden>
+  <div class="dlg-bar"><span class="tb-bar" aria-hidden="true"></span><h2 id="dlg-title">Where the Story Happens <span class="dlg-sub">Venezuela's energy sector, annotated</span></h2><button type="button" id="dlg-close">Close</button></div>
+  <div class="dlg-body" id="dlg-body">
+<div class="map-block" id="map-block">
+      <div class="layers" role="group" aria-label="Show layer">
+        <button type="button" id="l-all" data-l="all" aria-pressed="true">All sites</button>
+        <button type="button" id="l-up" data-l="up" aria-pressed="false"><i class="sw up"></i>Upstream</button>
+        <button type="button" id="l-ex" data-l="ex" aria-pressed="false"><i class="sw ex"></i>Refining &amp; export</button>
+        <button type="button" id="l-po" data-l="po" aria-pressed="false"><i class="sw po"></i>Policy</button>
+        <button type="button" id="l-pl" data-l="pl" aria-pressed="false"><i class="sw pl"></i>Platform</button>
+      </div>
+      <div class="mf-grid">
+        <div class="map-wrap"><div class="map-stage"><svg class="map" id="egmap" viewBox="0 0 978.9 806.4" role="group" tabindex="0" aria-label="Map of Venezuela with the sites the Gazette covers. Use plus and minus to zoom and arrow keys to pan."></svg><div class="zoomctl" role="group" aria-label="Map zoom"><button type="button" id="z-in" aria-label="Zoom in">+</button><button type="button" id="z-out" aria-label="Zoom out">−</button><span id="z-level" class="num" aria-live="polite">1×</span><button type="button" id="z-reset" hidden>Reset</button></div><div class="zhint" id="z-hint" hidden>Hold Ctrl or ⌘ and scroll to zoom, or use +</div></div><p id="map-status" class="map-note">Loading map…</p>
+          <p class="map-note">Geography: Natural Earth 10m. Site markers are indicative.</p>
+        </div>
+        <aside class="site" id="site-panel" aria-live="polite"></aside>
+      </div>
+      <div class="picker" role="group" aria-label="Choose a site"></div>
+</div>
+  </div>
+</div>
+<script>
+window.EG_PT={"The Energy Gazette: Venezuela Edition": "The Energy Gazette: Edição Venezuela", "THE ENERGY GAZETTE": "THE ENERGY GAZETTE", "Venezuela Edition": "Edição Venezuela", "THE ENERGY GAZETTE: VENEZUELA EDITION": "THE ENERGY GAZETTE: EDIÇÃO VENEZUELA", "The Energy Gazette, back to the latest issues": "The Energy Gazette, voltar às edições mais recentes", "Sections": "Seções", "Issues": "Edições", "Timeline": "Cronologia", "Calculator": "Calculadora", "Reference desk": "Referências", "Next issue": "Próxima edição", "Editor": "Editor", "Map →": "Mapa →", "Subscribe": "Assinar", "Play CRUDO ↗": "Jogar CRUDO ↗", "Play CRUDO": "Jogar CRUDO", "Play CRUDO →": "Jogar CRUDO →", "News and key facts": "Notícias e números-chave", "Latest news": "Últimas notícias", "Key facts": "Números-chave", "Latest ": "Últimas ", "news": "notícias", "Key ": "Em ", "facts": "números", "Pause": "Pausar", "Play": "Retomar", "Pause news ticker": "Pausar o letreiro de notícias", "Resume news ticker": "Retomar o letreiro de notícias", "Pause facts ticker": "Pausar o letreiro de números", "Resume facts ticker": "Retomar o letreiro de números", "On the map": "No mapa", "Updated 25 Oct 2026 · summaries by the Gazette desk, links to the original reports": "Atualizado em 25 out. 2026 · resumos da redação da Gazette, links para as reportagens originais", "23 OCT": "23 OUT", "21 OCT": "21 OUT", "18 OCT": "18 OUT", "9 OCT": "9 OUT", "7 OCT": "7 OUT", "1 OCT": "1º OUT", "NABEP reports 115,000 b/d at its Zulia operations, with 120,000 targeted by December; no independent figure yet": "A NABEP informa 115.000 b/d em suas operações em Zulia, com meta de 120.000 até dezembro; ainda sem confirmação independente", "Rubio meets Reliance at Jamnagar on refining more Venezuelan heavy crude; sanctions still to be worked through": "Rubio se reúne com a Reliance em Jamnagar para refinar mais petróleo pesado venezuelano; as sanções ainda precisam ser resolvidas", "Caracas projects about $76 billion of oil and gas investment over five years: 61 agreements signed, 44 in negotiation": "Caracas projeta cerca de US$ 76 bilhões em investimentos em petróleo e gás em cinco anos: 61 acordos assinados, 44 em negociação", "PDVSA aims to sign 105 oil contracts by year-end, about 70% of them new": "A PDVSA quer assinar 105 contratos petrolíferos até o fim do ano, cerca de 70% deles novos", "Explosion halts the Cardón refinery at Punto Fijo, 300,000 b/d of capacity": "Explosão paralisa a refinaria de Cardón, em Punto Fijo, com capacidade de 300.000 b/d", "September exports fall about 9% to 1.08 million b/d as traders press for freight discounts": "Exportações de setembro caem cerca de 9%, para 1,08 milhão de b/d, com traders pressionando por descontos de frete", "50.1%": "50,1%", "PDVSA minimum stake in mixed companies": "Participação mínima da PDVSA nas empresas mistas", "Hydrocarbons Law": "Lei de Hidrocarbonetos", "Maximum royalty": "Royalty máximo", "Hydrocarbons Law, 2026 reform": "Lei de Hidrocarbonetos, reforma de 2026", "Maximum integrated hydrocarbons tax": "Imposto integrado sobre hidrocarbonetos máximo", "Greenfield income tax rate": "Alíquota de imposto de renda para projetos greenfield", "Reglamento, Art. 45": "Regulamento, art. 45", "Latest issues · Latin America energy intelligence ·": "Edições mais recentes · Inteligência energética da América Latina ·", "An AbaxGrid publication ↗": "Uma publicação AbaxGrid ↗", "The Three Most Recent Issues": "As Três Edições Mais Recentes", "A new issue every other week, special editions as events warrant, sources cited throughout. Older issues are in the": "Uma nova edição a cada duas semanas, edições especiais quando os fatos exigem, fontes citadas em todo o texto. As edições anteriores estão no", "full archive": "arquivo completo", "Issue No. 4 · Executive brief": "Edição nº 4 · Resumo executivo", "Issue No. 3 · Special reflection": "Edição nº 3 · Reflexão especial", "Issue No. 2 · Full edition": "Edição nº 2 · Edição completa", "Latest": "Mais recente", "October 2026": "Outubro de 2026", "September 2026": "Setembro de 2026", "A supplier-qualification call in Venezuela, read the way a CFO would: FX and working capital, IVA and withholding, sanctions and licensing.": "Uma chamada de qualificação de fornecedores na Venezuela, lida como um CFO leria: câmbio e capital de giro, IVA e retenções, sanções e licenças.", "Venezuela's 2026 reopening set against California in 1849, checked against the reformed law and the July regulation.": "A reabertura da Venezuela em 2026 comparada à Califórnia de 1849, conferida com a lei reformada e o regulamento de julho.", "Decree 5.381 turned statutory ceilings into an assessable fiscal framework: the hinge between Chevron's May complaint and its September signature.": "O Decreto 5.381 transformou os tetos legais em um regime fiscal aplicável: o elo entre a queixa da Chevron em maio e sua assinatura em setembro.", "Inside": "Nesta edição", "Six supplier categories, scored for risk": "Seis categorias de fornecedores, classificadas por risco", "Finance, tax and legal, one lens each": "Finanças, tributos e jurídico, um olhar para cada", "What a qualified supplier has to prove": "O que um fornecedor qualificado precisa comprovar", "California 1849 and Venezuela 2026, side by side": "Califórnia 1849 e Venezuela 2026, lado a lado", "A three-country timeline, 1848–1858": "Uma linha do tempo de três países, 1848–1858", "Panama as the corridor, then and now": "O Panamá como corredor, antes e agora", "Four acts, January to September": "Quatro atos, de janeiro a setembro", "Anatomy of the fiscal architecture": "Anatomia da arquitetura fiscal", "The equilibrium clause as a repair mechanism": "A cláusula de equilíbrio como mecanismo de reparo", "Read the brief (PDF) →": "Ler o resumo (PDF, em inglês) →", "Request the full edition": "Solicitar a edição completa", "Read the magazine sample (PDF) →": "Ler a amostra da revista (PDF, em inglês) →", "Read the full edition (PDF) →": "Ler a edição completa (PDF, em inglês) →", "Executive brief": "Resumo executivo", "The living timeline": "A linha do tempo viva", "From Statute to Signature, 2026": "Da Lei à Assinatura, 2026", "Every edition so far hangs off these dates. Tap one to see the instrument, what it changed, what is still open, and where the Gazette covered it.": "Todas as edições até agora partem destas datas. Toque em uma para ver o instrumento, o que mudou, o que segue em aberto e onde a Gazette tratou do tema.", "2026 timeline": "Linha do tempo de 2026", "29 JAN": "29 JAN", "3 APR": "3 ABR", "29 MAY": "29 MAI", "7 JUL": "7 JUL", "SEP": "SET", "Law reformed": "Lei reformada", "Fiscal terms live": "Regime fiscal em vigor", "The complaint": "A queixa", "The rate arrives": "Chegam as alíquotas", "Signatures": "Assinaturas", "Panama delisted": "Panamá sai da lista", "Instrument": "Instrumento", "On-record statement": "Declaração pública", "Signing": "Assinatura", "Listing decision": "Decisão de listagem", "29 January 2026 · Instrument": "29 de janeiro de 2026 · Instrumento", "The Hydrocarbons Law Is Reformed": "A Lei de Hidrocarbonetos É Reformada", "The National Assembly amends the Organic Hydrocarbons Law. Royalties can reach 30%, a new Integrated Hydrocarbons Tax of up to 15% on gross revenue is set project by project, operatorship can be delegated to minority partners, and an economic-financial equilibrium guarantee is written in.": "A Assembleia Nacional altera a Lei Orgânica de Hidrocarbonetos. Os royalties podem chegar a 30%, um novo Imposto Integrado sobre Hidrocarbonetos de até 15% da receita bruta é fixado projeto a projeto, a operação pode ser delegada a sócios minoritários e é incluída uma garantia de equilíbrio econômico-financeiro.", "Still open": "Em aberto", "Whether the Integrated Hydrocarbons Tax is deductible for income-tax purposes.": "Se o Imposto Integrado sobre Hidrocarbonetos é dedutível para fins de imposto de renda.", "Source": "Fonte", "Gaceta Oficial N° 6.978 Extraordinario · LOH Arts. 26, 36, 51, 55–57": "Gaceta Oficial nº 6.978 Extraordinário · LOH, arts. 26, 36, 51, 55–57", "Read it in": "Leia em", "Issue No. 2 · The Rate Arrived on 7 July": "Edição nº 2 · The Rate Arrived on 7 July", "Special · Anatomy of an Oil MoU": "Especial · Anatomy of an Oil MoU", "3 April 2026 · Instrument": "3 de abril de 2026 · Instrumento", "The Fiscal Provisions Take Effect": "As Disposições Fiscais Entram em Vigor", "The reform's fiscal chapter comes into force. The statute now holds ceilings, not rates: royalty and the integrated tax are capped, but the figure for any given project is left to executive discretion.": "O capítulo fiscal da reforma entra em vigor. A lei agora traz tetos, não alíquotas: o royalty e o imposto integrado têm limites, mas o valor de cada projeto fica a critério do Executivo.", "No assessable rate for any project yet. Investors can model the ceiling, not the number.": "Ainda não há alíquota aplicável a nenhum projeto. Os investidores podem modelar o teto, não o número.", "Gaceta Oficial N° 6.978 Extraordinario · transitional provisions": "Gaceta Oficial nº 6.978 Extraordinário · disposições transitórias", "29 May 2026 · On-record statement": "29 de maio de 2026 · Declaração pública", "Chevron Says the Numbers Are Missing": "A Chevron Diz Que Faltam os Números", "On Bloomberg TV, Chevron's chief executive says the reform points in the right direction but the fiscal values that decide project economics have not been specified. It is the clearest public statement of what investors were waiting for.": "Na Bloomberg TV, o CEO da Chevron diz que a reforma vai na direção certa, mas que os valores fiscais que definem a economia dos projetos não foram especificados. É a declaração pública mais clara do que os investidores esperavam.", "Which instrument would fill the gap, and when.": "Qual instrumento preencheria a lacuna, e quando.", "Bloomberg Television interview, 29 May 2026": "Entrevista à Bloomberg Television, 29 de maio de 2026", "7 July 2026 · Instrument": "7 de julho de 2026 · Instrumento", "The Rate Arrives": "Chegam as Alíquotas", "The implementing regulation turns ceilings into an assessable framework: an aggregate-rate schedule (Art. 43), and a 34% income-tax rate with seven-year accelerated depreciation for greenfield projects (Art. 45). Tax resolutions follow in G.O. N° 43.410. Largely unreported at the time, this is the hinge between May's complaint and September's signatures.": "O regulamento transforma os tetos em um regime aplicável: uma tabela de alíquota agregada (art. 43) e uma alíquota de imposto de renda de 34% com depreciação acelerada em sete anos para projetos greenfield (art. 45). As resoluções tributárias vêm na G.O. nº 43.410. Pouco noticiado na época, é o elo entre a queixa de maio e as assinaturas de setembro.", "No project-specific rate determination had been published in the Gaceta as of Issue No. 2.": "Até a Edição nº 2, nenhuma alíquota específica por projeto havia sido publicada na Gaceta.", "Decreto N° 5.381, Gaceta Oficial N° 7.052 Extraordinario · G.O. N° 43.410": "Decreto nº 5.381, Gaceta Oficial nº 7.052 Extraordinário · G.O. nº 43.410", "Issue No. 3 · A Gold Rush, Read Twice": "Edição nº 3 · A Gold Rush, Read Twice", "Run the numbers · Fiscal take calculator": "Faça as contas · Calculadora da participação fiscal", "September 2026 · Signings": "Setembro de 2026 · Assinaturas", "The Signatures Follow": "Vêm as Assinaturas", "Chevron sets out a $7 billion, five-year plan across its joint ventures, a scaling-up rather than a return. Continental Resources signs an MoU with PDVSA for the Ayacucho 2 block on 16 September, and TotalEnergies signs one on 19 September.": "A Chevron apresenta um plano de US$ 7 bilhões em cinco anos para suas joint ventures, uma ampliação e não um retorno. A Continental Resources assina um memorando de entendimento com a PDVSA para o bloco Ayacucho 2 em 16 de setembro, e a TotalEnergies assina outro em 19 de setembro.", "The signed MoU texts are not public. Every clause that matters still depends on an OFAC licence.": "Os textos assinados dos memorandos não são públicos. Toda cláusula relevante ainda depende de uma licença da OFAC.", "Company announcements · CNBC interview, Caracas, 2 September 2026": "Comunicados das empresas · Entrevista à CNBC, Caracas, 2 de setembro de 2026", "Issue No. 1 · Chevron Bets Bigger": "Edição nº 1 · Chevron Bets Bigger", "Briefing · Who's Operating in Venezuela": "Briefing · Who's Operating in Venezuela", "9 October 2026 · Listing decision": "9 de outubro de 2026 · Decisão de listagem", "Panama Comes Off the EU List": "O Panamá Sai da Lista da UE", "The EU removes Panama from its list of non-cooperative tax jurisdictions, tied to the new economic-substance law and its implementing decree. Panama becomes a defensible platform for Venezuela-facing work, but only for structures with real substance.": "A UE retira o Panamá de sua lista de jurisdições fiscais não cooperantes, em razão da nova lei de substância econômica e de seu decreto regulamentador. O Panamá passa a ser uma plataforma defensável para operações voltadas à Venezuela, mas apenas para estruturas com substância real.", "Venezuela's own EU and FATF standing, being verified for the next brief.": "A situação da própria Venezuela na UE e no GAFI, em verificação para o próximo resumo.", "Venezuela’s own EU and FATF standing, being verified for the next brief.": "A situação da própria Venezuela na UE e no GAFI, em verificação para o próximo resumo.", "Council of the EU, list of non-cooperative jurisdictions · Panama Law 526": "Conselho da UE, lista de jurisdições não cooperantes · Lei 526 do Panamá", "In production · Panama, Cleared. Now Prove It.": "Em produção · Panama, Cleared. Now Prove It.", "← Earlier": "← Anterior", "Later →": "Seguinte →", "Previous date": "Data anterior", "Next date": "Próxima data", "Run the numbers": "Faça as contas", "Fiscal Take per Barrel": "Participação Fiscal por Barril", "Move the levers to see how one barrel splits between costs, the state and the private partner under the 2026 framework. Start from a preset, then make it your own.": "Mova os controles para ver como um barril se divide entre custos, Estado e sócio privado no regime de 2026. Comece por um cenário pronto e depois ajuste ao seu caso.", "Presets": "Cenários prontos", "Existing joint venture": "Joint venture existente", "Greenfield": "Greenfield", "Statutory ceilings": "Tetos legais", "Realized price": "Preço realizado", "Aggregate rate": "Alíquota agregada", "royalty + integrated tax, % of gross": "royalty + imposto integrado, % da receita bruta", "Income tax (ISLR)": "Imposto de renda (ISLR)", "Operating cost": "Custo operacional", "Capital recovery": "Recuperação de capital", "capex per barrel produced": "capex por barril produzido", "Private partner's stake": "Participação do sócio privado", "PDVSA holds the rest, at least 50.1%": "A PDVSA detém o restante, no mínimo 50,1%", "Aggregate rate deductible for income tax": "Alíquota agregada dedutível do imposto de renda", "Open question for the integrated-tax portion": "Questão em aberto para a parcela do imposto integrado", "State take": "Participação do Estado", "Taxes plus PDVSA's equity share, of pre-tax profit": "Tributos mais a parcela societária da PDVSA, sobre o lucro antes de impostos", "Partner keeps": "O sócio fica com", "per barrel, after tax": "por barril, após impostos", "One barrel at": "Um barril a", "Operating and capital cost": "Custo operacional e de capital", "Royalty and integrated tax": "Royalty e imposto integrado", "Income tax": "Imposto de renda", "PDVSA's equity share": "Parcela societária da PDVSA", "Private partner's share": "Parcela do sócio privado", "Fiscal take": "Participação fiscal", "Breakeven price": "Preço de equilíbrio", "Pre-tax profit": "Lucro pré-impostos", "At these settings the project loses money on every barrel.": "Com estes parâmetros, o projeto perde dinheiro em cada barril.", "n/a": "n/d", "none": "nenhum", "Illustrative. The aggregate rate and income tax follow the Hydrocarbons Law reform (G.O. N° 6.978 Ext.) and Decree 5.381 (G.O. N° 7.052 Ext., Arts. 43 and 45); preset rates are this desk's modelling assumptions, not published project terms. Capital recovery is treated as deductible. Analysis, not tax or investment advice.": "Ilustrativo. A alíquota agregada e o imposto de renda seguem a reforma da Lei de Hidrocarbonetos (G.O. nº 6.978 Ext.) e o Decreto 5.381 (G.O. nº 7.052 Ext., arts. 43 e 45); as alíquotas dos cenários prontos são premissas de modelagem desta redação, não termos publicados de projetos. A recuperação de capital é tratada como dedutível. Análise, não aconselhamento tributário ou de investimento.", "The archive": "O arquivo", "Every Edition": "Todas as Edições", "Numbered issues every other week, special editions when events warrant. Full editions and executive briefs are landscape PDFs; carousels are the LinkedIn page images.": "Edições numeradas a cada duas semanas, especiais quando os fatos exigem. Edições completas e resumos executivos são PDFs em formato paisagem; os carrosséis são as imagens das páginas no LinkedIn. Todas as edições são publicadas em inglês.", "Filter editions": "Filtrar edições", "All": "Todas", "Special editions": "Edições especiais", "Briefings": "Briefings", "Edition": "Edição", "Headline": "Título", "Formats": "Formatos", "Issue No. 4": "Edição nº 4", "Issue No. 3": "Edição nº 3", "Issue No. 2": "Edição nº 2", "Issue No. 1": "Edição nº 1", "Special": "Especial", "Briefing": "Briefing", "Halliburton Venezuela's supplier-qualification call across six categories, analysed for FX and working capital, IVA and withholding, transfer pricing, and OFAC licensing.": "A chamada de qualificação de fornecedores da Halliburton Venezuela em seis categorias, analisada sob câmbio e capital de giro, IVA e retenções, preços de transferência e licenças da OFAC.", "Oilfield services": "Serviços petrolíferos", "Supply chain": "Cadeia de suprimentos", "Tax": "Tributos", "Executive brief →": "Resumo executivo (em inglês) →", "Request full edition →": "Solicitar edição completa →", "Five questions foreign investors ask about valor agregado nacional, based on the article by Gustavo León Villalba, legal counsel to the Venezuelan Petroleum Chamber, Carabobo Chapter.": "Cinco perguntas que investidores estrangeiros fazem sobre o valor agregado nacional, com base no artigo de Gustavo León Villalba, assessor jurídico da Câmara Petroleira da Venezuela, seção Carabobo.", "FAQ": "Perguntas frequentes", "Local content": "Conteúdo local", "Expert view": "Visão de especialista", "FAQ (PDF) →": "Perguntas frequentes (PDF, em inglês) →", "The reopening set against the 1849 rush, with a three-country timeline (United States, Panama, Venezuela, 1848–1858) and Panama's role as the transit corridor, then and now.": "A reabertura comparada à corrida do ouro de 1849, com uma linha do tempo de três países (Estados Unidos, Panamá, Venezuela, 1848–1858) e o papel do Panamá como corredor de trânsito, antes e agora.", "History": "História", "Panama": "Panamá", "Magazine sample": "Amostra da revista", "Magazine sample →": "Amostra da revista (em inglês) →", "The document behind every signing ceremony. An illustrative 14-clause bilingual model drafted from the legal framework, with the five clauses that carry the risk and what binds and what does not.": "O documento por trás de cada cerimônia de assinatura. Um modelo bilíngue ilustrativo de 14 cláusulas redigido a partir do marco legal, com as cinco cláusulas que concentram o risco e o que obriga e o que não obriga.", "Contracts": "Contratos", "Bilingual": "Bilíngue", "OFAC": "OFAC", "Decree 5.381 turned statutory ceilings into an assessable fiscal framework. The largely unreported hinge between Chevron's May complaint and its September signature.": "O Decreto 5.381 transformou os tetos legais em um regime fiscal aplicável. O elo, pouco noticiado, entre a queixa da Chevron em maio e sua assinatura em setembro.", "Fiscal regime": "Regime fiscal", "Decree 5.381": "Decreto 5.381", "Chevron": "Chevron", "Full edition →": "Edição completa (em inglês) →", "Five factual developments, led by the $7 billion scaling-up of Chevron's joint ventures. Four Orinoco Belt blocks hold about 91% of the reserves of Venezuela's seven largest fields.": "Cinco fatos, liderados pela ampliação de US$ 7 bilhões das joint ventures da Chevron. Quatro blocos da Faixa do Orinoco concentram cerca de 91% das reservas dos sete maiores campos da Venezuela.", "Orinoco Belt": "Faixa do Orinoco", "Reserves": "Reservas", "Carousel →": "Carrossel (em inglês) →", "The majors, independents, traders and refiners mapped by segment and by status: active, licence sought, exited or legacy, state operator.": "As grandes petroleiras, independentes, traders e refinadores mapeados por segmento e por situação: ativos, licença solicitada, saída ou legado, operador estatal.", "Tracker": "Rastreador", "GL 49 · 50A · 50B": "GL 49 · 50A · 50B", "Briefing (PDF) →": "Briefing (PDF, em inglês) →", "Live tracker →": "Rastreador ao vivo →", "Tools the Editions Are Built On": "As Ferramentas por Trás das Edições", "Working references kept current between issues. Some are open; the deeper models are shared on request.": "Referências de trabalho atualizadas entre as edições. Algumas são abertas; os modelos mais detalhados são compartilhados sob solicitação.", "Interactive tracker": "Rastreador interativo", "Oil Companies in Venezuela": "Petroleiras na Venezuela", "Upstream, midstream and downstream players, filterable by segment and licence status.": "Empresas de upstream, midstream e downstream, filtráveis por segmento e situação de licença.", "Open tracker →": "Abrir o rastreador →", "Cheat sheet": "Guia rápido", "OFAC Licensing, 2015–2026": "Licenças da OFAC, 2015–2026", "Executive orders, statutes and the general licences in force, in five phases, linked to primary sources.": "Ordens executivas, leis e as licenças gerais em vigor, em cinco fases, com links para as fontes primárias.", "Open cheat sheet →": "Abrir o guia rápido →", "Diagram": "Diagrama", "The Supply Chain in Four Eras": "A Cadeia de Suprimentos em Quatro Épocas", "1970, 1990, 2010 and a 2030 outlook side by side. Who owns, who operates, who collects.": "1970, 1990, 2010 e uma perspectiva para 2030 lado a lado. Quem é dono, quem opera, quem arrecada.", "Open diagram →": "Abrir o diagrama →", "Sector Relationship Matrix": "Matriz de Relações do Setor", "State layer, international operators, trading counterparties, advisers and the Citgo litigation, post-January 2026.": "Camada estatal, operadoras internacionais, contrapartes comerciais, assessores e o litígio da Citgo, após janeiro de 2026.", "Open matrix (PDF) →": "Abrir a matriz (PDF, em inglês) →", "Model · on request": "Modelo · sob solicitação", "LOH 2026 P&L at 600 kb/d": "DRE da LOH 2026 a 600 mil b/d", "Base and greenfield streams under the 2026 fiscal terms, with government take, netback and breakeven KPIs and peer benchmarks.": "Fluxos de base e greenfield sob o regime fiscal de 2026, com KPIs de participação governamental, netback e preço de equilíbrio, além de comparação com pares.", "Request the model →": "Solicitar o modelo →", "Primary sources": "Fontes primárias", "The Legal Library": "A Biblioteca Jurídica", "Hydrocarbons Law reform (G.O. 6.978 Ext.), Decree 5.381 (G.O. 7.052 Ext.) and G.O. 43.410, as cited across the editions.": "Reforma da Lei de Hidrocarbonetos (G.O. 6.978 Ext.), Decreto 5.381 (G.O. 7.052 Ext.) e G.O. 43.410, conforme citados nas edições.", "See the editions →": "Ver as edições →", "In production": "Em produção", "Next on the Desk": "Próxima na Redação", "Executive brief · compliance first": "Resumo executivo · compliance em primeiro lugar", "Structuring a Venezuela energy platform in Panama after the EU delisting, under the new economic-substance law.": "Como estruturar no Panamá uma plataforma de energia voltada à Venezuela após a saída da lista da UE, sob a nova lei de substância econômica.", "What OFAC still restricts for non-U.S. persons dealing with PDVSA": "O que a OFAC ainda restringe para pessoas não americanas que negociam com a PDVSA", "Holding, services hub, trading and procurement structures, compared": "Estruturas de holding, centro de serviços, trading e compras, comparadas", "A list scorecard: Panama and Venezuela on FATF, EU and OFAC lists": "Um placar das listas: Panamá e Venezuela no GAFI, na UE e na OFAC", "Being verified before release": "Em verificação antes da publicação", "Venezuela's current status on the EU tax list": "A situação atual da Venezuela na lista fiscal da UE", "Venezuela's FATF status after the October 2026 plenary": "A situação da Venezuela no GAFI após a plenária de outubro de 2026", "Editions go out only once every figure on the page has a source.": "As edições só são publicadas quando cada número da página tem uma fonte.", "So what": "Em resumo", "Editorial Standards": "Padrões Editoriais", "Primary sources first.": "Fontes primárias em primeiro lugar.", "Gaceta Oficial texts, SEC filings and on-record statements, linked on the page.": "Textos da Gaceta Oficial, documentos registrados na SEC e declarações públicas, com links na página.", "Inference is labelled.": "Inferências são identificadas.", "Illustrative models and this desk's reasoning are marked as such, never passed off as fact.": "Modelos ilustrativos e o raciocínio desta redação são identificados como tal, nunca apresentados como fato.", "Findings, not teasers.": "Fatos, não chamarizes.", "Headlines state what happened. The analysis says why it matters to a CFO.": "Os títulos dizem o que aconteceu. A análise explica por que isso importa para um CFO.", "Analysis, not advice.": "Análise, não aconselhamento.", "Nothing here is legal, tax or investment advice. Sanctions material is descriptive.": "Nada aqui é aconselhamento jurídico, tributário ou de investimento. O conteúdo sobre sanções é descritivo.", "Also from AbaxGrid": "Também da AbaxGrid", "Beyond the Gazette": "Além da Gazette", "Strategy game · play in the browser": "Jogo de estratégia · jogue no navegador", "CRUDO": "CRUDO", "Run Venezuela's oil and gas chain end to end, from the wellhead to the export terminal.": "Comande a cadeia de petróleo e gás da Venezuela de ponta a ponta, da cabeça do poço ao terminal de exportação.", "Research tool": "Ferramenta de pesquisa", "GazettePro": "GazettePro", "Venezuelan tax-law research corpus.": "Acervo de pesquisa em direito tributário venezuelano.", "Visit GazettePro →": "Visitar o GazettePro →", "The studio": "O estúdio", "AbaxGrid": "AbaxGrid", "Products, plus solutions designed to measure for companies.": "Produtos, além de soluções sob medida para empresas.", "Visit abaxgrid.com →": "Visitar abaxgrid.com →", "Danny Peña": "Danny Peña", "Founder & Editor · The Energy Gazette: Venezuela Edition": "Fundador e Editor · The Energy Gazette: Edição Venezuela", "CFO · Tax Newsroom Editor, Latin America": "CFO · Editor de Notícias Tributárias, América Latina", "Danilo (Danny) Peña Segovia is a CFO with more than sixteen years leading finance, statutory reporting and tax for multinationals, including 3M, Halliburton, Syngenta and Daimler, across fifteen-plus jurisdictions in Latin America, the United States and Canada, and regional teams of over thirty professionals. His background also spans advisory consulting with Baker Tilly and BDO. A registered CPA and a lawyer licensed to practice in Venezuela, he writes on Latin American tax developments for IBFD in Amsterdam.": "Danilo (Danny) Peña Segovia é CFO, com mais de dezesseis anos à frente de finanças, relatórios estatutários e tributos em multinacionais como 3M, Halliburton, Syngenta e Daimler, em mais de quinze jurisdições da América Latina, dos Estados Unidos e do Canadá, liderando equipes regionais de mais de trinta profissionais. Sua trajetória inclui ainda consultoria na Baker Tilly e na BDO. Contador registrado e advogado habilitado na Venezuela, escreve sobre a evolução tributária da América Latina para o IBFD, em Amsterdã.", "Practice": "Atuação", "CFO · Registered CPA and lawyer licensed in Venezuela · Former regional tax leadership at 3M, Halliburton, Syngenta and Daimler · 16+ years across 15+ jurisdictions": "CFO · Contador registrado e advogado habilitado na Venezuela · Ex-líder tributário regional na 3M, Halliburton, Syngenta e Daimler · Mais de 16 anos em mais de 15 jurisdições", "Academic": "Formação", "LL.M. in Taxation of Cross-Border Investment, University of Miami · MBA in Tax Management · Law and Public Accounting, Universidad de Carabobo": "LL.M. em Tributação do Investimento Transfronteiriço, University of Miami · MBA em Gestão Tributária · Direito e Ciências Contábeis, Universidad de Carabobo", "Editorial": "Editorial", "Tax Newsroom Editor for Latin America, IBFD (Amsterdam) · Founder and Editor, The Energy Gazette: Venezuela Edition": "Editor de Notícias Tributárias para a América Latina, IBFD (Amsterdã) · Fundador e Editor, The Energy Gazette: Edição Venezuela", "Subscribe to The Energy Gazette: Venezuela Edition": "Assine The Energy Gazette: Edição Venezuela", "A new issue every other week, with special editions as events warrant. Subscribe on LinkedIn, or write to request a full edition or a model.": "Uma nova edição a cada duas semanas, com edições especiais quando os fatos exigem. Assine pelo LinkedIn ou escreva para solicitar uma edição completa ou um modelo.", "Follow on LinkedIn": "Seguir no LinkedIn", "Copy email address": "Copiar o endereço de e-mail", "· Copy": "· Copiar", "· Copied": "· Copiado", "· Selected": "· Selecionado", "More from AbaxGrid": "Mais da AbaxGrid", "Taxable": "Taxable", "© 2026 The Energy Gazette: Venezuela Edition · Analysis, not legal, tax or investment advice": "© 2026 The Energy Gazette: Edição Venezuela · Análise, não aconselhamento jurídico, tributário ou de investimento", "Open the map": "Abrir o mapa", "Map": "Mapa", "Close": "Fechar", "Where the Story Happens": "Onde a História Acontece", "Venezuela's energy sector, annotated": "O setor de energia da Venezuela, comentado", "Show layer": "Mostrar camada", "All sites": "Todos os locais", "Upstream": "Upstream", "Refining & export": "Refino e exportação", "Policy": "Política", "Platform": "Plataforma", "Map zoom": "Zoom do mapa", "Zoom in": "Aproximar", "Zoom out": "Afastar", "Reset": "Redefinir", "Hold Ctrl or ⌘ and scroll to zoom, or use +": "Segure Ctrl ou ⌘ e role para dar zoom, ou use +", "Map of Venezuela with the sites the Gazette covers. Use plus and minus to zoom and arrow keys to pan.": "Mapa da Venezuela com os locais cobertos pela Gazette. Use mais e menos para dar zoom e as setas para mover.", "Loading map…": "Carregando o mapa…", "The map could not load. The sites are listed below.": "Não foi possível carregar o mapa. Os locais estão listados abaixo.", "Geography: Natural Earth 10m. Site markers are indicative.": "Geografia: Natural Earth 10m. Os marcadores dos locais são indicativos.", "Choose a site": "Escolha um local", "Players:": "Atores:", "← Previous site": "← Local anterior", "Next site →": "Próximo local →", "Orinoco Oil Belt": "Faixa Petrolífera do Orinoco", "Upstream · extra-heavy crude": "Upstream · petróleo extrapesado", "Four divisions, Boyacá, Junín, Ayacucho and Carabobo, hold most of Venezuela’s reserves. Issue No. 1 found four Orinoco blocks account for about 91% of the reserves of the country’s seven largest fields.": "Quatro divisões, Boyacá, Junín, Ayacucho e Carabobo, concentram a maior parte das reservas da Venezuela. A Edição nº 1 mostrou que quatro blocos do Orinoco respondem por cerca de 91% das reservas dos sete maiores campos do país.", "PDVSA mixed companies, with PDVSA holding at least 50.1%; Chevron through its joint ventures.": "Empresas mistas da PDVSA, com a PDVSA detendo no mínimo 50,1%; a Chevron por meio de suas joint ventures.", "Which blocks get project-specific fiscal terms first.": "Quais blocos recebem primeiro termos fiscais específicos por projeto.", "Reference desk · The supply chain in four eras": "Referências · A cadeia de suprimentos em quatro épocas", "Ayacucho": "Ayacucho", "Upstream · Orinoco division": "Upstream · divisão do Orinoco", "Home of Petropiar, one of Chevron’s joint ventures with PDVSA, and of the Ayacucho 2 block, the subject of Continental Resources’ MoU with PDVSA on 16 September 2026.": "Sede da Petropiar, uma das joint ventures da Chevron com a PDVSA, e do bloco Ayacucho 2, objeto do memorando de entendimento da Continental Resources com a PDVSA em 16 de setembro de 2026.", "PDVSA, Chevron (Petropiar), Continental Resources (MoU).": "PDVSA, Chevron (Petropiar), Continental Resources (memorando).", "The signed MoU text is not public, and its entry into force depends on an OFAC licence.": "O texto assinado do memorando não é público, e sua entrada em vigor depende de uma licença da OFAC.", "Carabobo": "Carabobo", "The greenfield growth stream in the Gazette’s LOH 2026 P&L model, priced at the July regulation’s 34% greenfield income tax with seven-year accelerated depreciation. Chevron’s Petroindependencia operates here.": "O fluxo de crescimento greenfield no modelo de DRE da LOH 2026 da Gazette, calculado com o imposto de renda greenfield de 34% do regulamento de julho e depreciação acelerada em sete anos. A Petroindependencia, da Chevron, opera aqui.", "PDVSA, Chevron (Petroindependencia).": "PDVSA, Chevron (Petroindependencia).", "No project-specific rate determination published in the Gaceta as of Issue No. 2.": "Até a Edição nº 2, nenhuma alíquota específica por projeto havia sido publicada na Gaceta.", "Lake Maracaibo basin": "Bacia do Lago de Maracaibo", "Upstream · conventional crude": "Upstream · petróleo convencional", "The country’s historic producing heartland. Chevron’s Boscán field operations date to the 1990s; its FY2000 Form 10-K was the first to disclose Venezuela to investors, including a 27% interest in the LL-652 field.": "O coração histórico da produção do país. As operações da Chevron no campo de Boscán remontam aos anos 1990; seu Formulário 10-K do ano fiscal de 2000 foi o primeiro a informar a Venezuela aos investidores, incluindo uma participação de 27% no campo LL-652.", "PDVSA, Chevron (Petroboscán).": "PDVSA, Chevron (Petroboscán).", "Whether Venezuela appears in Chevron’s 1997–1999 filings is still being checked.": "Ainda se verifica se a Venezuela aparece nos relatórios da Chevron de 1997 a 1999.", "Jose complex": "Complexo de Jose", "Refining & export · Anzoátegui coast": "Refino e exportação · litoral de Anzoátegui", "Upgraders and the main export terminal for Orinoco crude. Where heavy barrels from the belt become a tradable blend.": "Melhoradores e o principal terminal de exportação do petróleo do Orinoco. Onde os barris pesados da faixa viram uma mistura comercializável.", "PDVSA and its mixed companies; traders and offtakers under licence.": "A PDVSA e suas empresas mistas; traders e compradores sob licença.", "Which counterparties can lift cargoes under the current general licences.": "Quais contrapartes podem retirar cargas sob as licenças gerais atuais.", "Reference desk · OFAC licensing cheat sheet": "Referências · Guia rápido das licenças da OFAC", "Paraguaná Refining Center": "Centro de Refino de Paraguaná", "Refining & export · Falcón": "Refino e exportação · Falcón", "Amuay and Cardón, the largest refining complex in the country and the anchor of the downstream chain in every era the Gazette has mapped.": "Amuay e Cardón, o maior complexo de refino do país e a âncora da cadeia downstream em todas as épocas mapeadas pela Gazette.", "PDVSA.": "PDVSA.", "When Cardón restarts after the explosion that halted it on 7 October 2026.": "Quando Cardón volta a operar após a explosão que a paralisou em 7 de outubro de 2026.", "El Palito and Puerto Cabello": "El Palito e Puerto Cabello", "Refining & export · Carabobo state": "Refino e exportação · estado de Carabobo", "Refinery and port on the central coast, in the state whose Petroleum Chamber chapter is driving the national-added-value debate.": "Refinaria e porto no litoral central, no estado cuja seção da Câmara Petroleira lidera o debate sobre o valor agregado nacional.", "PDVSA; local suppliers and service companies.": "PDVSA; fornecedores locais e empresas de serviços.", "How national-added-value rules will be measured and enforced.": "Como as regras de valor agregado nacional serão medidas e aplicadas.", "Special · National Added Value FAQ": "Especial · Perguntas frequentes sobre valor agregado nacional", "Issue No. 4 · The Procurement Signal": "Edição nº 4 · The Procurement Signal", "Caracas": "Caracas", "Policy · where the rules are published": "Política · onde as regras são publicadas", "The Ministry, PDVSA headquarters and the Gaceta Oficial: the January reform, the July regulation and every project determination are published here. Chevron’s CEO gave his September interview from Caracas.": "O Ministério, a sede da PDVSA e a Gaceta Oficial: a reforma de janeiro, o regulamento de julho e cada definição por projeto são publicados aqui. O CEO da Chevron deu sua entrevista de setembro em Caracas.", "National Assembly, Ministry of Hydrocarbons, PDVSA.": "Assembleia Nacional, Ministério de Hidrocarbonetos, PDVSA.", "Project-by-project royalty and integrated-tax rates, still unpublished.": "As alíquotas de royalty e de imposto integrado por projeto, ainda não publicadas.", "The living timeline · 2026": "A linha do tempo viva · 2026", "Dragon gas field": "Campo de gás Dragon", "Upstream · offshore gas": "Upstream · gás offshore", "Offshore gas licensed to Shell, designed to reach market through Trinidad and Tobago. The gas leg of the 2030 outlook.": "Gás offshore licenciado à Shell, pensado para chegar ao mercado via Trinidad e Tobago. A vertente de gás da perspectiva para 2030.", "Shell, under licence; Trinidad and Tobago as the export route.": "Shell, sob licença; Trinidad e Tobago como rota de exportação.", "Timing of first gas and the licence terms that govern it.": "O prazo do primeiro gás e os termos da licença que o regem.", "Platform · regional hub": "Plataforma · centro regional", "Off the EU non-cooperative list since 9 October 2026, after the new economic-substance law. The natural base for Venezuela-facing structures, and the 1849 transit corridor revisited in Issue No. 3.": "Fora da lista de jurisdições não cooperantes da UE desde 9 de outubro de 2026, após a nova lei de substância econômica. A base natural para estruturas voltadas à Venezuela e o corredor de trânsito de 1849 revisitado na Edição nº 3.", "Holding, services, trading and procurement structures, if they carry real substance.": "Estruturas de holding, serviços, trading e compras, desde que tenham substância real.", "A Gold Rush, Read Twice: California 1849, Venezuela 2026": "A Gold Rush, Read Twice: California 1849, Venezuela 2026", "Dragon gas": "Gás Dragon", "Jose": "Jose", "Paraguaná": "Paraguaná", "El Palito": "El Palito", "CARIBBEAN SEA": "MAR DO CARIBE", "ATLANTIC OCEAN": "OCEANO ATLÂNTICO", "GULF OF VENEZUELA": "GOLFO DA VENEZUELA", "G. OF PARIA": "G. DE PARIA", "CAPITAL DISTRICT": "DISTRITO CAPITAL", "Language": "Idioma", "English": "English", "Português": "Português", "Reference desk · LOH 2026 P&L model": "Referências · Modelo de DRE da LOH 2026", "Majors": "Grandes petroleiras", "close 23 Oct 2026": "fechamento de 23 out. 2026", "Results calendar": "Calendário de resultados", "Q3 results": "Resultados do 3º tri", "confirmed": "confirmado", "expected": "previsto", "27 OCT": "27 OUT", "29 OCT": "29 OUT", "30 OCT": "30 OUT", "5 NOV": "5 NOV"};
+(function(){
+  var L='';try{L=localStorage.getItem('eg-lang')||'';}catch(e){}
+  if(L!=='en'&&L!=='pt')L=/^pt/i.test(navigator.language||'')?'pt':'en';
+  window.EG_LANG=L; document.documentElement.lang=L==='pt'?'pt-BR':'en';
+  var PAT=[[/^(\d+) of (\d+)$/,function(m){return m[1]+' de '+m[2];}],
+           [/^\u2190 Panama \u00b7 ([\d,]+) km$/,function(m){return '\u2190 Panam\u00e1 \u00b7 '+m[1].replace(/,/g,'.')+' km';}]];
+  window.EG_T=function(s){
+    if(window.EG_LANG!=='pt'||s==null)return s; var k=String(s), v=EG_PT[k]; if(v!=null)return v;
+    var t=k.trim(); if(t!==k){v=EG_PT[t]; if(v!=null)return k.replace(t,v);}
+    for(var i=0;i<PAT.length;i++){var m=t.match(PAT[i][0]); if(m)return k.replace(t,PAT[i][1](m));}
+    return s;
+  };
+})();
+</script>
+<script>
+(function(){
+  var btns=document.querySelectorAll('.filters button'), rows=document.querySelectorAll('.arch tbody tr');
+  btns.forEach(function(b){ b.addEventListener('click',function(){
+    var f=b.getAttribute('data-f');
+    btns.forEach(function(x){x.setAttribute('aria-pressed', x===b?'true':'false');});
+    rows.forEach(function(r){ r.hidden = !(f==='all' || r.getAttribute('data-kind')===f); });
+  });});
+  /* living timeline */
+  var tabs=[].slice.call(document.querySelectorAll('.rail .stop')), rail=document.querySelector('.rail');
+  var count=document.getElementById('tl-count');
+  function show(i,focus){
+    i=Math.max(0,Math.min(tabs.length-1,i));
+    tabs.forEach(function(t,j){
+      var on=j===i; t.setAttribute('aria-selected',on?'true':'false'); t.tabIndex=on?0:-1;
+      document.getElementById(t.getAttribute('aria-controls')).hidden=!on;
+    });
+    var a=tabs[0], b=tabs[i], base=a.offsetLeft+a.offsetWidth/2;
+    rail.style.setProperty('--prog', (b.offsetLeft+b.offsetWidth/2-base)+'px');
+    count.textContent=(i+1)+' of '+tabs.length;
+    if(focus) tabs[i].focus();
+    var wrap=rail.parentNode; wrap.scrollLeft=Math.max(0,b.offsetLeft+b.offsetWidth/2-wrap.clientWidth/2);
+    cur=i;
+  }
+  var cur=0;
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){show(i);});
+    t.addEventListener('keydown',function(e){
+      if(e.key==='ArrowRight'){e.preventDefault();show(i+1,true);} else if(e.key==='ArrowLeft'){e.preventDefault();show(i-1,true);}
+      else if(e.key==='Home'){e.preventDefault();show(0,true);} else if(e.key==='End'){e.preventDefault();show(tabs.length-1,true);}
+    });
+  });
+  document.getElementById('tl-prev').addEventListener('click',function(){show(cur-1);});
+  document.getElementById('tl-next').addEventListener('click',function(){show(cur+1);});
+  var h=(location.hash||'').slice(1), start=0;
+  tabs.forEach(function(t,i){ if(t.id==='tab-'+h) start=i; });
+  show(start);
+  if(start>0){ document.getElementById('year').scrollIntoView(); }
+  window.addEventListener('resize',function(){show(cur);});
+  /* edition links jump to the archive row */
+  document.querySelectorAll('.read a[data-ed]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var title=a.getAttribute('data-ed'), row=null;
+      rows.forEach(function(r){ var h3=r.querySelector('h3'); if(h3 && (h3.getAttribute('data-t')||h3.textContent.trim())===title) row=r; });
+      if(!row) return;
+      e.preventDefault();
+      document.getElementById('f-all').click();
+      row.scrollIntoView({block:'center',behavior:'smooth'});
+      row.classList.add('flash'); setTimeout(function(){row.classList.remove('flash');},1600);
+    });
+  });
+
+  /* ---- EG map engine: region-agnostic. Reads one chapter file (bbox + lon/lat layers). ----
+     Equirectangular, longitude scaled by cos(mid-latitude). Land is fill-only; borders,
+     coast, rivers and roads are separate line layers. Nothing is clipped: the SVG viewBox
+     simply frames the bbox. */
+  var EGMap=(function(){
+    var NS='http://www.w3.org/2000/svg';
+    function el(tag,attrs,parent){var e=document.createElementNS(NS,tag);for(var k in attrs)e.setAttribute(k,attrs[k]);if(parent)parent.appendChild(e);return e;}
+    function make(data,K){
+      var b=data.bbox,W=b[0],S=b[1],E=b[2],N=b[3],kx=Math.cos((S+N)/2*Math.PI/180);
+      function x(lon){return (lon-W)*kx*K;} function y(lat){return (N-lat)*K;}
+      return {x:x,y:y,w:(E-W)*kx*K,h:(N-S)*K,
+        path:function(flat,close){var d='';for(var i=0;i<flat.length;i+=2){d+=(i?'L':'M')+x(flat[i]).toFixed(1)+' '+y(flat[i+1]).toFixed(1);}return close?d+'Z':d;},
+        inside:function(lon,lat){return lon>=W&&lon<=E&&lat>=S&&lat<=N;}};
+    }
+    function render(svg,data,opt){
+      opt=opt||{}; var K=opt.k||64, P=make(data,K);
+      while(svg.firstChild)svg.removeChild(svg.firstChild);
+      var V=opt.view||{x:0,y:0,w:P.w,h:P.h}; P.view=V;
+      svg.setAttribute('viewBox',V.x.toFixed(1)+' '+V.y.toFixed(1)+' '+V.w.toFixed(1)+' '+V.h.toFixed(1));
+      var px=(svg.clientWidth||V.w)/V.w, fs=function(cssPx){return cssPx/px;};
+      var g=function(cls){return el('g',{'class':cls},svg);};
+      el('rect',{'class':'m-sea',x:0,y:0,width:P.w,height:P.h},svg);
+      var gl=g('m-land-layer');
+      data.land.forEach(function(c){c.p.forEach(function(poly){
+        var d=poly.map(function(r){return P.path(r,true);}).join('');
+        el('path',{'class':c.focus?'m-focus':'m-land',d:d,'fill-rule':'evenodd'},gl);});});
+      var gk=g('m-lakes');
+      data.lakes.forEach(function(l){l.p.forEach(function(poly){el('path',{'class':'m-lake',d:poly.map(function(r){return P.path(r,true);}).join(''),'fill-rule':'evenodd'},gk);});});
+      function lines(arr,cls){var gg=g(cls),d='';arr.forEach(function(r){d+=P.path(r,false);});el('path',{d:d,'vector-effect':'non-scaling-stroke'},gg);return gg;}
+      lines(data.roads,'m-road');
+      var gr=g('m-river');
+      data.rivers.forEach(function(rv){rv.l.forEach(function(r){el('path',{d:P.path(r,false),'vector-effect':'non-scaling-stroke','class':rv.rank<=4?'major':''},gr);});});
+      lines(data.admin1,'m-a1'); lines(data.coast,'m-coast'); lines(data.admin0,'m-a0');
+      var over=g('m-over'); if(opt.overlay)opt.overlay(over,P,el);
+      /* labels with greedy collision avoidance */
+      var boxes=[], lab=g('m-labels');
+      function free(bx){if(bx.x<V.x+2||bx.y<V.y+2||bx.x+bx.w>V.x+V.w-2||bx.y+bx.h>V.y+V.h-2)return false;for(var i=0;i<boxes.length;i++){var o=boxes[i];if(bx.x<o.x+o.w&&bx.x+bx.w>o.x&&bx.y<o.y+o.h&&bx.y+bx.h>o.y)return false;}return true;}
+      function text(t,X,Y,cls,size,anchor,rot,spacing){
+        t=window.EG_T?EG_T(t):t;
+        var w=t.length*size*(spacing?0.75:(t===t.toUpperCase()?0.68:0.56)), h=size*1.1, ax=anchor==='middle'?X-w/2:anchor==='end'?X-w:X;
+        var bx={x:ax-2,y:Y-h+2,w:w+4,h:h};
+        if(!rot&&!free(bx))return null; if(!rot)boxes.push(bx);
+        var a={'class':cls,x:X.toFixed(1),y:Y.toFixed(1),'font-size':size.toFixed(1),'text-anchor':anchor||'start'};
+        if(rot)a.transform='rotate('+rot.toFixed(1)+' '+X.toFixed(1)+' '+Y.toFixed(1)+')';
+        var e=el('text',a,lab);e.textContent=t;return e;
+      }
+      function reserve(X,Y,r){boxes.push({x:X-r,y:Y-r,w:2*r,h:2*r});}
+      (opt.reserve||[]).forEach(function(p){if(P.inside(p.lon,p.lat))reserve(P.x(p.lon),P.y(p.lat),fs(14));});
+      if(opt.beforeLabels)opt.beforeLabels(text,P,fs,boxes);
+      data.marine.filter(function(m){return !(opt.skipMarine||[]).includes(m.name);}).forEach(function(m){text(m.name.toUpperCase(),P.x(m.lon),P.y(m.lat),'l-sea',fs(m.rank<=1?12:10),'middle',0,m.rank<=1);});
+      var cities=data.places.filter(function(c){return c.rank<=(opt.cityRank==null?6:opt.cityRank)&&(c.a3===data.focus||c.rank<=4);});
+      cities.forEach(function(c){var X=P.x(c.lon),Y=P.y(c.lat),s=fs(c.rank<=1?12.5:11);
+        if(!free({x:X-3,y:Y-3,w:6,h:6}))return;
+        var t=text(c.name,X+fs(6),Y+s*0.35,c.rank<=1?'l-city cap':'l-city',s,'start')||text(c.name,X-fs(6),Y+s*0.35,c.rank<=1?'l-city cap':'l-city',s,'end');
+        if(t){el('circle',{'class':c.cap?'c-dot cap':'c-dot',cx:X.toFixed(1),cy:Y.toFixed(1),r:fs(c.rank<=1?3.6:2.6)},lab);boxes.push({x:X-3,y:Y-3,w:6,h:6});}
+      });
+      data.states.forEach(function(s){text(s.name.toUpperCase(),P.x(s.lon),P.y(s.lat),'l-state',fs(9.5),'middle',0,true);});
+      data.lakes.filter(function(l){return l.rank<=9;}).forEach(function(l){var r=l.p[0][0],sx=0,sy=0,n=r.length/2;for(var i=0;i<r.length;i+=2){sx+=r[i];sy+=r[i+1];}
+        text('L. '+l.name,P.x(sx/n),P.y(sy/n)+fs(16),'l-water',fs(10),'middle');});
+      var seen={};
+      data.rivers.filter(function(rv){return rv.rank<=7;}).forEach(function(rv){
+        var best=null;rv.l.forEach(function(r){if(!best||r.length>best.length)best=r;});
+        if(seen[rv.name]&&seen[rv.name]>=best.length)return;
+        var lenSum=0,pts=[];for(var i=0;i+3<best.length;i+=2){var x1=P.x(best[i]),y1=P.y(best[i+1]),x2=P.x(best[i+2]),y2=P.y(best[i+3]);if(P.inside(best[i],best[i+1])&&x1>V.x&&x1<V.x+V.w&&y1>V.y&&y1<V.y+V.h)pts.push([x1,y1,x2,y2]);}
+        if(pts.length<3)return; var m=pts[Math.floor(pts.length/2)],ang=Math.atan2(m[3]-m[1],m[2]-m[0])*180/Math.PI;if(ang>90)ang-=180;if(ang<-90)ang+=180;
+        var s=fs(rv.rank<=4?11:9.5),w=rv.name.length*s*0.56,bx={x:m[0]-w/2,y:m[1]-s,w:w,h:s*1.2};
+        if(!free(bx))return; boxes.push(bx); seen[rv.name]=best.length;
+        text(rv.name,m[0],m[1]-fs(3),'l-river',s,'middle',ang);
+      });
+      if(opt.after)opt.after(svg,P,el,fs);
+      return P;
+    }
+    return {render:render};
+  })();
+
+  /* map front */
+  var SITES={
+    belt:{n:'Orinoco Oil Belt',k:'Upstream · extra-heavy crude',l:'up',
+      p:'Four divisions, Boyacá, Junín, Ayacucho and Carabobo, hold most of Venezuela’s reserves. Issue No. 1 found four Orinoco blocks account for about 91% of the reserves of the country’s seven largest fields.',
+      w:'PDVSA mixed companies, with PDVSA holding at least 50.1%; Chevron through its joint ventures.',
+      o:'Which blocks get project-specific fiscal terms first.',
+      r:[['Chevron Bets Bigger','Issue No. 1 · Chevron Bets Bigger'],['#desk','Reference desk · The supply chain in four eras']]},
+    ayacucho:{n:'Ayacucho',k:'Upstream · Orinoco division',l:'up',
+      p:'Home of Petropiar, one of Chevron’s joint ventures with PDVSA, and of the Ayacucho 2 block, the subject of Continental Resources’ MoU with PDVSA on 16 September 2026.',
+      w:'PDVSA, Chevron (Petropiar), Continental Resources (MoU).',
+      o:'The signed MoU text is not public, and its entry into force depends on an OFAC licence.',
+      r:[['Anatomy of an Oil MoU','Special · Anatomy of an Oil MoU'],['Chevron Bets Bigger','Issue No. 1 · Chevron Bets Bigger']]},
+    carabobo:{n:'Carabobo',k:'Upstream · Orinoco division',l:'up',
+      p:'The greenfield growth stream in the Gazette’s LOH 2026 P&L model, priced at the July regulation’s 34% greenfield income tax with seven-year accelerated depreciation. Chevron’s Petroindependencia operates here.',
+      w:'PDVSA, Chevron (Petroindependencia).',
+      o:'No project-specific rate determination published in the Gaceta as of Issue No. 2.',
+      r:[['The Rate Arrived on 7 July','Issue No. 2 · The Rate Arrived on 7 July'],['#desk','Reference desk · LOH 2026 P&L model']]},
+    maracaibo:{n:'Lake Maracaibo basin',k:'Upstream · conventional crude',l:'up',
+      p:'The country’s historic producing heartland. Chevron’s Boscán field operations date to the 1990s; its FY2000 Form 10-K was the first to disclose Venezuela to investors, including a 27% interest in the LL-652 field.',
+      w:'PDVSA, Chevron (Petroboscán).',
+      o:'Whether Venezuela appears in Chevron’s 1997–1999 filings is still being checked.',
+      r:[['Chevron Bets Bigger','Issue No. 1 · Chevron Bets Bigger'],['#desk','Reference desk · The supply chain in four eras']]},
+    jose:{n:'Jose complex',k:'Refining & export · Anzoátegui coast',l:'ex',
+      p:'Upgraders and the main export terminal for Orinoco crude. Where heavy barrels from the belt become a tradable blend.',
+      w:'PDVSA and its mixed companies; traders and offtakers under licence.',
+      o:'Which counterparties can lift cargoes under the current general licences.',
+      r:[["Who's Operating in Venezuela","Briefing · Who's Operating in Venezuela"],['#desk','Reference desk · OFAC licensing cheat sheet']]},
+    paraguana:{n:'Paraguaná Refining Center',k:'Refining · Falcón',l:'ex',
+      p:'Amuay and Cardón, the largest refining complex in the country and the anchor of the downstream chain in every era the Gazette has mapped.',
+      w:'PDVSA.',
+      o:'When Cardón restarts after the explosion that halted it on 7 October 2026.',
+      r:[['#desk','Reference desk · The supply chain in four eras']]},
+    elpalito:{n:'El Palito and Puerto Cabello',k:'Refining & export · Carabobo state',l:'ex',
+      p:'Refinery and port on the central coast, in the state whose Petroleum Chamber chapter is driving the national-added-value debate.',
+      w:'PDVSA; local suppliers and service companies.',
+      o:'How national-added-value rules will be measured and enforced.',
+      r:[["National Added Value for Venezuela's Energy Sector","Special · National Added Value FAQ"],['The Procurement Signal','Issue No. 4 · The Procurement Signal']]},
+    caracas:{n:'Caracas',k:'Policy · where the rules are published',l:'po',
+      p:'The Ministry, PDVSA headquarters and the Gaceta Oficial: the January reform, the July regulation and every project determination are published here. Chevron’s CEO gave his September interview from Caracas.',
+      w:'National Assembly, Ministry of Hydrocarbons, PDVSA.',
+      o:'Project-by-project royalty and integrated-tax rates, still unpublished.',
+      r:[['The Rate Arrived on 7 July','Issue No. 2 · The Rate Arrived on 7 July'],['#year','The living timeline · 2026']]},
+    dragon:{n:'Dragon gas field',k:'Upstream · offshore gas',l:'up',
+      p:'Offshore gas licensed to Shell, designed to reach market through Trinidad and Tobago. The gas leg of the 2030 outlook.',
+      w:'Shell, under licence; Trinidad and Tobago as the export route.',
+      o:'Timing of first gas and the licence terms that govern it.',
+      r:[['#desk','Reference desk · The supply chain in four eras']]},
+    panama:{n:'Panama',k:'Platform · regional hub',l:'pl',
+      p:'Off the EU non-cooperative list since 9 October 2026, after the new economic-substance law. The natural base for Venezuela-facing structures, and the 1849 transit corridor revisited in Issue No. 3.',
+      w:'Holding, services, trading and procurement structures, if they carry real substance.',
+      o:'Venezuela’s own EU and FATF standing, being verified for the next brief.',
+      r:[['A Gold Rush, Read Twice: California 1849, Venezuela 2026','Issue No. 3 · A Gold Rush, Read Twice'],['#production','In production · Panama, Cleared. Now Prove It.']]}
+  };
+  var LAYER={up:'Upstream',ex:'Refining & export',po:'Policy',pl:'Platform'};
+  var order=['belt','ayacucho','carabobo','maracaibo','jose','paraguana','elpalito','caracas','dragon','panama'];
+  /* real positions, lon/lat; belt divisions are placed on the Orinoco's north bank from the data */
+  var POS={maracaibo:[-71.6,9.75],paraguana:[-70.22,11.74],elpalito:[-68.12,10.48],caracas:[-66.9,10.49],jose:[-64.84,10.09],dragon:[-62.05,10.98],panama:[-79.52,8.98],
+           belt:[-65.6,null],ayacucho:[-64.25,null],carabobo:[-63.0,null]};
+  var SHORT={belt:'Orinoco Belt',ayacucho:'Ayacucho',carabobo:'Carabobo',maracaibo:'Lake Maracaibo basin',jose:'Jose',paraguana:'Paraguaná',elpalito:'El Palito',caracas:'Caracas',dragon:'Dragon gas',panama:'Panama'};
+  var svg=document.getElementById('egmap'), panel=document.getElementById('site-panel'), picker=document.querySelector('.picker');
+  var layer='all', curSite=null, MAP=null, pins=[];
+  function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;');}
+  function orinocoBank(data){
+    var pts=[];data.rivers.forEach(function(rv){if(rv.name!=='Orinoco')return;rv.l.forEach(function(r){for(var i=0;i<r.length;i+=2){if(r[i]>-67.8&&r[i]<-62.35&&r[i+1]>7.3&&r[i+1]<8.75)pts.push([r[i],r[i+1]]);}});});
+    var bins={};pts.forEach(function(p){var k=Math.round(p[0]*4)/4;(bins[k]=bins[k]||[]).push(p[1]);});
+    return Object.keys(bins).map(Number).sort(function(a,b){return a-b;}).map(function(k){var v=bins[k].sort();return [k,v[Math.floor(v.length/2)]];});
+  }
+  function bankLat(bank,lon){for(var i=1;i<bank.length;i++){if(bank[i][0]>=lon){var a=bank[i-1],b=bank[i],t=(lon-a[0])/((b[0]-a[0])||1);return a[1]+t*(b[1]-a[1]);}}return bank.length?bank[bank.length-1][1]:8;}
+  function hav(a,b){var R=6371,r=Math.PI/180,dLa=(b[1]-a[1])*r,dLo=(b[0]-a[0])*r,h=Math.sin(dLa/2)*Math.sin(dLa/2)+Math.cos(a[1]*r)*Math.cos(b[1]*r)*Math.sin(dLo/2)*Math.sin(dLo/2);return 2*R*Math.asin(Math.sqrt(h));}
+  function draw(){
+    if(!MAP)return;
+    var bank=orinocoBank(MAP);
+    ['belt','ayacucho','carabobo'].forEach(function(k){POS[k][1]=bankLat(bank,POS[k][0])+0.42;});
+    var labelEls={}, offTxt={};
+    LASTP=EGMap.render(svg,MAP,{k:64,view:VIEW||undefined,cityRank:Math.min(7,(svg.clientWidth<520?3:6)+zl()),skipMarine:['Lake Maracaibo'],
+      reserve:order.map(function(k){return {lon:POS[k][0],lat:POS[k][1]};}),
+      overlay:function(g,P,el){
+        if(bank.length<4)return;
+        var top=bank.map(function(p){return P.x(p[0]).toFixed(1)+' '+P.y(p[1]+0.88).toFixed(1);});
+        var bot=bank.slice().reverse().map(function(p){return P.x(p[0]).toFixed(1)+' '+P.y(p[1]+0.06).toFixed(1);});
+        el('path',{'class':'belt',d:'M'+top.join('L')+'L'+bot.join('L')+'Z','vector-effect':'non-scaling-stroke'},g);
+      },
+      beforeLabels:function(text,P,fs,boxes){
+        order.forEach(function(k){var p=POS[k];if(P.inside(p[0],p[1]))return;var V=P.view,s=fs(12),Y2=Math.min(Math.max(P.y(p[1]),V.y+fs(20)),V.y+V.h-fs(20));offTxt[k]=EG_T('\u2190 '+SHORT[k]+' \u00b7 '+(Math.round(hav(p,POS.caracas)/10)*10).toLocaleString('en-US')+' km');boxes.push({x:V.x,y:Y2-s-fs(2),w:offTxt[k].length*s*0.56+fs(24),h:s*1.9+fs(4)});});
+        (curSite?[curSite].concat(order.filter(function(k){return k!==curSite;})):order).forEach(function(k){
+          var p=POS[k]; if(!P.inside(p[0],p[1]))return;
+          var X=P.x(p[0]),Y=P.y(p[1]),s=fs(12.5),o=fs(17),t=null;
+          var tries=[[X+o,Y+s*0.35,'start'],[X-o,Y+s*0.35,'end'],[X,Y-fs(19),'middle'],[X,Y+fs(19)+s*0.8,'middle']];
+          for(var i=0;i<tries.length&&!t;i++)t=text(SHORT[k],tries[i][0],tries[i][1],'l-pin',s,tries[i][2]);
+          labelEls[k]=t;
+        });
+      },
+      after:function(svg,P,el,fs){
+        var gp=el('g',{'class':'pins'},svg);
+        order.forEach(function(k){
+          var p=POS[k],g=el('g',{'class':'pin','data-site':k,'data-layer':SITES[k].l,role:'button',tabindex:'0','aria-label':SITES[k].n},gp);
+          if(P.inside(p[0],p[1])){
+            var X=P.x(p[0]),Y=P.y(p[1]);
+            el('circle',{'class':'halo',cx:X,cy:Y,r:fs(15)},g); el('circle',{'class':'mk',cx:X,cy:Y,r:fs(6.5)},g);
+            if(labelEls[k])g.appendChild(labelEls[k]);
+          } else {
+            var V=P.view, Y2=Math.min(Math.max(P.y(p[1]),V.y+fs(20)),V.y+V.h-fs(20)), s=fs(12), txt=offTxt[k], w=txt.length*s*0.56+fs(16);
+            el('rect',{'class':'off',x:V.x+fs(6),y:Y2-s,width:w,height:s*1.9},g);
+            var t=el('text',{'class':'l-off',x:V.x+fs(14),y:Y2+s*0.35,'font-size':s},g); t.textContent=txt;
+          }
+          g.addEventListener('click',function(){if(DRAG.moved)return;pick(k);});
+          g.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();pick(k);}});
+        });
+        pins=[].slice.call(gp.querySelectorAll('.pin'));
+      }});
+    FULL={w:LASTP.w,h:LASTP.h}; applyLayer(); if(curSite)mark(curSite); drawMini();
+  }
+  order.forEach(function(k){
+    var b=document.createElement('button'); b.type='button'; b.id='pick-'+k; b.textContent=SITES[k].n; b.setAttribute('data-site',k);
+    b.addEventListener('click',function(){pick(k);}); picker.appendChild(b);
+  });
+  function visible(){ return order.filter(function(k){return layer==='all'||SITES[k].l===layer;}); }
+  function mark(k){
+    pins.forEach(function(p){p.classList.toggle('on',p.getAttribute('data-site')===k);});
+    picker.querySelectorAll('button').forEach(function(b){b.setAttribute('aria-current',b.getAttribute('data-site')===k?'true':'false');});
+  }
+  function pick(k){
+    var s=SITES[k], prev=curSite; curSite=k;
+    if(LASTP&&VIEW&&LASTP.inside(POS[k][0],POS[k][1])){var X=LASTP.x(POS[k][0]),Y=LASTP.y(POS[k][1]);if(X<VIEW.x||X>VIEW.x+VIEW.w||Y<VIEW.y||Y>VIEW.y+VIEW.h){setView({x:X-VIEW.w/2,y:Y-VIEW.h/2,w:VIEW.w,h:VIEW.h},false,true);}}
+    if(prev&&prev!==k&&MAP)draw(); else mark(k);
+    var links=s.r.map(function(x){
+      return x[0].charAt(0)==='#' ? '<a href="'+x[0]+'">'+esc(x[1])+'</a>' : '<a href="#archive" data-ed="'+esc(x[0]).replace(/"/g,'&quot;')+'">'+esc(x[1])+'</a>';
+    }).join('');
+    panel.setAttribute('data-layer',s.l);
+    panel.innerHTML='<div class="when caps">'+esc(LAYER[s.l])+' · '+esc(s.k.split(' · ')[1]||'')+'</div>'+
+      '<h2>'+esc(s.n)+'</h2><p>'+esc(s.p)+'</p>'+
+      '<div class="who2"><b>Players:</b> '+esc(s.w)+'</div>'+
+      '<div class="open"><b class="caps">Still open</b><span>'+esc(s.o)+'</span></div>'+
+      '<div class="read"><span class="caps">Read it in</span>'+links+'</div>'+
+      '<div class="nav2"><button type="button" data-step="-1">← Previous site</button><button type="button" data-step="1">Next site →</button></div>';
+  }
+  panel.addEventListener('click',function(e){
+    var st=e.target.closest('[data-step]');
+    if(st){ var v=visible(), i=v.indexOf(curSite); if(i<0)i=0; pick(v[(i+Number(st.getAttribute('data-step'))+v.length)%v.length]); return; }
+    var a=e.target.closest('a[data-ed]'); if(!a) return;
+    var title=a.getAttribute('data-ed'), row=null;
+    rows.forEach(function(r){ var h3=r.querySelector('h3'); if(h3&&(h3.getAttribute('data-t')||h3.textContent.trim())===title) row=r; });
+    if(!row) return;
+    e.preventDefault(); document.getElementById('f-all').click();
+    row.scrollIntoView({block:'center',behavior:'smooth'});
+    row.classList.add('flash'); setTimeout(function(){row.classList.remove('flash');},1600);
+  });
+  function applyLayer(){
+    pins.forEach(function(p){p.classList.toggle('dim',!(layer==='all'||p.getAttribute('data-layer')===layer));});
+    picker.querySelectorAll('button').forEach(function(x){x.classList.toggle('dim',!(layer==='all'||SITES[x.getAttribute('data-site')].l===layer));});
+  }
+  var lbtns=document.querySelectorAll('.layers button');
+  lbtns.forEach(function(b){ b.addEventListener('click',function(){
+    layer=b.getAttribute('data-l');
+    lbtns.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});
+    applyLayer(); var v=visible(); if(v.indexOf(curSite)<0) pick(v[0]);
+  });});
+  var hs=(location.hash||'').slice(1);
+  pick(SITES[hs]?hs:'belt');
+  fetch('maps/venezuela.json').then(function(r){if(!r.ok)throw new Error(r.status);return r.json();}).then(function(d){
+    MAP=d; draw(); var note=document.getElementById('map-status'); if(note)note.hidden=true;
+  }).catch(function(){var note=document.getElementById('map-status'); if(note)note.textContent='The map could not load. The sites are listed below.';});
+  /* zoom and pan */
+  var VIEW=null, FULL=null, LASTP=null, DRAG={moved:false}, rdT, hintT;
+  function zl(){if(!FULL||!VIEW)return 0;var z=FULL.w/VIEW.w;return z>=3.5?2:z>=1.8?1:0;}
+  function fullv(){return {x:0,y:0,w:FULL.w,h:FULL.h};}
+  function clampV(v){var w=Math.min(FULL.w,Math.max(FULL.w/8,v.w)),h=w*FULL.h/FULL.w;return {x:Math.min(Math.max(0,v.x),FULL.w-w),y:Math.min(Math.max(0,v.y),FULL.h-h),w:w,h:h};}
+  function setView(v,now,silent){
+    if(!FULL)return; VIEW=clampV(v);
+    svg.setAttribute('viewBox',[VIEW.x,VIEW.y,VIEW.w,VIEW.h].map(function(n){return n.toFixed(1);}).join(' '));
+    var z=FULL.w/VIEW.w; svg.classList.toggle('zoomed',z>1.01);
+    document.getElementById('z-level').textContent=(Math.round(z*10)/10)+'×';
+    document.getElementById('z-out').disabled=false; document.getElementById('z-reset').hidden=z<=1.01;
+    if(silent)return; clearTimeout(rdT); if(now)draw(); else rdT=setTimeout(draw,140);
+  }
+  function curV(){return VIEW||fullv();}
+  function zoomAt(f,sx,sy){var v=curV(),nw=Math.min(FULL.w,v.w/f),r=nw/v.w;setView({x:sx-(sx-v.x)*r,y:sy-(sy-v.y)*r,w:nw,h:v.h*r});}
+  function toSvg(cx,cy){var b=svg.getBoundingClientRect(),v=curV();return [v.x+(cx-b.left)/b.width*v.w,v.y+(cy-b.top)/b.height*v.h];}
+  function zc(f){if(!FULL)return;var v=curV();zoomAt(f,v.x+v.w/2,v.y+v.h/2);}
+  document.getElementById('z-in').addEventListener('click',function(){zc(1.6);});
+  document.getElementById('z-out').addEventListener('click',function(){zc(1/1.6);});
+  document.getElementById('z-reset').addEventListener('click',function(){if(FULL)setView(fullv(),true);});
+  function hint(){var h=document.getElementById('z-hint');h.hidden=false;clearTimeout(hintT);hintT=setTimeout(function(){h.hidden=true;},1400);}
+  svg.addEventListener('wheel',function(e){
+    if(!FULL)return; if(!(e.ctrlKey||e.metaKey)){hint();return;}
+    e.preventDefault(); var p=toSvg(e.clientX,e.clientY); zoomAt(Math.exp(-e.deltaY*0.0025),p[0],p[1]);
+  },{passive:false});
+  svg.addEventListener('dblclick',function(e){if(!FULL)return;e.preventDefault();var p=toSvg(e.clientX,e.clientY);zoomAt(e.shiftKey?0.5:2,p[0],p[1]);});
+  var ptrs={}, start=null, pinch=null;
+  function n(){return Object.keys(ptrs).length;}
+  function two(){var k=Object.keys(ptrs),a=ptrs[k[0]],b=ptrs[k[1]];return {d:Math.hypot(a.x-b.x,a.y-b.y),mx:(a.x+b.x)/2,my:(a.y+b.y)/2};}
+  svg.addEventListener('pointerdown',function(e){
+    if(!FULL)return; ptrs[e.pointerId]={x:e.clientX,y:e.clientY}; DRAG.moved=false;
+    if(n()===1)start={x:e.clientX,y:e.clientY,v:curV()};
+    if(n()===2){var t=two();pinch={d:t.d||1,v:curV(),m:toSvg(t.mx,t.my)};start=null;}
+  });
+  svg.addEventListener('pointermove',function(e){
+    if(!ptrs[e.pointerId])return; ptrs[e.pointerId]={x:e.clientX,y:e.clientY};
+    var b=svg.getBoundingClientRect();
+    if(n()===2&&pinch){var t=two(),nw=Math.min(FULL.w,pinch.v.w/(t.d/pinch.d)),nh=nw*FULL.h/FULL.w;DRAG.moved=true;
+      setView({x:pinch.m[0]-(t.mx-b.left)/b.width*nw,y:pinch.m[1]-(t.my-b.top)/b.height*nh,w:nw,h:nh});return;}
+    if(n()===1&&start){var dx=e.clientX-start.x,dy=e.clientY-start.y;
+      if(!DRAG.moved&&Math.hypot(dx,dy)<6)return; if(start.v.w>=FULL.w-1)return;
+      if(!DRAG.moved){DRAG.moved=true;try{svg.setPointerCapture(e.pointerId);}catch(_){}}
+      setView({x:start.v.x-dx/b.width*start.v.w,y:start.v.y-dy/b.height*start.v.h,w:start.v.w,h:start.v.h});}
+  });
+  function up(e){delete ptrs[e.pointerId]; if(n()<2)pinch=null; var k=Object.keys(ptrs); start=k.length===1?{x:ptrs[k[0]].x,y:ptrs[k[0]].y,v:curV()}:null;}
+  svg.addEventListener('pointerup',up); svg.addEventListener('pointercancel',up);
+  svg.addEventListener('keydown',function(e){if(!FULL)return;var v=curV(),st=v.w*0.15;
+    if(e.key==='+'||e.key==='='){zc(1.6);e.preventDefault();} else if(e.key==='-'){zc(1/1.6);e.preventDefault();}
+    else if(e.key==='ArrowLeft'&&e.target===svg){setView({x:v.x-st,y:v.y,w:v.w,h:v.h});e.preventDefault();}
+    else if(e.key==='ArrowRight'&&e.target===svg){setView({x:v.x+st,y:v.y,w:v.w,h:v.h});e.preventDefault();}
+    else if(e.key==='ArrowUp'&&e.target===svg){setView({x:v.x,y:v.y-st,w:v.w,h:v.h});e.preventDefault();}
+    else if(e.key==='ArrowDown'&&e.target===svg){setView({x:v.x,y:v.y+st,w:v.w,h:v.h});e.preventDefault();}});
+  var rz; window.addEventListener('resize',function(){clearTimeout(rz);rz=setTimeout(draw,150);});
+
+  /* fiscal take calculator */
+  var $=function(id){return document.getElementById(id);};
+  var dec=function(x){return window.EG_LANG==='pt'?String(x).replace('.',','):String(x);};
+  var money=function(v){return dec((v<0?'−$':'$')+Math.abs(v).toFixed(2));};
+  var pct=function(v){return isFinite(v)?Math.round(v*100)+'%':EG_T('n/a');};
+  var ins=['c-price','c-agg','c-tax','c-opex','c-capex','c-stake','c-ded'];
+  var presetBtns=document.querySelectorAll('.presets button');
+  function calc(){
+    var P=+$('c-price').value, ag=$('c-agg').value/100, t=$('c-tax').value/100, ox=+$('c-opex').value, cx=+$('c-capex').value, s=$('c-stake').value/100, ded=$('c-ded').checked;
+    $('o-price').textContent='$'+P+'/bbl'; $('o-agg').textContent=Math.round(ag*100)+'%'; $('o-tax').textContent=Math.round(t*100)+'%';
+    $('o-opex').textContent='$'+ox+'/bbl'; $('o-capex').textContent='$'+cx+'/bbl'; $('o-stake').textContent=dec((s*100).toFixed(1).replace(/\.0$/,''))+'%';
+    var C=ox+cx, A=P*ag, pre=P-C, taxable=P-C-(ded?A:0), I=Math.max(0,taxable)*t, net=P-A-C-I;
+    var pdv=net>0?net*(1-s):net*(1-s), inv=net*s;
+    var fiscal=pre>0?(A+I)/pre:NaN, state=pre>0?(A+I+Math.max(net,0)*(1-s))/pre:NaN;
+    var be;
+    if(ded){ be=ag<1?C/(1-ag):Infinity; } else { var d=1-ag-t; be=d>0?C*(1-t)/d:Infinity; if(isFinite(be)&&be<C/(1-ag)) be=C/(1-ag); }
+    $('r-state').textContent=pre>0&&net>=0?pct(state):EG_T('n/a');
+    $('r-inv').textContent=money(inv);
+    $('t-price').textContent='$'+P; $('t-cost').textContent=money(C); $('t-agg').textContent=money(A); $('t-tax').textContent=money(I);
+    $('t-pdv').textContent=money(pdv); $('t-inv').textContent=money(inv);
+    $('r-fiscal').textContent=pre>0?pct(fiscal):EG_T('n/a'); $('r-be').textContent=isFinite(be)?dec('$'+be.toFixed(1)):EG_T('none'); $('r-pre').textContent=money(pre);
+    $('r-warn').hidden=net>=0;
+    var parts=[['b-cost',Math.min(C,P)],['b-agg',A],['b-tax',I],['b-pdv',Math.max(pdv,0)],['b-inv',Math.max(inv,0)]], tot=0;
+    parts.forEach(function(x){tot+=x[1];});
+    parts.forEach(function(x){$(x[0]).style.width=(tot>0?x[1]/tot*100:0)+'%';});
+  }
+  ins.forEach(function(id){ $(id).addEventListener('input',function(){ if(id==='c-agg'||id==='c-tax') presetBtns.forEach(function(b){b.setAttribute('aria-pressed','false');}); calc(); }); });
+  presetBtns.forEach(function(b){ b.addEventListener('click',function(){
+    $('c-agg').value=b.getAttribute('data-agg'); $('c-tax').value=b.getAttribute('data-tax');
+    presetBtns.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');}); calc();
+  });});
+  calc();
+
+  /* section navigation: smooth scroll up or down, then the section arrives from that direction */
+  (function(){
+    var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches, ind=document.getElementById('scroll-dir'), hideT;
+    document.addEventListener('click',function(e){
+      if(e.defaultPrevented||e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey)return;
+      var a=e.target.closest('a[href^="#"]'); if(!a||a.hasAttribute('data-ed'))return;
+      var id=a.getAttribute('href').slice(1), t=id&&document.getElementById(id); if(!t)return;
+      e.preventDefault();
+      var down=t.getBoundingClientRect().top>0;
+      if(reduce){t.scrollIntoView();return;}
+      ind.textContent=down?'↓':'↑'; ind.classList.add('show'); clearTimeout(hideT);
+      t.classList.remove('arrive-down','arrive-up');
+      var done=false, finish=function(){if(done)return;done=true;ind.classList.remove('show');void t.offsetWidth;t.classList.add(down?'arrive-down':'arrive-up');
+        setTimeout(function(){t.classList.remove('arrive-down','arrive-up');},700);window.removeEventListener('scrollend',finish);};
+      if('onscrollend' in window)window.addEventListener('scrollend',finish); hideT=setTimeout(finish,1200);
+      t.scrollIntoView({behavior:'smooth',block:'start'});
+    });
+  })();
+  /* map drawer, opened from the right-edge tab */
+  var mmSvg=document.getElementById('mm-svg'), dlg=document.getElementById('mapdlg'), bd=document.getElementById('dlg-backdrop'),
+      edge=document.getElementById('edge-tab'), tabMap=document.getElementById('tab-map'), lastFocus=null, closeT;
+  var MMCOL={up:'#4FA3C7',ex:'#C8102E',po:'#DCE6EE',pl:'#0F2A43'};
+  function drawMini(){
+    if(!MAP)return;
+    var P=EGMap.render(mmSvg,MAP,{k:64,cityRank:-1,skipMarine:MAP.marine.map(function(m){return m.name;})});
+    var lb=mmSvg.querySelector('.m-labels'); if(lb)lb.parentNode.removeChild(lb);
+    var g=document.createElementNS('http://www.w3.org/2000/svg','g');
+    order.forEach(function(k){var p=POS[k]; if(!p[1]||!P.inside(p[0],p[1]))return;
+      var c=document.createElementNS('http://www.w3.org/2000/svg','circle');
+      c.setAttribute('cx',P.x(p[0]));c.setAttribute('cy',P.y(p[1]));c.setAttribute('r',k===curSite?30:22);
+      c.setAttribute('fill',MMCOL[SITES[k].l]); c.setAttribute('class','mm-dot'+(k===curSite?' on':'')); c.setAttribute('vector-effect','non-scaling-stroke'); g.appendChild(c);});
+    mmSvg.appendChild(g);
+  }
+  function isOpen(){return !dlg.hidden&&dlg.classList.contains('open');}
+  function openMap(){
+    if(isOpen())return; clearTimeout(closeT); lastFocus=document.activeElement;
+    dlg.hidden=false; bd.hidden=false; document.documentElement.style.overflow='hidden';
+    void dlg.offsetWidth; dlg.classList.add('open'); bd.classList.add('open');
+    edge.setAttribute('aria-expanded','true'); tabMap.setAttribute('aria-expanded','true');
+    draw(); setTimeout(draw,360); document.getElementById('dlg-close').focus();
+  }
+  function closeMap(){
+    if(dlg.hidden)return; dlg.classList.remove('open'); bd.classList.remove('open'); document.documentElement.style.overflow='';
+    edge.setAttribute('aria-expanded','false'); tabMap.setAttribute('aria-expanded','false');
+    closeT=setTimeout(function(){dlg.hidden=true;bd.hidden=true;},320);
+    if(lastFocus&&lastFocus.focus)try{lastFocus.focus();}catch(_){}
+  }
+  edge.addEventListener('click',openMap); tabMap.addEventListener('click',openMap);
+  bd.addEventListener('click',closeMap);
+  document.getElementById('dlg-close').addEventListener('click',closeMap);
+  document.addEventListener('keydown',function(e){
+    if(dlg.hidden)return;
+    if(e.key==='Escape'){closeMap();return;}
+    if(e.key==='Tab'){var f=[].slice.call(dlg.querySelectorAll('button,a[href],[tabindex="0"]')).filter(function(x){return x.offsetParent!==null;});if(!f.length)return;
+      var a=f[0],z=f[f.length-1]; if(e.shiftKey&&document.activeElement===a){e.preventDefault();z.focus();} else if(!e.shiftKey&&document.activeElement===z){e.preventDefault();a.focus();}}
+  });
+  /* links from the map to sections of the page close the drawer first */
+  dlg.addEventListener('click',function(e){var a=e.target.closest('a[href^="#"]');if(a&&!dlg.hidden){dlg.classList.remove('open');bd.classList.remove('open');dlg.hidden=true;bd.hidden=true;document.documentElement.style.overflow='';edge.setAttribute('aria-expanded','false');tabMap.setAttribute('aria-expanded','false');}},true);
+  if(SITES[(location.hash||'').slice(1)])openMap();
+  /* keep the measured bar heights in CSS so sections fit between them */
+  (function(){
+    var top=document.querySelector('.topbar'), bot=document.getElementById('botbar'), root=document.documentElement;
+    function m(){root.style.setProperty('--top-h',top.offsetHeight+'px');root.style.setProperty('--bot-h',bot.offsetHeight+'px');}
+    m(); window.addEventListener('resize',m); if(window.ResizeObserver){var ro=new ResizeObserver(m);ro.observe(top);ro.observe(bot);}
+  })();
+  /* markets and results calendar, appended to the facts ticker from the data block */
+  (function(){
+    var el=document.getElementById('eg-markets'), tr=document.querySelector('.ticker.facts .tk-track'); if(!el||!tr)return;
+    var D; try{D=JSON.parse(el.textContent);}catch(e){return;}
+    var MON=['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+    var today=new Date(); today.setHours(0,0,0,0);
+    function li(html,cls){var x=document.createElement('li'); if(cls)x.className=cls; x.innerHTML=html; tr.appendChild(x);}
+    function esc(t){return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;');}
+    D.groups.forEach(function(g){
+      li('<span class="tk-sec caps">'+esc(g.label)+'</span><span class="tk-src">'+esc('close '+D.asOf)+'</span>','sec');
+      g.stocks.forEach(function(q){
+        var up=q[3]>=0;
+        li('<span class="fk"><b>'+esc(q[0])+'</b><span>'+esc(q[1])+'</span></span><span class="px">$'+q[2].toFixed(2)+'</span><span class="chg '+(up?'up':'dn')+'">'+(up?'▲':'▼')+' '+Math.abs(q[3]).toFixed(1)+'%</span>');
+      });
+    });
+    var next=D.calendar.filter(function(c){var d=new Date(c[0]+'T12:00:00');return d>=today;});
+    if(next.length){
+      li('<span class="tk-sec caps">Results calendar</span>','sec');
+      next.forEach(function(c){var d=new Date(c[0]+'T12:00:00');
+        li('<span class="fk"><b>'+d.getDate()+' '+MON[d.getMonth()]+'</b><span>'+esc(c[1])+'</span></span><span class="tk-src">'+esc(c[2])+'</span><span class="cal '+esc(c[3])+'">'+esc(c[3])+'</span>');});
+    }
+  })();
+  /* tickers (news and facts) */
+  [].slice.call(document.querySelectorAll('.ticker')).forEach(function(tk){
+    var tr=tk.querySelector('.tk-track'), pb=tk.querySelector('.tk-pause'), nm=tk.getAttribute('data-name')||'ticker', sp=+(tk.getAttribute('data-speed')||60);
+    var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(!reduce){
+      [].slice.call(tr.children).forEach(function(li){var c=li.cloneNode(true);c.setAttribute('aria-hidden','true');c.querySelectorAll('a,button').forEach(function(x){x.tabIndex=-1;});tr.appendChild(c);});
+      var setDur=function(){tr.style.setProperty('--tk-dur',Math.max(20,tr.scrollWidth/2/sp)+'s');}; setDur(); window.addEventListener('resize',setDur);
+    }
+    function setP(p){tk.classList.toggle('paused',p);pb.setAttribute('aria-pressed',p?'true':'false');pb.textContent=p?'Play':'Pause';pb.setAttribute('aria-label',(p?'Resume ':'Pause ')+nm);}
+    tk.addEventListener('pointerdown',function(e){if(e.pointerType!=='mouse'&&!tk.classList.contains('paused')&&e.target!==pb)setP(true);});
+    pb.addEventListener('click',function(){setP(!tk.classList.contains('paused'));});
+    tr.addEventListener('click',function(e){var b=e.target.closest('.tk-map');if(!b)return;pick(b.getAttribute('data-site'));openMap();});
+  });
+  /* scroll spy for the top tabs */
+  (function(){
+    var tabs=[].slice.call(document.querySelectorAll('.tabs a[data-sec]')), nav=document.querySelector('.tabs');
+    var secs=[];tabs.forEach(function(a){[a.getAttribute('data-sec'),a.getAttribute('data-also')].forEach(function(id){var el=id&&document.getElementById(id);if(el)secs.push(el);});});
+    secs.sort(function(x,y){return x.getBoundingClientRect().top-y.getBoundingClientRect().top;});
+    function setActive(id){tabs.forEach(function(a){var on=a.getAttribute('data-sec')===id||a.getAttribute('data-also')===id;a.setAttribute('aria-current',on?'true':'false');
+      if(on&&nav.scrollWidth>nav.clientWidth){var l=a.offsetLeft-nav.clientWidth/2+a.offsetWidth/2;nav.scrollTo({left:Math.max(0,l),behavior:'smooth'});}});}
+    function spy(){var y=window.innerHeight*0.35,best=secs[0];secs.forEach(function(sec){if(sec.getBoundingClientRect().top<=y)best=sec;});if(best)setActive(best.id);}
+    var t; window.addEventListener('scroll',function(){if(t)return;t=requestAnimationFrame(function(){t=null;spy();});},{passive:true});
+    spy();
+  })();
+  /* language: English / Portuguese (pt-BR) */
+  (function(){
+    var ORIG=new WeakMap(), ATTRS=['aria-label','alt','title','placeholder'], AORIG=new WeakMap(), docTitle=document.title;
+    document.querySelectorAll('.arch h3').forEach(function(h){h.setAttribute('data-t',h.textContent.trim());});
+    function skip(el){return !el||el.closest('script,style,svg.map');}
+    function trText(n){
+      if(skip(n.parentElement))return;
+      if(EG_LANG==='pt'){var src=ORIG.has(n)?ORIG.get(n):n.nodeValue, v=EG_T(src); if(v!==src){if(!ORIG.has(n))ORIG.set(n,src); if(n.nodeValue!==v)n.nodeValue=v;}}
+      else if(ORIG.has(n)){n.nodeValue=ORIG.get(n);ORIG.delete(n);}
+    }
+    function trAttrs(el){
+      if(skip(el))return; var o=AORIG.get(el)||{};
+      ATTRS.forEach(function(a){if(!el.hasAttribute(a))return; var cur=el.getAttribute(a);
+        if(EG_LANG==='pt'){var src=(a in o&&EG_T(o[a])===cur)?o[a]:cur, v=EG_T(src); if(v!==src){o[a]=src; if(cur!==v)el.setAttribute(a,v);}}
+        else if(a in o){if(cur===EG_PT[o[a]]||cur!==o[a])el.setAttribute(a,o[a]); delete o[a];}});
+      AORIG.set(el,o);
+    }
+    function walk(root){
+      if(root.nodeType===3){trText(root);return;} if(root.nodeType!==1)return;
+      trAttrs(root); root.querySelectorAll('*').forEach(trAttrs);
+      var w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT),n; while(n=w.nextNode())trText(n);
+    }
+    var mo=new MutationObserver(function(ms){
+      ms.forEach(function(m){ if(m.type==='childList')m.addedNodes.forEach(walk); else if(m.type==='characterData')trText(m.target); else if(m.type==='attributes')trAttrs(m.target); }); });
+    var btns=[document.getElementById('lang-en'),document.getElementById('lang-pt')];
+    function setLang(L,save){
+      window.EG_LANG=L; document.documentElement.lang=L==='pt'?'pt-BR':'en';
+      if(save){try{localStorage.setItem('eg-lang',L);}catch(e){}}
+      btns.forEach(function(b){b.setAttribute('aria-pressed',b.getAttribute('data-lang')===L?'true':'false');});
+      mo.disconnect(); walk(document.body); document.title=EG_T(docTitle);
+      mo.observe(document.body,{childList:true,subtree:true,characterData:true,attributes:true,attributeFilter:ATTRS});
+      try{ if(curSite){var c=curSite;curSite=null;pick(c);} }catch(e){}
+      try{ show(cur); }catch(e){}
+      try{ calc(); }catch(e){}
+      try{ if(MAP)draw(); }catch(e){}
+    }
+    btns.forEach(function(b){b.addEventListener('click',function(){if(EG_LANG!==b.getAttribute('data-lang'))setLang(b.getAttribute('data-lang'),true);});});
+    setLang(EG_LANG,false);
+  })();
+  var mail=document.getElementById('copy-mail'), st=document.getElementById('copy-state');
+  mail.addEventListener('click',function(){
+    var done=function(){st.textContent='· Copied';setTimeout(function(){st.textContent='· Copy';},1800);};
+    try{ navigator.clipboard.writeText('danny@abaxgrid.com').then(done,function(){sel();}); }catch(e){ sel(); }
+    function sel(){ var r=document.createRange(); r.selectNodeContents(mail.firstChild.parentNode); var s=getSelection(); s.removeAllRanges(); s.addRange(r); st.textContent='· Selected'; }
+  });
+})();
+</script>
