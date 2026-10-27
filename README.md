@@ -11,7 +11,9 @@ A publication of AbaxGrid · Proactivados, S.A. · Founder & Editor: Danny Peña
 | `index.html` | The whole site: latest issues, timeline, fiscal take calculator, archive, reference desk, next issue, editor page, map drawer, news and facts tickers, EN/PT switch |
 | `maps/venezuela.json` | Map data for the Venezuela chapter (Natural Earth 10m, simplified lon/lat arrays) |
 | `assets/portrait.png` | Editor portrait |
-| `i18n/pt.json` | Portuguese (pt-BR) dictionary. Keys are the English strings as shown on the page. The page carries its own copy inline; when you edit this file, ask Claude to sync it into `index.html` |
+| `i18n/es.json`, `i18n/pt.json` | Spanish and Portuguese (pt-BR) dictionaries. Keys are the English strings as shown on the page. English is the default; the page carries its own copy of both dictionaries inline, so after editing a file here ask Claude to sync it into `index.html` |
+| `en/`, `es/`, `pt/` | Share links with their own WhatsApp/social preview (`assets/share-eg-*.jpg`); each opens the site in that language |
+| `tools/build_deploy.py` | Rebuilds `index.html` and the share pages from the page source |
 | `tools/mapkit/` | Builder and geography checks for map chapters (`build_region.py`, `verify.py`, one config per chapter) |
 | `issues/` | Edition PDFs (to upload, see below) |
 | `.nojekyll` | Tells GitHub Pages to serve files as they are |
