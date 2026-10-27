@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Oil Companies in Venezuela · The Energy Gazette</title>
+<meta name="description" content="The largest oil companies mapped across upstream, midstream and downstream, with each one's current position in Venezuela. The Energy Gazette: Venezuela Edition.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F3F5F6;--card:#FFFFFF;--ink:#15202B;--sub:#56636F;--line:#D9DFE3;--orinoco:#0E6F73;--orinoco-bg:#DCEFEF;
+--active:#2F7D4F;--active-bg:#E1F2E7;--talks:#9A5B07;--talks-bg:#FBEBD2;--legacy:#5E6973;--legacy-bg:#E8ECEE;--home:#1F4E8C;--home-bg:#DFE9F7;--none:#8C979F;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F161C;--card:#18222A;--ink:#E7EDF1;--sub:#9AA8B3;--line:#2A3843;--orinoco:#5CC3C6;--orinoco-bg:#123436;
+--active:#6FCB93;--active-bg:#153524;--talks:#F0B45C;--talks-bg:#3A2A10;--legacy:#A6B1BA;--legacy-bg:#26323B;--home:#8DB5EE;--home-bg:#18293F;--none:#6F7C86}}
+:root[data-theme="dark"]{--bg:#0F161C;--card:#18222A;--ink:#E7EDF1;--sub:#9AA8B3;--line:#2A3843;--orinoco:#5CC3C6;--orinoco-bg:#123436;
+--active:#6FCB93;--active-bg:#153524;--talks:#F0B45C;--talks-bg:#3A2A10;--legacy:#A6B1BA;--legacy-bg:#26323B;--home:#8DB5EE;--home-bg:#18293F;--none:#6F7C86}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Archivo",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:16px;line-height:1.55}
+.wrap{max-width:980px;margin:0 auto;padding:28px 18px 60px}
+h1{font-stretch:68%;font-weight:760;font-size:clamp(34px,7vw,58px);line-height:.98;letter-spacing:-.01em;margin:0 0 10px;max-width:14ch}
+.lede{color:var(--sub);max-width:60ch;margin:0 0 18px}
+.live{display:inline-flex;align-items:center;gap:8px;font-size:14px;color:var(--sub);margin-bottom:22px}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--none)}
+.dot.on{background:var(--active);animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.35}}
+@media (prefers-reduced-motion:reduce){.dot.on{animation:none}}
+.pipe{display:grid;grid-template-columns:repeat(3,1fr);border:1.5px solid var(--ink);border-radius:999px;overflow:hidden;margin:0 0 26px}
+.pipe button{all:unset;cursor:pointer;text-align:center;padding:12px 6px;font-stretch:80%;font-weight:650;font-size:15px;border-right:1.5px solid var(--ink)}
+.pipe button:last-child{border-right:0}
+.pipe button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.pipe button:focus-visible,.stat:focus-visible,.row:focus-visible,input:focus-visible,.ask:focus-visible{outline:2px solid var(--orinoco);outline-offset:2px}
+.pipe small{display:block;font-weight:400;font-stretch:100%;font-size:12px;opacity:.75}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-bottom:20px}
+.stat{all:unset;cursor:pointer;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.stat[aria-pressed="true"]{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.stat b{display:block;font-stretch:70%;font-size:34px;line-height:1;font-weight:720}
+.stat span{font-size:13px;color:var(--sub)}
+.tools{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+input[type=search]{flex:1;min-width:200px;font:inherit;font-size:15px;padding:10px 14px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink)}
+.count{font-size:13px;color:var(--sub);align-self:center}
+.grp{font-stretch:75%;font-weight:700;font-size:20px;margin:28px 0 6px;padding-bottom:6px;border-bottom:1.5px solid var(--ink)}
+.row{all:unset;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 14px;width:100%;padding:12px 4px;border-bottom:1px solid var(--line);cursor:pointer}
+.row:hover{background:var(--card)}
+.nm{font-weight:620;font-size:17px}.ct{font-size:13px;color:var(--sub);margin-left:8px;font-weight:400}
+.seg{display:flex;gap:0;border:1px solid var(--line);border-radius:999px;overflow:hidden;height:24px;align-self:center}
+.seg i{font-style:normal;width:30px;font-size:11px;display:flex;align-items:center;justify-content:center;color:var(--none);border-right:1px solid var(--line)}
+.seg i:last-child{border-right:0}
+.seg i.y{background:var(--orinoco-bg);color:var(--orinoco);font-weight:700}
+.meta{grid-column:1/-1;font-size:14px;color:var(--sub);display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+.badge{font-size:12px;font-weight:600;padding:2px 9px;border-radius:999px;white-space:nowrap}
+.st-active{background:var(--active-bg);color:var(--active)}.st-talks{background:var(--talks-bg);color:var(--talks)}
+.st-legacy{background:var(--legacy-bg);color:var(--legacy)}.st-home{background:var(--home-bg);color:var(--home)}.st-none{color:var(--none);border:1px solid var(--line)}
+.detail{grid-column:1/-1;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px;margin-top:6px;cursor:default}
+.ask{font:inherit;font-size:14px;font-weight:600;padding:8px 14px;border-radius:999px;border:1.5px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer;margin-top:10px}
+.ans{white-space:pre-wrap;font-size:14px;margin-top:10px;color:var(--ink)}
+.empty{padding:30px 4px;color:var(--sub)}
+.eg-back{display:inline-block;margin-bottom:18px;font-size:13px;font-weight:650;letter-spacing:.05em;text-transform:uppercase;color:var(--sub);text-decoration:none}
+.eg-back:hover{color:var(--ink)}
+footer{margin-top:34px;font-size:13px;color:var(--sub);max-width:70ch}
+</style>
+</head>
+<body>
+<main class="wrap">
+<a class="eg-back" href="/energygazette/#desk">← The Energy Gazette</a>
+<h1>Who's in Venezuelan oil, and where they sit</h1>
+<p class="lede">The largest oil companies mapped across upstream, midstream and downstream, with each one's current position in Venezuela. Filter by segment or status, search by name, and open a row for detail.</p>
+<div class="live" aria-live="polite"><span class="dot" id="dot"></span><span id="livetxt">Snapshot updated 27 October 2026</span></div>
+
+<div class="pipe" role="group" aria-label="Filter by value-chain segment">
+<button data-seg="U" aria-pressed="false">Upstream<small>exploration, production</small></button>
+<button data-seg="M" aria-pressed="false">Midstream<small>pipelines, storage, trading</small></button>
+<button data-seg="D" aria-pressed="false">Downstream<small>refining, marketing</small></button>
+</div>
+
+<div class="stats" id="stats" role="group" aria-label="Filter by Venezuela status"></div>
+
+<div class="tools">
+<input type="search" id="q" placeholder="Search Chevron, Repsol, Valero…" aria-label="Search companies">
+<span class="count" id="count"></span>
+</div>
+<div id="list"></div>
+
+<footer id="foot">Sources: OFAC Venezuela general licences 49, 50A and 50B; Reuters, Bloomberg and trade press reporting through October 2026. Statuses move quickly; confirm licence coverage against the current OFAC text before relying on it.</footer>
+</main>
+<script>
+const FALLBACK=[["exxonmobil", "ExxonMobil", "United States", "Integrated majors", "UMD", "talks", "Expropriated in 2007; negotiating a return with the Rodríguez government, no deal signed yet."], ["chevron", "Chevron", "United States", "Integrated majors", "UMD", "active", "Never left Venezuela; operates PDVSA joint ventures under an OFAC general licence."], ["shell", "Shell", "United Kingdom", "Integrated majors", "UMD", "active", "Named in OFAC GL 50A (Feb 2026); Dragon offshore gas project. Check coverage under GL 50B."], ["bp", "BP", "United Kingdom", "Integrated majors", "UMD", "active", "Covered by OFAC GL 50A/50B; signed a gas exploration MoU with Venezuela in April 2026."], ["eni", "Eni", "Italy", "Integrated majors", "UMD", "active", "Cardón IV (Perla) offshore gas with Repsol; plans to raise gas output. Covered by GL 50B."], ["repsol", "Repsol", "Spain", "Integrated majors", "UMD", "active", "Cardón IV gas plus oil joint ventures with PDVSA. Covered by GL 50B."], ["totalenergies", "TotalEnergies", "France", "Integrated majors", "UMD", "talks", "Exited Petrocedeño in 2021; signed a memorandum of understanding with PDVSA in September 2026 to return."], ["equinor", "Equinor", "Norway", "Integrated majors", "UM", "legacy", "Exited the Petrocedeño heavy-oil project in 2021."], ["conocophillips", "ConocoPhillips", "United States", "Upstream-focused", "U", "talks", "Expropriated in 2007; holds a ~US$12bn arbitration award; evaluating re-entry."], ["continental", "Continental Resources", "United States", "Upstream-focused", "U", "talks", "Signed a memorandum of understanding with PDVSA on 16 September 2026 for the Ayacucho 2 block; text not public."], ["maurel-prom", "Maurel & Prom", "France", "Upstream-focused", "U", "active", "Petroregional del Lago joint venture; added to OFAC GL 50A in Feb 2026."], ["pdvsa", "PDVSA", "Venezuela", "National oil companies", "UMD", "home", "State operator and majority partner in every joint venture; owns CITGO refining in the US."], ["aramco", "Saudi Aramco", "Saudi Arabia", "National oil companies", "UMD", "none", ""], ["adnoc", "ADNOC", "United Arab Emirates", "National oil companies", "UMD", "none", ""], ["cnpc", "CNPC / PetroChina", "China", "National oil companies", "UMD", "legacy", "Orinoco joint ventures and major lender to Venezuela; position unclear after 2026."], ["sinopec", "Sinopec", "China", "National oil companies", "UMD", "legacy", "Orinoco joint-venture partner and buyer of Venezuelan crude."], ["rosneft", "Rosneft", "Russia", "National oil companies", "UMD", "legacy", "Transferred its Venezuela assets to state-owned Roszarubezhneft in 2020."], ["ongc", "ONGC Videsh", "India", "National oil companies", "U", "legacy", "Minority stakes in Orinoco joint ventures."], ["petrobras", "Petrobras", "Brazil", "National oil companies", "UMD", "legacy", "Held past joint ventures in Venezuela, since exited."], ["enbridge", "Enbridge", "Canada", "Midstream specialists", "M", "none", ""], ["enterprise", "Enterprise Products", "United States", "Midstream specialists", "M", "none", ""], ["kinder-morgan", "Kinder Morgan", "United States", "Midstream specialists", "M", "none", ""], ["energy-transfer", "Energy Transfer", "United States", "Midstream specialists", "M", "none", ""], ["valero", "Valero", "United States", "Refiners and traders", "D", "talks", "Gulf Coast heavy-crude refiner; in talks for a licence to buy Venezuelan oil."], ["marathon", "Marathon Petroleum", "United States", "Refiners and traders", "MD", "talks", "Confirmed it is in talks for a Venezuela licence."], ["phillips66", "Phillips 66", "United States", "Refiners and traders", "MD", "legacy", "Historical buyer of Venezuelan heavy crude."], ["reliance", "Reliance Industries", "India", "Refiners and traders", "D", "talks", "Large buyer of Venezuelan crude; in talks for a licence."], ["vitol", "Vitol", "Switzerland", "Refiners and traders", "MD", "active", "Received one of the first two US authorizations (Jan 2026) to market Venezuelan oil."], ["trafigura", "Trafigura", "Singapore", "Refiners and traders", "MD", "active", "Received one of the first two US authorizations (Jan 2026) to market Venezuelan oil."], ["glencore", "Glencore", "Switzerland", "Refiners and traders", "MD", "talks", "In talks for a Venezuela licence."], ["mercuria", "Mercuria", "Switzerland", "Refiners and traders", "MD", "talks", "In talks for a Venezuela licence."]];
+const STATUS={active:"Active in Venezuela",talks:"Re-entry or licence talks",legacy:"Exited or legacy",home:"State operator",none:"No notable presence"};
+const ORDER=["Integrated majors","Upstream-focused","National oil companies","Midstream specialists","Refiners and traders"];
+let rows=FALLBACK.map(a=>({id:a[0],name:a[1],country:a[2],group:a[3],segments:a[4],status:a[5],note:a[6]}));
+let f={seg:null,status:null,q:"",open:null};
+let sample=null;const answers={};
+const $=s=>document.querySelector(s);
+function esc(s){return String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
+function drawStats(){const c={};rows.forEach(r=>c[r.status]=(c[r.status]||0)+1);
+$("#stats").innerHTML=["active","talks","legacy","none"].map(k=>`<button class="stat" data-st="${k}" aria-pressed="${f.status===k}"><b>${c[k]||0}</b><span>${STATUS[k]}</span></button>`).join("")}
+function draw(){drawStats();
+const q=f.q.trim().toLowerCase();
+const vis=rows.filter(r=>(!f.seg||r.segments.includes(f.seg))&&(!f.status||r.status===f.status)&&(!q||(r.name+" "+r.country+" "+r.note).toLowerCase().includes(q)));
+$("#count").textContent=`${vis.length} of ${rows.length} companies`;
+if(!vis.length){$("#list").innerHTML=`<p class="empty">No companies match these filters. Clear a filter or try another name.</p>`;return}
+let h="";ORDER.concat([...new Set(vis.map(r=>r.group))].filter(g=>!ORDER.includes(g))).forEach(g=>{const rs=vis.filter(r=>r.group===g).sort((a,b)=>a.name.localeCompare(b.name));if(!rs.length)return;
+h+=`<h2 class="grp">${esc(g)}</h2>`;
+rs.forEach(r=>{const open=f.open===r.id;
+h+=`<div class="row" role="button" tabindex="0" aria-expanded="${open}" data-id="${esc(r.id)}"><div><span class="nm">${esc(r.name)}</span><span class="ct">${esc(r.country)}</span></div>
+<div class="seg" aria-label="Segments: ${esc(r.segments)}">${["U","M","D"].map(x=>`<i class="${r.segments.includes(x)?"y":""}">${x}</i>`).join("")}</div>
+<div class="meta"><span class="badge st-${esc(r.status)}">${STATUS[r.status]||esc(r.status)}</span>${open?"":`<span>${esc(r.note)}</span>`}</div>
+${open?`<div class="detail" data-stop="1"><div>${esc(r.note)||"No Venezuela activity on record."}</div>${sample?`<button class="ask" data-ask="${esc(r.id)}">Ask Claude for context</button>`:""}<div class="ans" id="ans-${esc(r.id)}">${esc(answers[r.id]||"")}</div></div>`:""}</div>`})});
+$("#list").innerHTML=h}
+document.querySelector(".pipe").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;f.seg=f.seg===b.dataset.seg?null:b.dataset.seg;document.querySelectorAll(".pipe button").forEach(x=>x.setAttribute("aria-pressed",x.dataset.seg===f.seg));draw()});
+$("#stats").addEventListener("click",e=>{const b=e.target.closest(".stat");if(!b)return;f.status=f.status===b.dataset.st?null:b.dataset.st;draw()});
+$("#q").addEventListener("input",e=>{f.q=e.target.value;draw()});
+async function ask(id){const r=rows.find(x=>x.id===id);const el=document.getElementById("ans-"+id);if(!r||!sample)return;el.textContent="Thinking…";
+const prompt=`You are an oil and gas analyst. In 4-6 sentences, give context on ${r.name} (${r.country}) and Venezuela: its history there, what its current position means, and what to watch next. Tracker data (as of the page's last update): segments ${r.segments} (U upstream, M midstream, D downstream); status "${STATUS[r.status]}"; note: "${r.note}". Say plainly where you are unsure or where facts may have changed after your knowledge cutoff. Plain text, no headings or lists.`;
+try{const res=await sample(prompt,{modelTier:"default",onText:({text})=>{el.textContent=text}});answers[id]=res.text;el.textContent=res.text}
+catch(err){if(err&&err.code==="not_granted"){sample=null;draw()}else{el.textContent=err&&err.text?err.text:"Claude couldn't answer right now. Try again in a minute."}}}
+$("#list").addEventListener("click",e=>{const a=e.target.closest("[data-ask]");if(a){e.stopPropagation();ask(a.dataset.ask);return}
+if(e.target.closest("[data-stop]"))return;const r=e.target.closest(".row");if(!r)return;f.open=f.open===r.dataset.id?null:r.dataset.id;draw()});
+$("#list").addEventListener("keydown",e=>{if((e.key==="Enter"||e.key===" ")&&e.target.classList.contains("row")){e.preventDefault();f.open=f.open===e.target.dataset.id?null:e.target.dataset.id;draw()}});
+draw();
+</script>
+</body>
+</html>

@@ -29,8 +29,8 @@ The page already links to these. Upload them with exactly these names or the lin
 - `special-national-added-value.pdf` (Special, National Added Value FAQ)
 - `briefing-operators-tracker.pdf` (Briefing, Who's Operating in Venezuela)
 
-**`tools/`**
-- `operators-tracker.html`, `ofac-licensing.html`, `supply-chain-eras.html`, `relationship-matrix.pdf`
+**`tools/`** (in the repo: `operators-tracker.html`, `supply-chain-eras.html`)
+- `ofac-licensing.html` and `relationship-matrix.pdf` are not built yet; the page shows them as "on request". When they exist, add them here and switch their cards back to direct links.
 
 ## Updating the tickers
 

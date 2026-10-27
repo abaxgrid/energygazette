@@ -1,0 +1,410 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Venezuela's Oil Chain, 1970–2030</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Who controlled each link of Venezuela's oil chain in 1970, 1990, 2010 and the 2030 outlook. The Energy Gazette: Venezuela Edition.">
+<style>
+/* Layout: masthead band → thesis → era rail → production chart → filterable stage matrix → era notes → sources.
+   Single-theme by design: The Energy Gazette's navy press identity, one Helvetica-class family throughout. */
+:root{
+  --ground:#0F2B43;      /* cover navy */
+  --panel:#17395C;       /* raised panel */
+  --panel-2:#152F47;     /* quiet panel */
+  --ink:#FFFFFF;
+  --ink-2:#C6D5E5;       /* secondary on navy */
+  --ink-3:#8397AB;       /* captions, footer */
+  --rule:#3D5C79;
+  --accent:#C80F2E;      /* Gazette red */
+  --private:#E0445E;     /* foreign / private operators */
+  --private-fill:#3B2038;
+  --state:#6A9BD0;       /* state */
+  --state-fill:#17395C;
+  --mixed:#7F92A6;       /* mixed / third party */
+  --mixed-fill:#152F47;
+  --sans:"Helvetica Neue",Helvetica,Arial,"Liberation Sans",sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{
+  background:var(--ground);color:var(--ink);font-family:var(--sans);
+  font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;
+}
+.wrap{
+  max-width:1120px;margin:0 auto;
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+}
+h1,h2,h3{margin:0;text-wrap:balance;font-weight:700;letter-spacing:-0.01em}
+p{margin:0}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)}
+
+.eg-back{display:block;text-align:left;font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2);text-decoration:none;margin-bottom:10px}
+.eg-back:hover{color:#fff}
+/* masthead */
+.masthead{border-bottom:1px solid var(--rule)}
+.masthead .wrap{padding-block:18px 16px;text-align:center}
+.masthead .name{font-size:clamp(20px,4.4vw,27px);font-weight:700;letter-spacing:.06em}
+.masthead .edition{margin-top:4px;font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+.masthead .bar{width:54px;height:3px;background:var(--accent);margin:12px auto 0}
+
+/* thesis */
+.thesis .wrap{padding-block:34px 8px;max-width:860px}
+.thesis h1{font-size:clamp(30px,6.4vw,50px);line-height:1.04}
+.thesis .deck{margin-top:16px;font-size:clamp(16px,2.4vw,19px);color:var(--ink-2);max-width:62ch}
+.byline{margin-top:20px;display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-size:13px;color:var(--ink-3)}
+.byline b{color:var(--ink);font-weight:700}
+.byline .dot{width:3px;height:3px;border-radius:50%;background:var(--rule)}
+
+/* era rail */
+.rail .wrap{padding-block:30px}
+.rail-grid{display:grid;gap:10px;grid-template-columns:repeat(4,1fr)}
+.era-card{background:var(--panel-2);border:1px solid var(--rule);border-top:3px solid var(--accent);padding:16px 15px 17px;min-width:0}
+.era-card.outlook{border:1px dashed var(--ink-3);border-top:1px dashed var(--ink-3)}
+.era-card .yr{font-size:clamp(26px,3.6vw,34px);font-weight:700;font-variant-numeric:tabular-nums;line-height:1}
+.era-card .tag{margin-top:7px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+.era-card p{margin-top:9px;font-size:14px;color:var(--ink-2)}
+
+/* chart */
+.chart .wrap{padding-block:14px 30px}
+.panel{background:var(--panel-2);border:1px solid var(--rule);padding:20px 18px 16px}
+.panel h2{font-size:17px}
+.panel .sub{margin-top:5px;font-size:13.5px;color:var(--ink-3)}
+.chart-box{overflow-x:auto;margin-top:12px}
+.chart-box svg{display:block;min-width:520px;width:100%;height:auto}
+
+/* matrix */
+.matrix .wrap{padding-block:8px 36px}
+.matrix-head{display:flex;flex-wrap:wrap;gap:14px;align-items:flex-end;justify-content:space-between;margin-bottom:14px}
+.matrix-head h2{font-size:clamp(20px,3vw,26px)}
+.matrix-head .sub{margin-top:5px;font-size:14px;color:var(--ink-3);max-width:60ch}
+.filters{display:flex;flex-wrap:wrap;gap:6px}
+.filters button{
+  font:inherit;font-size:12.5px;font-weight:700;letter-spacing:.04em;color:var(--ink-2);
+  background:transparent;border:1px solid var(--rule);padding:7px 12px;cursor:pointer;
+  font-variant-numeric:tabular-nums;
+}
+.filters button:hover{border-color:var(--ink-3);color:var(--ink)}
+.filters button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.filters button:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+
+.legend{display:flex;flex-wrap:wrap;gap:6px 18px;margin:0 0 16px;font-size:12.5px;color:var(--ink-3)}
+.legend span{display:inline-flex;align-items:center;gap:7px}
+.legend i{width:11px;height:11px;border:1px solid;display:inline-block}
+.legend .k-f{background:var(--private-fill);border-color:var(--private)}
+.legend .k-s{background:var(--state-fill);border-color:var(--state)}
+.legend .k-m{background:var(--mixed-fill);border-color:var(--mixed)}
+.legend .k-o{background:transparent;border:1px dashed var(--ink-3)}
+
+.colhead{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:10px}
+.colhead div{background:var(--panel);border-bottom:2px solid var(--accent);padding:10px 12px;min-width:0}
+.colhead div.outlook{background:transparent;border:1px dashed var(--ink-3)}
+.colhead .yr{font-size:17px;font-weight:700;font-variant-numeric:tabular-nums}
+.colhead .tag{font-size:11px;color:var(--ink-2);margin-top:2px}
+
+.stage{margin-bottom:16px}
+.stage > h3{
+  font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);
+  display:flex;align-items:center;gap:12px;margin-bottom:8px;
+}
+.stage > h3::after{content:"";flex:1;height:1px;background:var(--rule)}
+.cells{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.cell{border:1px solid;padding:11px 12px 12px;min-width:0}
+.cell.f{background:var(--private-fill);border-color:var(--private)}
+.cell.s{background:var(--state-fill);border-color:var(--state)}
+.cell.m{background:var(--mixed-fill);border-color:var(--mixed)}
+.cell.outlook{border-style:dashed}
+.cell .era{display:none;font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--ink-3);margin-bottom:5px}
+.cell .t{font-size:14.5px;font-weight:700;line-height:1.3}
+.cell .d{margin-top:3px;font-size:13px;line-height:1.45;color:var(--ink-2)}
+
+/* arc band */
+.arc .wrap{padding-block:4px 34px}
+.arc .band{background:var(--panel);border-left:4px solid var(--accent);padding:18px 20px}
+.arc h2{font-size:15px;letter-spacing:.06em;text-transform:uppercase}
+.arc p{margin-top:8px;font-size:15.5px;color:var(--ink-2);max-width:72ch}
+
+/* notes */
+.notes .wrap{padding-block:0 34px;display:grid;gap:14px;grid-template-columns:repeat(2,1fr)}
+.note{background:var(--panel-2);border:1px solid var(--rule);padding:18px 18px 20px;min-width:0}
+.note.outlook{border-style:dashed;border-color:var(--ink-3)}
+.note h3{font-size:22px;font-variant-numeric:tabular-nums}
+.note .tag{margin-top:3px;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+.note.outlook .tag{color:var(--ink-3)}
+.note ul{margin:12px 0 0;padding:0;list-style:none;display:grid;gap:9px}
+.note li{font-size:14px;color:var(--ink-2);padding-left:14px;position:relative;line-height:1.45}
+.note li::before{content:"";position:absolute;left:0;top:8px;width:5px;height:1px;background:var(--private)}
+.note.s li::before{background:var(--state)}
+.note.outlook li::before{background:var(--ink-3)}
+.note li b{color:var(--ink);font-weight:700}
+
+/* sources + footer */
+.sources .wrap{padding-block:0 30px}
+.sources .panel p{font-size:13px;color:var(--ink-3);margin-top:8px;max-width:88ch}
+.sources .panel p b{color:var(--ink-2)}
+footer{border-top:1px solid var(--rule)}
+footer .wrap{padding-block:18px 26px;display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:space-between;font-size:12.5px;color:var(--ink-3)}
+footer b{color:var(--ink);font-weight:700}
+
+@media (max-width:900px){
+  .rail-grid{grid-template-columns:repeat(2,1fr)}
+  .colhead{display:none}
+  .cells{grid-template-columns:repeat(2,1fr)}
+  .cell .era{display:block}
+  .notes .wrap{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  .rail-grid{grid-template-columns:1fr}
+  .cells{grid-template-columns:1fr}
+}
+.cells.single{grid-template-columns:1fr}
+@media (min-width:901px){
+  .cells.single{grid-template-columns:repeat(2,1fr)}
+  .cells.single .cell{grid-column:span 1}
+  .colhead.single{display:none}
+  .cells.single .era{display:block}
+}
+@media (prefers-reduced-motion:no-preference){
+  .cell,.era-card{transition:border-color .15s ease}
+}
+</style>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="eg-back" href="/energygazette/#desk">← The Energy Gazette</a>
+    <div class="name">THE ENERGY GAZETTE</div>
+    <div class="edition">Venezuela Edition · Supply Chain Series</div>
+    <div class="bar"></div>
+  </div>
+</header>
+
+<section class="thesis">
+  <div class="wrap">
+    <p class="eyebrow">Special edition · October 2026</p>
+    <h1>Venezuela's oil chain has come full circle.</h1>
+    <p class="deck">Who controlled each link, from wellhead to market, in four eras. In 1970 foreign majors ran the chain and the state collected rent. The 2030 outlook, built on 100-year leases and private marketing, looks structurally closer to 1970 than to 1990.</p>
+    <div class="byline">
+      <b>Danny Peña</b><span class="dot"></span><span>Founder &amp; Editor</span><span class="dot"></span><span>Powered by AI, validated by practitioners in the field</span>
+    </div>
+  </div>
+</section>
+
+<section class="rail">
+  <div class="wrap">
+    <div class="rail-grid" id="rail"></div>
+  </div>
+</section>
+
+<section class="chart">
+  <div class="wrap">
+    <div class="panel">
+      <h2>Crude production, million barrels per day</h2>
+      <p class="sub">1970 remains the all-time peak. The 2030 bar is a range, not a forecast.</p>
+      <div class="chart-box">
+        <svg viewBox="0 0 640 268" role="img" aria-label="Bar chart of Venezuelan crude production: 3.7 million barrels per day in 1970, 2.2 in 1990, 2.3 in 2010, 1.23 in August 2026, and a 1.5 to 2.0 range for the 2030 outlook.">
+          <g stroke="#3D5C79" stroke-width="1">
+            <line x1="48" y1="162.5" x2="620" y2="162.5"></line>
+            <line x1="48" y1="115" x2="620" y2="115"></line>
+            <line x1="48" y1="67.5" x2="620" y2="67.5"></line>
+            <line x1="48" y1="20" x2="620" y2="20"></line>
+          </g>
+          <g fill="#8397AB" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-size="11" text-anchor="end">
+            <text x="40" y="166">1</text><text x="40" y="118.5">2</text>
+            <text x="40" y="71">3</text><text x="40" y="23.5">4</text>
+          </g>
+          <line x1="48" y1="210" x2="620" y2="210" stroke="#C6D5E5" stroke-width="1.5"></line>
+
+          <rect x="73" y="34.25" width="64" height="175.75" fill="#3B2038" stroke="#E0445E" stroke-width="1.5"></rect>
+          <rect x="187.6" y="105.5" width="64" height="104.5" fill="#17395C" stroke="#6A9BD0" stroke-width="1.5"></rect>
+          <rect x="302" y="100.75" width="64" height="109.25" fill="#17395C" stroke="#6A9BD0" stroke-width="1.5"></rect>
+          <rect x="416.4" y="151.6" width="64" height="58.4" fill="#152F47" stroke="#7F92A6" stroke-width="1.5"></rect>
+          <rect x="530.8" y="138.75" width="64" height="71.25" fill="#3B2038" stroke="none"></rect>
+          <rect x="530.8" y="115" width="64" height="95" fill="none" stroke="#E0445E" stroke-width="1.5" stroke-dasharray="5 3"></rect>
+
+          <g font-family="Helvetica Neue,Helvetica,Arial,sans-serif" text-anchor="middle">
+            <g fill="#FFFFFF" font-size="13" font-weight="700">
+              <text x="105.2" y="232">3.7</text><text x="219.6" y="232">2.2</text>
+              <text x="334" y="232">2.3</text><text x="448.4" y="232">1.23</text>
+              <text x="562.8" y="232">1.5–2.0</text>
+            </g>
+            <g fill="#8397AB" font-size="11">
+              <text x="105.2" y="249">1970</text><text x="219.6" y="249">1990</text>
+              <text x="334" y="249">2010</text><text x="448.4" y="249">Aug 2026</text>
+              <text x="562.8" y="249">2030 outlook</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="matrix">
+  <div class="wrap">
+    <div class="matrix-head">
+      <div>
+        <h2>Stage by stage</h2>
+        <p class="sub">Nine links of the chain, from ownership to the fiscal take. Pick one era to read a single column.</p>
+      </div>
+      <div class="filters" id="filters" role="group" aria-label="Filter the matrix by era"></div>
+    </div>
+
+    <div class="legend">
+      <span><i class="k-f"></i>Foreign or private operators</span>
+      <span><i class="k-s"></i>State</span>
+      <span><i class="k-m"></i>Mixed or third party</span>
+      <span><i class="k-o"></i>Outlook</span>
+    </div>
+
+    <div class="colhead" id="colhead"></div>
+    <div id="stages"></div>
+  </div>
+</section>
+
+<section class="arc">
+  <div class="wrap">
+    <div class="band">
+      <h2>The arc</h2>
+      <p>Foreign majors built the chain and kept it until nationalization in 1976. PDVSA then owned every link, bought refineries abroad to place its heavy crude, and by 2010 still held the chain while output and maintenance slid. The July 2026 regulation does not mention PDVSA at all.</p>
+    </div>
+  </div>
+</section>
+
+<section class="notes">
+  <div class="wrap" id="notes"></div>
+</section>
+
+<section class="sources">
+  <div class="wrap">
+    <div class="panel">
+      <h2>Sources and method</h2>
+      <p><b>1970–2010</b> from the historical record: concession-era company reports, PDVSA annual reports, OPEC statistics and the Hydrocarbons Law and its reforms.</p>
+      <p><b>2030 outlook</b> from Venezuela's hydrocarbons implementing regulation (Official Gazette, July 2026), US and Venezuelan government statements on the NABEP agreement (August 2026), Rystad Energy, S&amp;P Global, OPEC, company statements, and Reuters, Bloomberg and CNN reporting. Figures current to September 2026; output in crude terms and approximate. Analysis, not investment advice.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span><b>Danny Peña</b> · Founder &amp; Editor, The Energy Gazette: Venezuela Edition</span>
+    <span>Proactivados, S.A. · October 2026</span>
+  </div>
+</footer>
+
+<script>
+const ERAS=[
+ {yr:"1970",tag:"Foreign concessions",k:"f",line:"Twenty concessionaires run every link; the state is landlord and tax collector."},
+ {yr:"1990",tag:"Nationalized PDVSA",k:"s",line:"PDVSA owns the chain end to end, refineries abroad included."},
+ {yr:"2010",tag:"State-majority mixed companies",k:"s",line:"Politicized PDVSA still holds the chain as output and upkeep slide."},
+ {yr:"2030",tag:"Outlook: private-led reopening",k:"m",line:"Private operators on long leases; the state licenses and taxes.",outlook:true}
+];
+
+const STAGES=[
+ ["Ownership and control",[
+  ["f","Foreign majors","Creole (Exxon), Shell and Mene Grande (Gulf) lead some 20 concessionaires; CVP marginal"],
+  ["s","PDVSA holding","Competing affiliates Lagoven, Maraven and Corpoven"],
+  ["s","PDVSA majority control","Mixed companies with PDVSA at 60% or more; Exxon and Conoco exited after 2007"],
+  ["m","Private-led, state as licensor","Chevron, Repsol, Eni and Shell; the NABEP–US government venture on 17 fields"]]],
+ ["Exploration and production",[
+  ["f","3.7 MMb/d, all-time peak","Maracaibo basin dominant; reserves about 14 bn bbl; investment falling ahead of reversion"],
+  ["s","~2.2 MMb/d under OPEC quota","Maracaibo plus El Furrial; reserves about 60 bn bbl; Orimulsion exports begin"],
+  ["s","~2.3 MMb/d and declining","Orinoco upgraders running; about 297 bn bbl booked after certification"],
+  ["f","~1.5–2 MMb/d if capital arrives","1.23 MMb/d in August 2026; brownfield-led, with Orinoco greenfield mostly after 2035"]]],
+ ["Services and procurement",[
+  ["m","US contractors","Halliburton, Schlumberger and Dresser; each major buys its own"],
+  ["m","International and local contractors","Centralized purchasing through Bariven; research at Intevep"],
+  ["m","Partly nationalized","2009 takeover of Lake Maracaibo service firms; contractor arrears build"],
+  ["m","Western contractors return","SLB restarting 15 rigs; only 2 active onshore rigs in July 2026"]]],
+ ["Natural gas",[
+  ["m","Largely flared or reinjected","CVP builds the domestic grid; gas reserved to the state in 1971"],
+  ["s","Reinjected and processed","Criogénico de Oriente; Anaco lines to Caracas and Guayana"],
+  ["m","Domestic shortfall","Pipeline imports from Colombia; Perla found offshore in 2009"],
+  ["f","Gas exports emerge","Shell's Dragon gas to Trinidad LNG; Cardón IV LNG targeted around 2031"]]],
+ ["Pipelines, terminals, shipping",[
+  ["f","Majors' global fleets","La Salina, Puerto Miranda, Amuay, Cardón and Puerto La Cruz"],
+  ["s","PDVSA terminals and fleet","The same core terminals, state-run, with a domestic tanker fleet"],
+  ["s","José hub for Orinoco crude","PDVSA Naval; growing China-bound cargoes"],
+  ["m","Operators ship their own barrels","Direct marketing rights; power and upgrading are the bottlenecks"]]],
+ ["Domestic refining and petrochemicals",[
+  ["f","~1.3 MMb/d, export-oriented","Company-owned Amuay, Cardón, Puerto La Cruz and El Palito; state IVP in petrochemicals"],
+  ["s","~1.1–1.2 MMb/d","Paraguaná, El Palito and Puerto La Cruz; Pequiven at El Tablazo and Morón"],
+  ["s","~1.3 MMb/d nameplate, aging","Outages rise after years of deferred maintenance; Pequiven split off"],
+  ["m","Open to private capital","A heavy rehabilitation bill; fiscal discount for refining and upgrading"]]],
+ ["Refining abroad",[
+  ["f","Parents' affiliates","Lago (Aruba), Isla (Curaçao) and plants in the US, Canada and Europe"],
+  ["s","PDVSA-owned outlets","Citgo, Ruhr Oel, Nynäs, the Isla lease and UNO-VEN"],
+  ["s","Tilt to political allies","Citgo, Isla and Hovensa; ventures in Cuba, Jamaica and the Dominican Republic"],
+  ["f","Citgo likely transferred","Court-approved sale to Elliott's Amber Energy, under appeal at the Third Circuit"]]],
+ ["Markets",[
+  ["f","Majors' integrated networks","US East Coast fuel oil; Esso, Shell and Mobil stations at home"],
+  ["s","PDVSA's own networks","Citgo in the US; heavily subsidized fuel at home"],
+  ["s","US, China and PetroCaribe","Loans-for-oil to China; concessional Caribbean supply; near-free gasoline"],
+  ["m","US Gulf Coast anchor","The US takes about half of output, with offtake rights on NABEP oil"]]],
+ ["The state's role",[
+  ["m","Landlord and tax collector","16⅔% royalty; income tax raised to 60% and unilateral export values in December 1970"],
+  ["s","Owner and tax collector","Royalty, petroleum income tax and fiscal export values"],
+  ["s","Owner and social financier","30% royalty and a windfall tax; oil rent funds the social missions"],
+  ["m","Licensor and tax collector","Royalty up to 30% with relief; 15% integrated tax; international arbitration"]]]
+];
+
+const NOTES=[
+ {yr:"1970",tag:"Foreign concessions",cls:"f",items:[
+  "<b>Peak year.</b> 3.7 MMb/d, a level never matched since, from the Bolívar Coastal Field and the eastern Oficina and Quiriquire areas.",
+  "<b>Running down the clock.</b> No new concessions after 1960 and expiry due in 1983–84, so exploration stalled and proven reserves sat near 14 bn bbl.",
+  "<b>Integrated outward.</b> Crude moved through the majors' own tankers to Aruba, Curaçao and parent refineries in the US and Europe.",
+  "<b>The turn.</b> In December 1970 the Caldera government raised the petroleum income tax to 60% and took power to set export reference values; the Reversion Law followed in 1971."]},
+ {yr:"1990",tag:"Nationalized PDVSA",cls:"s",items:[
+  "<b>One owner, three operators.</b> PDVSA ran Lagoven, Maraven and Corpoven as competing affiliates, with Intevep, Pequiven, Bariven and Bitor alongside.",
+  "<b>Reserves rebuilt.</b> About 60 bn bbl after heavy crude was reclassified, with El Furrial driving the eastern basin.",
+  "<b>Internationalization.</b> Citgo, Ruhr Oel, Nynäs, the Isla lease and UNO-VEN secured outlets for heavy barrels.",
+  "<b>The rent at home.</b> Fuel stayed heavily subsidized; the 1989 price increase helped trigger the Caracazo."]},
+ {yr:"2010",tag:"State-majority mixed companies",cls:"s",items:[
+  "<b>Migration completed.</b> The 2007 shift to mixed companies left PDVSA at 60% or more; Exxon and Conoco went to arbitration instead.",
+  "<b>Reserves on paper.</b> Orinoco certification put booked reserves near 297 bn bbl while output slid toward 2.3 MMb/d.",
+  "<b>Supply chain strain.</b> Service firms on the lake were taken over in 2009, contractor arrears built up, and refinery outages rose.",
+  "<b>Rent as policy.</b> A 30% royalty and windfall tax funded the social missions; barrels went to China under loans-for-oil and to the Caribbean under PetroCaribe."]},
+ {yr:"2030",tag:"Outlook: private-led reopening",cls:"outlook",items:[
+  "<b>The new framework.</b> The implementing regulation of July 2026 lets private operators explore, produce, refine and market independently, with royalties capped at 30%. It does not mention PDVSA.",
+  "<b>The US deal.</b> Washington holds 35% of NABEP, which has a 100-year lease on 17 fields, takes 20% of output at cost and has first refusal on the rest.",
+  "<b>The capital question.</b> Chevron plans about $7 bn to roughly double its output; Rystad sees about 1.4 MMb/d by 2028, well short of the 2 MMb/d floated in Washington.",
+  "<b>The risk.</b> Durability, not geology. Investors need confidence that contracts signed now survive the next government."]}
+];
+
+const rail=document.getElementById("rail");
+rail.innerHTML=ERAS.map(e=>`<article class="era-card${e.outlook?" outlook":""}">
+  <div class="yr">${e.yr}</div><div class="tag">${e.tag}</div><p>${e.line}</p></article>`).join("");
+
+const colhead=document.getElementById("colhead");
+colhead.innerHTML=ERAS.map(e=>`<div class="${e.outlook?"outlook":""}" data-era="${e.yr}">
+  <div class="yr">${e.yr}</div><div class="tag">${e.tag}</div></div>`).join("");
+
+const stages=document.getElementById("stages");
+stages.innerHTML=STAGES.map(([label,cells])=>`<section class="stage"><h3>${label}</h3><div class="cells">`+
+  cells.map((c,i)=>`<div class="cell ${c[0]}${i===3?" outlook":""}" data-era="${ERAS[i].yr}">
+    <div class="era">${ERAS[i].yr}</div><div class="t">${c[1]}</div><div class="d">${c[2]}</div></div>`).join("")+
+  `</div></section>`).join("");
+
+document.getElementById("notes").innerHTML=NOTES.map(n=>`<article class="note ${n.cls}">
+  <h3>${n.yr}</h3><div class="tag">${n.tag}</div>
+  <ul>${n.items.map(i=>`<li>${i}</li>`).join("")}</ul></article>`).join("");
+
+const filters=document.getElementById("filters");
+const opts=[["all","All four"],...ERAS.map(e=>[e.yr,e.yr])];
+filters.innerHTML=opts.map(([v,l])=>`<button type="button" data-era="${v}" aria-pressed="${v==="all"}">${l}</button>`).join("");
+
+function apply(era){
+  document.querySelectorAll("#filters button").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.era===era)));
+  document.querySelectorAll(".cell").forEach(c=>{c.hidden = era!=="all" && c.dataset.era!==era;});
+  document.querySelectorAll("#colhead div").forEach(d=>{d.hidden = era!=="all" && d.dataset.era!==era;});
+  document.querySelectorAll(".cells").forEach(g=>g.classList.toggle("single",era!=="all"));
+  colhead.classList.toggle("single",era!=="all");
+}
+filters.addEventListener("click",e=>{
+  const b=e.target.closest("button"); if(!b) return;
+  const era=b.dataset.era;
+  apply(era);
+  try{ history.replaceState(null,"",era==="all"?location.pathname:"#"+("y"+era)); }catch(_){}
+});
+const h=(location.hash||"").replace("#","");
+if(/^y(1970|1990|2010|2030)$/.test(h)) apply(h.slice(1)); else apply("all");
+</script>
+
+</body></html>
