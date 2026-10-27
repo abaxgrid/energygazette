@@ -28,7 +28,7 @@
 <body>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Serif:wght@500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
 <style>
 /* Layout: the printed issue, translated to the web — navy cover band, paper interior with 1.6pt masthead rule,
    archive as the house data grid, navy back-page bio, red only as bar / rule / ribbon. */
@@ -38,7 +38,9 @@
   --ink:#1A1A1A; --grey:#4A4A4A; --link:#2E6E8E;
   --on-navy:#FFFFFF; --pale:#C8D3DE; --sub:#9AA5B1; --mist:#DCE6EE; --navy-rule:#2D445A; --ring:#5B7186;
   --head:var(--navy);
-  --sans:"Arimo","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --sans:"IBM Plex Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --serif:"IBM Plex Serif",Georgia,"Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
   --wrap:1120px;
 }
 @media all{ :root{
@@ -608,6 +610,15 @@ body{padding-bottom:var(--bot-h)}
 }
 @media (max-width:380px){ .bn{font-size:12.5px;letter-spacing:.02em} .tb-bar{display:none} .brand{gap:0} }
 @media (max-width:345px){ .bn-the{display:none} }
+
+/* type: IBM Plex serif headlines, sans text, mono figures */
+h1,h2,h3{font-family:var(--serif);font-weight:600;letter-spacing:-.005em}
+h1.caps,h2.caps,h3.caps,.inside h2,.cols h3,.dlg-bar h2 .dlg-sub{font-family:var(--sans);font-weight:700;letter-spacing:.07em}
+.fk b,.ticker .px,.ticker .chg,.tk-track time,.big b,.kpi dd,.split td,.fld output,.stop time,#tl-count,.zoomctl #z-level,.arch td.no,.when,.icov .imeta,.idate{font-family:var(--mono);font-weight:600;letter-spacing:0}
+.big b{font-weight:600;letter-spacing:-.02em}
+.fk b{font-size:16px}
+.stop time{font-size:14px}
+
 /* ---------- AbaxGrid links */
 .mast .pub{color:var(--pale);font-size:12.5px;text-decoration:none;margin-top:4px}
 .mast .pub:hover{color:#fff}
