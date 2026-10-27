@@ -8,7 +8,7 @@ A publication of AbaxGrid · Proactivados, S.A. · Founder & Editor: Danny Peña
 
 | Path | What it is |
 |---|---|
-| `index.html` | The whole site: latest issues, timeline, fiscal take calculator, archive, reference desk, next issue, editor page, map drawer, news and facts tickers, EN/PT switch |
+| `index.html` | The whole site: latest issues, timeline, fiscal take calculator, archive, reference desk, next issue, editor page, map drawer, news and facts tickers, EN/ES/PT switch, dark theme only |
 | `maps/venezuela.json` | Map data for the Venezuela chapter (Natural Earth 10m, simplified lon/lat arrays) |
 | `assets/portrait.png` | Editor portrait |
 | `i18n/es.json`, `i18n/pt.json` | Spanish and Portuguese (pt-BR) dictionaries. Keys are the English strings as shown on the page. English is the default; the page carries its own copy of both dictionaries inline, so after editing a file here ask Claude to sync it into `index.html` |
