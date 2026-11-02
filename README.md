@@ -36,5 +36,7 @@ The page already links to these. Upload them with exactly these names or the lin
 
 ## Updating the tickers
 
-- **News:** the `<li>` items inside `#tk-track` in `index.html`.
-- **Prices and results calendar:** the JSON block `<script type="application/json" id="eg-markets">`. Change `asOf`, the prices and daily changes, and the calendar dates. Past dates drop off the ticker automatically.
+Both tickers are driven by JSON data blocks in `index.html`; no other code needs touching. A daily scheduled task refreshes them and pushes here.
+
+- **News:** `<script type="application/json" id="eg-news">`. `updated` is an ISO date; `items` (newest first) each have `date` (ISO), `site` (a map site id such as `maracaibo` or `paraguana`, or empty), `src`, `url`, and the headline in `en`, `es` and `pt`.
+- **Prices and results calendar:** `<script type="application/json" id="eg-markets">`. `asOf` (e.g. `30 Oct 2026`), the prices and daily % changes, and `calendar` rows `[isoDate, company, label, "confirmed"|"expected"]`. Past dates drop off automatically. Translations for any new company or label go in `i18n.es` / `i18n.pt` inside the same block.
