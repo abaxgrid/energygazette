@@ -1,6 +1,9 @@
 """Build the GitHub Pages copy of the Energy Gazette page from the artifact source.
 usage: python3 -I build_deploy.py <source index.html> <repo dir>"""
 import sys, os, shutil
+
+# Cloudflare Web Analytics (cookieless) for abaxgrid.com
+CF_BEACON = '<!-- Cloudflare Web Analytics --><script type=\'module\' src=\'https://static.cloudflareinsights.com/beacon.min.js\' data-cf-beacon=\'{"token": "d5838d08039e40ca9319fbf50368dfec"}\'></script><!-- End Cloudflare Web Analytics -->'
 src_path, repo = sys.argv[1:3]
 src = open(src_path).read()
 lines = src.split('\n')
@@ -39,7 +42,7 @@ head = f'''<!doctype html>
 </head>
 <body>
 '''
-open(os.path.join(repo, 'index.html'), 'w').write(head + body.lstrip('\n') + '\n</body>\n</html>\n')
+open(os.path.join(repo, 'index.html'), 'w').write(head + body.lstrip('\n') + '\n'+CF_BEACON+'\n</body>\n</html>\n')
 P = {'en': dict(lang='en', loc='en_US', t='The Energy Gazette: Venezuela Edition', d="Venezuela's energy reopening, read from primary sources: biweekly issues, a living timeline, a sector map and a fiscal take calculator.", a='The Energy Gazette in English →'),
      'es': dict(lang='es', loc='es_LA', t='The Energy Gazette: Edición Venezuela', d='La reapertura energética de Venezuela, leída desde las fuentes primarias: ediciones quincenales, cronología viva, mapa del sector y calculadora de participación fiscal.', a='The Energy Gazette en español →'),
      'pt': dict(lang='pt-BR', loc='pt_BR', t='The Energy Gazette: Edição Venezuela', d='A reabertura energética da Venezuela, lida a partir das fontes primárias: edições quinzenais, linha do tempo viva, mapa do setor e calculadora da participação fiscal.', a='The Energy Gazette em português →')}
