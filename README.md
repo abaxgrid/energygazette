@@ -27,6 +27,7 @@ The page already links to these. Upload them with exactly these names or the lin
 - `issue-03-gold-rush.pdf` (Issue No. 3, magazine sample)
 - `issue-02-full.pdf`, `issue-02-brief.pdf` (Issue No. 2)
 - `issue-01-full.pdf`, `issue-01-carousel.pdf` (Issue No. 1)
+- `issue-06-exxon-mou.pdf` (Issue No. 6, Exxon Signs an MOU, executive brief)
 - `special-panama-annex-ii-brief.pdf` (Special, Panama Leaves the Blacklist)
 - `special-anatomy-oil-mou-brief.pdf` (Special, Anatomy of an Oil MoU)
 - `special-national-added-value.pdf` (Special, National Added Value FAQ)
